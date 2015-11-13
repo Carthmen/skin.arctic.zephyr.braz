@@ -39,6 +39,11 @@
     
     <!-- Browse for Backgrounds -->
     <backgroundBrowse>True</backgroundBrowse>
+    <background label="Movie fanart" condition="System.HasAddon(script.grab.fanart)">movieFanart</background>
+    <background label="TV Show fanart" condition="System.HasAddon(script.grab.fanart)">tvFanart</background>
+    <background label="Video fanart" condition="System.HasAddon(script.grab.fanart)">videoFanart</background>
+    <background label="Music fanart" condition="System.HasAddon(script.grab.fanart)">musicFanart</background>
+    <background label="All fanart" condition="System.HasAddon(script.grab.fanart)">allFanart</background>
     <background label="::PLAYLIST::">playlistBackground</background>
     
     <!-- Warning to Remove Settings -->

@@ -98,6 +98,11 @@
     </include>
 
     <variable name="GlobalFanart">
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),movieFanart)">$INFO[Window(Home).Property(script.grab.fanart.Movie.FanArt)]</value>
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),tvFanart)">$INFO[Window(Home).Property(script.grab.fanart.TV.FanArt)]</value>
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),videoFanart)">$INFO[Window(Home).Property(script.grab.fanart.Video.FanArt)]</value>
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),musicFanart)">$INFO[Window(Home).Property(script.grab.fanart.Music.FanArt)]</value>
+        <value condition="Window.IsVisible(home) + StringCompare(Container(300).ListItem.Property(background),allFanart)">$INFO[Window(Home).Property(script.grab.fanart.Global.FanArt)]</value>
         <value condition="Window.IsActive(script-globalsearch-infodialog.xml) | Window.IsActive(script-globalsearch-main.xml)">$VAR[GlobalSearchArtInfo]</value>
         <value condition="[Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + IsEmpty(Window(home).Property(ExtendedInfo_fanart))] | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/backgrounds/default_bg.jpg</value>
         <value condition="Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !IsEmpty(Window(home).Property(ExtendedInfo_fanart))">$INFO[Window(home).Property(ExtendedInfo_fanart)]</value>
