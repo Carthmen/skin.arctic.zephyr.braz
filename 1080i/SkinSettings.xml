@@ -20,7 +20,6 @@
                 <texture border="16" colordiffuse="PanelFull">common/rounded-shadow8.png</texture>
             </control>
             <control type="group">
-                <visible>!Window.IsActive(script-skinshortcuts.xml)</visible>
                 <animation effect="fade" time="150" tween="cubic" start="100" end="0" reversible="true">Hidden</animation>
                 <left>8</left>
                 <right>8</right>

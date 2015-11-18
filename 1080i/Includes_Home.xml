@@ -968,20 +968,20 @@
                             </control>
                         </focusedlayout>
 
-                        <itemlayout width="356" height="211" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                        <itemlayout width="445" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
                             <control type="image">
                                 <centerleft>50%</centerleft>
-                                <width>339</width>
+                                <width>422</width>
                                 <bottom>10</bottom>
                                 <top>10</top>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
                                 <texture diffuse="diffuse/wall-fanart.png" fallback="DefaultAddonNone.png" background="true">$VAR[LandscapeImage]</texture>
                             </control>
                         </itemlayout>
-                        <focusedlayout width="356" height="211" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                        <focusedlayout width="445" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
                             <control type="image">
                                 <centerleft>50%</centerleft>
-                                <width>339</width>
+                                <width>422</width>
                                 <bottom>10</bottom>
                                 <top>10</top>
                                 <aspectratio scalediffuse="false">scale</aspectratio>
@@ -989,7 +989,7 @@
                             </control>
                             <control type="image">
                                 <visible>Control.HasFocus(301)</visible>
-                                <left>3</left>
+                                <left>4</left>
                                 <top>3</top>
                                 <right>3</right>
                                 <bottom>3</bottom>
