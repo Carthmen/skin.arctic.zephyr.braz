@@ -34,7 +34,7 @@
                         <right>10</right>
                         <bottom>10</bottom>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="diffuse/wall-fanart.png" background="true">$VAR[BannerImage]</texture>
+                        <texture diffuse="diffuse/bannerwall.png" background="true">$VAR[BannerImage]</texture>
                     </control>
                     
                     <control type="image">
@@ -72,7 +72,7 @@
                         <right>10</right>
                         <bottom>10</bottom>
                         <aspectratio scalediffuse="false">scale</aspectratio>
-                        <texture diffuse="diffuse/wall-fanart.png" background="true">$VAR[BannerImage]</texture>
+                        <texture diffuse="diffuse/bannerwall.png" background="true">$VAR[BannerImage]</texture>
                     </control>
                     
                     <control type="image">
