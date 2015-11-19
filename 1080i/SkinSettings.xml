@@ -127,10 +127,8 @@
                         <label2>$VAR[LabelHomeWidgetStyle]</label2>
                         <onclick condition="Skin.HasSetting(home.classicwidgets)">Skin.SetBool(home.vertical)</onclick>
                         <onclick condition="Skin.HasSetting(home.classicwidgets)">Skin.Reset(home.classicwidgets)</onclick>
-                        <onclick condition="Skin.HasSetting(home.vertical)">Skin.Reset(home.classicwidgets)</onclick>
                         <onclick condition="Skin.HasSetting(home.vertical)">Skin.Reset(home.vertical)</onclick>
-                        <onclick condition="!Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.classicwidgets)">Skin.Reset(home.vertical)</onclick>
-                        <onclick condition="!Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.classicwidgets)">Skin.SetBool(home.classicwidgets)</onclick>
+                        <onclick condition="Skin.HasSetting(home.vertical)">Skin.SetBool(home.classicwidgets)</onclick>
                     </control>
                     
                     <control type="radiobutton" id="9213" description="Show Header">
