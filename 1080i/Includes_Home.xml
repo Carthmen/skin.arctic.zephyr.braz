@@ -1872,7 +1872,7 @@
                             </control>
                         </focusedlayout>
 
-                        <itemlayout height="270" width="425" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                        <itemlayout height="325" width="578" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
@@ -1899,7 +1899,7 @@
                                 <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
                             </control>
                         </itemlayout>
-                        <focusedlayout height="270" width="425" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                        <focusedlayout height="325" width="578" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
                             <control type="image">
                                 <left>0</left>
                                 <top>0</top>
