@@ -15,7 +15,7 @@
                 <right>-8</right>
                 <top>-8</top>
                 <bottom>-8</bottom>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                 <texture border="16">common/rounded-shadow8.png</texture>
             </control>
             

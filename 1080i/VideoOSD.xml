@@ -34,7 +34,7 @@
                     <description>background image</description>
                     <width>100%</width>
                     <height>100%</height>
-                    <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                    <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                     <texture border="16">common/rounded-shadow8.png</texture>
                 </control>
                 <control type="grouplist" id="9300">

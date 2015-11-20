@@ -127,7 +127,7 @@
     <include name="GlobalVideoWindow">
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+            <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
         </control>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
@@ -169,7 +169,7 @@
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
             <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+            <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
             <visible>!Window.IsVisible(home) | Skin.HasSetting(home.vertical)</visible>
             <animation effect="fade" start="100" end="75" time="200" condition="Player.HasVideo + Skin.HasSetting(global.showvideo) | Player.HasAudio + Skin.HasSetting(global.showvisualisation)">Conditional</animation>
         </control>
@@ -204,7 +204,7 @@
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
             <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+            <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
         </control>
         <control type="multiimage" description="Fanart">
             <include>GlobalBackgroundFade</include>

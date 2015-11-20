@@ -13,7 +13,7 @@
         <control type="image">
             <width>100%</width>
             <height>100%</height>
-            <texture colordiffuse="$VAR[OSDPanel]">common/white.png</texture>
+            <texture colordiffuse="$VAR[ColorBackground]">common/white.png</texture>
             <visible>Window.IsVisible(fullscreenvideo)</visible>
         </control>
         <control type="group">
@@ -506,7 +506,7 @@
             
             <control type="image" description="Background">
                 <include>Dimensions_Fullscreen</include>
-                <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
                 <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
             </control>
         </control>

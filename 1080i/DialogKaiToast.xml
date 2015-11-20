@@ -19,7 +19,7 @@
                 <posy>0</posy>
                 <width>660</width>
                 <height>100</height>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                 <animation effect="fade" start="100" end="90" condition="!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)">Conditional</animation>
                 <texture border="16">common/rounded-shadow8.png</texture>
             </control>

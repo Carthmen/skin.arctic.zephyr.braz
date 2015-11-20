@@ -32,7 +32,7 @@
                     <width>100%</width>
                     <height>374</height>
                     <texture>common/white.png</texture>
-                    <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                    <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                     <include>Animation.FadeOut</include>
                 </control>
             </control>

@@ -286,10 +286,6 @@
         </control>
     </include>
     
-    <variable name="OSDPanel">
-        <value condition="!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)">$VAR[ColorBackground]</value>
-        <value>$VAR[ColorBackground]</value>
-    </variable>
     <variable name="OSDPanelWhite12">
         <value condition="!Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation)">White30</value>
         <value>PanelWhite12</value>
@@ -687,7 +683,7 @@
                 <posy>0</posy>
                 <width>100%</width>
                 <height>100%</height>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                 <texture border="16">common/rounded-shadow8.png</texture>
                 <visible>Player.HasVideo</visible>
             </control>
@@ -698,7 +694,7 @@
                 <posy>0</posy>
                 <width>50%</width>
                 <height>100%</height>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                 <texture border="16">common/rounded-shadow8.png</texture>
                 <visible>!Player.HasVideo</visible>
             </control>

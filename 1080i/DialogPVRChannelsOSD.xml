@@ -16,7 +16,7 @@
                 <posy>-1</posy>
                 <width>668</width>
                 <height>1082</height>
-                <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <colordiffuse>$VAR[ColorBackground]</colordiffuse>
                 <texture border="5">common/white.png</texture>
             </control>
             <control type="image">

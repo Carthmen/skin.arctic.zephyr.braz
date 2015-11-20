@@ -13,7 +13,7 @@
                 <top>0</top>
                 <height>240</height>
                 <aspectratio aligny="top">scale</aspectratio>
-                <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
                 <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="Shadow">
@@ -207,7 +207,7 @@
                 <top>0</top>
                 <height>100</height>
                 <aspectratio aligny="top">scale</aspectratio>
-                <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
                 <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="Shadow">
@@ -493,16 +493,6 @@
                         <font>HomeIcon</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <!--<control type="image">
-                        <top>74</top>
-                        <centerleft>50%</centerleft>
-                        <width>90%</width>
-                        <height>4</height>
-                        <texture colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                        <visible>Control.HasFocus(302)</visible>
-                        <include>Animation.FadeIn</include>
-                        <include>Animation.FadeOut</include>
-                    </control>-->
                     <control type="image">
                         <top>10</top>
                         <centerleft>50%</centerleft>
@@ -535,7 +525,7 @@
                         <height>900</height>
                         <bottom>-680</bottom>
                         <aspectratio aligny="bottom">scale</aspectratio>
-                        <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
+                        <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
                         <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
                     </control>
                     <control type="image" description="Shadow">
@@ -945,7 +935,7 @@
                 <left>32</left>
                 <width>16</width>
                 <height>16</height>
-                <texture colordiffuse="White70" flipx="true">common/arrow-small-right.png</texture>
+                <texture colordiffuse="White30" flipx="true">common/arrow-small-right.png</texture>
             </control>
             <control type="image">
                 <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
@@ -954,7 +944,7 @@
                 <right>470</right>
                 <width>16</width>
                 <height>16</height>
-                <texture colordiffuse="White70" flipx="false">common/arrow-small-right.png</texture>
+                <texture colordiffuse="White30" flipx="false">common/arrow-small-right.png</texture>
             </control>
             <control type="image">
                 <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
@@ -963,7 +953,7 @@
                 <right>32</right>
                 <width>16</width>
                 <height>16</height>
-                <texture colordiffuse="White70" flipx="false">common/arrow-small-right.png</texture>
+                <texture colordiffuse="White30" flipx="false">common/arrow-small-right.png</texture>
             </control>
             <control type="list" id="300">
                 <animation effect="fade" start="100" end="33" time="400" condition="Control.HasFocus(301)">Conditional</animation>
@@ -1018,16 +1008,6 @@
                 <font>Home</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
-            <!--<control type="image">
-                <top>55</top>
-                <centerleft>50%</centerleft>
-                <width>90%</width>
-                <height>4</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                <visible>Control.HasFocus(300)</visible>
-                <include>Animation.FadeIn</include>
-                <include>Animation.FadeOut</include>
-            </control>-->
             <control type="image">
                 <top>70</top>
                 <centerleft>50%</centerleft>
@@ -1086,16 +1066,6 @@
                 <font>HomeIcon</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
-            <!--<control type="image">
-                <bottom>16</bottom>
-                <centerleft>50%</centerleft>
-                <width>90%</width>
-                <height>4</height>
-                <texture colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                <visible>Control.HasFocus(300)</visible>
-                <include>Animation.FadeIn</include>
-                <include>Animation.FadeOut</include>
-            </control>-->
             <control type="image">
                 <bottom>-4</bottom>
                 <centerleft>50%</centerleft>
@@ -1243,16 +1213,6 @@
                             <texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Icon]</texture>
                             <visible>Skin.HasSetting(home.showicons)</visible>
                         </control>
-                        <!--<control type="image">
-                            <left>415</left>
-                            <top>17</top>
-                            <width>4</width>
-                            <height>58%</height>
-                            <texture colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                            <visible>Control.HasFocus(300)</visible>
-                            <include>Animation.FadeIn</include>
-                            <include>Animation.FadeOut</include>
-                        </control>-->
                     </focusedlayout>
                     <content>
                         <include>skinshortcuts-mainmenu</include>
@@ -1302,16 +1262,6 @@
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
-                        <!--<control type="image">
-                            <left>415</left>
-                            <top>17</top>
-                            <width>4</width>
-                            <height>58%</height>
-                            <texture colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                            <visible>Control.HasFocus(302)</visible>
-                            <include>Animation.FadeIn</include>
-                            <include>Animation.FadeOut</include>
-                        </control>-->
                     </focusedlayout>
                     <content>
                         <include>skinshortcuts-submenu</include>
