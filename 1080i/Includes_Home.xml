@@ -14,14 +14,7 @@
                 <height>240</height>
                 <aspectratio aligny="top">scale</aspectratio>
                 <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
-                <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
-            </control>
-            <control type="image" description="FanartOverlay">
-                <width>100%</width>
-                <height>240</height>
-                <top>0</top>
-                <aspectratio aligny="bottom">scale</aspectratio>
-                <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
+                <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="Shadow">
                 <width>100%</width>
@@ -215,14 +208,7 @@
                 <height>100</height>
                 <aspectratio aligny="top">scale</aspectratio>
                 <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
-                <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
-            </control>
-            <control type="image" description="FanartOverlay">
-                <width>100%</width>
-                <height>100</height>
-                <top>0</top>
-                <aspectratio aligny="bottom">scale</aspectratio>
-                <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
+                <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
             </control>
             <control type="image" description="Shadow">
                 <width>100%</width>
@@ -490,7 +476,7 @@
                         <width>180</width>
                         <top>30</top>
                         <centerleft>50%</centerleft>
-                        <textcolor>White30</textcolor>
+                        <textcolor>White70</textcolor>
                         <font>HomeIcon</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -503,11 +489,11 @@
                         <width>90%</width>
                         <top>30</top>
                         <centerleft>50%</centerleft>
-                        <textcolor>White100</textcolor>
+                        <textcolor>$VAR[ColorHighlight]</textcolor>
                         <font>HomeIcon</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
-                    <control type="image">
+                    <!--<control type="image">
                         <top>74</top>
                         <centerleft>50%</centerleft>
                         <width>90%</width>
@@ -516,7 +502,7 @@
                         <visible>Control.HasFocus(302)</visible>
                         <include>Animation.FadeIn</include>
                         <include>Animation.FadeOut</include>
-                    </control>
+                    </control>-->
                     <control type="image">
                         <top>10</top>
                         <centerleft>50%</centerleft>
@@ -550,14 +536,7 @@
                         <bottom>-680</bottom>
                         <aspectratio aligny="bottom">scale</aspectratio>
                         <texture colordiffuse="$VAR[ColorBackground]">common/bg.jpg</texture>
-                        <animation effect="fade" start="100" end="75" time="200" condition="true">Conditional</animation>
-                    </control>
-                    <control type="image" description="FanartOverlay">
-                        <width>100%</width>
-                        <height>900</height>
-                        <bottom>-680</bottom>
-                        <aspectratio aligny="bottom">scale</aspectratio>
-                        <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
+                        <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
                     </control>
                     <control type="image" description="Shadow">
                         <width>100%</width>
@@ -987,6 +966,7 @@
                 <texture colordiffuse="White70" flipx="false">common/arrow-small-right.png</texture>
             </control>
             <control type="list" id="300">
+                <animation effect="fade" start="100" end="33" time="400" condition="Control.HasFocus(301)">Conditional</animation>
                 <include>Animation.FadeIn.Delay</include>
                 <include>Animation.FadeOut</include>
                 <description>Home Wraplist</description>
@@ -1021,7 +1001,7 @@
                 <width>180</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
-                <textcolor>White30</textcolor>
+                <textcolor>White70</textcolor>
                 <font>Home</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -1034,11 +1014,11 @@
                 <width>90%</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
-                <textcolor>White100</textcolor>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <font>Home</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
-            <control type="image">
+            <!--<control type="image">
                 <top>55</top>
                 <centerleft>50%</centerleft>
                 <width>90%</width>
@@ -1047,7 +1027,7 @@
                 <visible>Control.HasFocus(300)</visible>
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
-            </control>
+            </control>-->
             <control type="image">
                 <top>70</top>
                 <centerleft>50%</centerleft>
@@ -1072,7 +1052,7 @@
                 <height>128</height>
                 <centerleft>50%</centerleft>
                 <centertop>40%</centertop>
-                <texture colordiffuse="White30">$INFO[ListItem.Icon]</texture>
+                <texture colordiffuse="White70">$INFO[ListItem.Icon]</texture>
                 <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
             </control>
             <control type="label">
@@ -1081,7 +1061,7 @@
                 <width>180</width>
                 <bottom>0</bottom>
                 <centerleft>50%</centerleft>
-                <textcolor>White30</textcolor>
+                <textcolor>White70</textcolor>
                 <font>HomeIcon</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -1093,7 +1073,7 @@
                 <height>128</height>
                 <centerleft>50%</centerleft>
                 <centertop>40%</centertop>
-                <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
+                <texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Icon]</texture>
                 <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
             </control>
             <control type="label">
@@ -1102,11 +1082,11 @@
                 <width>180</width>
                 <bottom>0</bottom>
                 <centerleft>50%</centerleft>
-                <textcolor>White100</textcolor>
+                <textcolor>$VAR[ColorHighlight]</textcolor>
                 <font>HomeIcon</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
-            <control type="image">
+            <!--<control type="image">
                 <bottom>16</bottom>
                 <centerleft>50%</centerleft>
                 <width>90%</width>
@@ -1115,7 +1095,7 @@
                 <visible>Control.HasFocus(300)</visible>
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
-            </control>
+            </control>-->
             <control type="image">
                 <bottom>-4</bottom>
                 <centerleft>50%</centerleft>
@@ -1198,7 +1178,7 @@
                     <width>PosterW</width>
                     <height>720</height>
                     <orientation>vertical</orientation>
-                    <onright condition="!substring(Container(300).ListItem.Property(widget),Weather,left)">301</onright>
+                    <onright condition="IntegerGreaterThan(Container(301).NumItems,0) | StringCompare(Container(300).ListItem.Property(widget),weather)">301</onright>
                     <onleft>302</onleft>
                     <scrolltime>200</scrolltime>
                     <itemlayout width="427" height="80">
@@ -1208,7 +1188,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White30</textcolor>
+                            <textcolor>White70</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>!Skin.HasSetting(home.showicons)</visible>
@@ -1219,7 +1199,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White30</textcolor>
+                            <textcolor>White70</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>Skin.HasSetting(home.showicons)</visible>
@@ -1228,7 +1208,7 @@
                             <right>10</right>
                             <width>80</width>
                             <height>80</height>
-                            <texture colordiffuse="White30">$INFO[ListItem.Icon]</texture>
+                            <texture colordiffuse="White70">$INFO[ListItem.Icon]</texture>
                             <visible>Skin.HasSetting(home.showicons)</visible>
                         </control>
                     </itemlayout>
@@ -1240,7 +1220,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>!Skin.HasSetting(home.showicons)</visible>
@@ -1251,7 +1231,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>Skin.HasSetting(home.showicons)</visible>
@@ -1260,10 +1240,10 @@
                             <right>10</right>
                             <width>80</width>
                             <height>80</height>
-                            <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
+                            <texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Icon]</texture>
                             <visible>Skin.HasSetting(home.showicons)</visible>
                         </control>
-                        <control type="image">
+                        <!--<control type="image">
                             <left>415</left>
                             <top>17</top>
                             <width>4</width>
@@ -1272,7 +1252,7 @@
                             <visible>Control.HasFocus(300)</visible>
                             <include>Animation.FadeIn</include>
                             <include>Animation.FadeOut</include>
-                        </control>
+                        </control>-->
                     </focusedlayout>
                     <content>
                         <include>skinshortcuts-mainmenu</include>
@@ -1305,7 +1285,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White30</textcolor>
+                            <textcolor>White70</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
@@ -1318,11 +1298,11 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>White100</textcolor>
+                            <textcolor>$VAR[ColorHighlight]</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
-                        <control type="image">
+                        <!--<control type="image">
                             <left>415</left>
                             <top>17</top>
                             <width>4</width>
@@ -1331,7 +1311,7 @@
                             <visible>Control.HasFocus(302)</visible>
                             <include>Animation.FadeIn</include>
                             <include>Animation.FadeOut</include>
-                        </control>
+                        </control>-->
                     </focusedlayout>
                     <content>
                         <include>skinshortcuts-submenu</include>
@@ -1379,6 +1359,7 @@
                         <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                     </control>
                     <control type="group">
+                        <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
                         <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
                         <include>Animation.FadeOut</include>
@@ -1442,6 +1423,7 @@
                     <control type="fixedlist" id="301">
                         <visible>!StringCompare(Container(300).ListItem.Property(widget),weather) + ![Container(300).OnNext | Container(300).OnPrevious]</visible>
                         <visible allowhiddenfocus="true">IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
+                        <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
                         <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
                         <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
@@ -1678,6 +1660,7 @@
                     <!-- Weather Widget -->
                     <control type="panel" id="301">
                         <visible allowhiddenfocus="true">StringCompare(Container(300).ListItem.Property(widget),weather)</visible>
+                        <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
                         <include>Animation.FadeIn</include>
                         <left>518</left>
                         <top>330</top>
@@ -1685,8 +1668,7 @@
                         <height>335</height>
                         <onup>300</onup>
                         <ondown>300</ondown>
-                        <onleft>301</onleft>
-                        <onright>301</onright>
+                        <onleft>300</onleft>
                         <onback>300</onback>
                         <orientation>Horizontal</orientation>
                         <scrolltime tween="quadratic" easing="out">200</scrolltime>

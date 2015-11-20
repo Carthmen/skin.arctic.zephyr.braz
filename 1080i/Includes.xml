@@ -199,13 +199,6 @@
             <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
         </control>
-        <control type="image" description="FanartOverlay">
-            <include>Dimensions_Fullscreen</include>
-            <visible>!Window.IsVisible(home) | Skin.HasSetting(home.vertical)</visible>
-            <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
-        </control>
-        
     </include>
     <include name="GlobalBackgroundExtended">
         <control type="image" description="Background">
@@ -226,12 +219,6 @@
             <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
         </control>
-        <control type="image" description="FanartOverlay">
-            <include>Dimensions_Fullscreen</include>
-            <include condition="!Skin.HasSetting(home.vertical)">Animation.FadeFromHome</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
-        </control>
-        
     </include>
 
 </includes>

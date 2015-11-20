@@ -263,8 +263,8 @@
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
-                        <label>31200</label>
-                        <enable>Skin.HasSetting(home.classicwidgets)</enable>
+                        <label>Display only when pressing up (horizontal menu) or right (vertical menu)</label>
+                        <!--<enable>Skin.HasSetting(home.classicwidgets)</enable>-->
                         <selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
                         <onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
                     </control>

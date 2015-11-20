@@ -8,13 +8,6 @@
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
         </control>
-        <control type="image" description="FanartOverlay">
-            <include>Dimensions_Fullscreen</include>
-            <visible>!Window.IsVisible(home) | Skin.HasSetting(home.vertical)</visible>
-            <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>
-            <texture colordiffuse="$VAR[ColorBackground]">common/floor.png</texture>
-        </control>
         <!-- Busy Loader -->
         <control type="group">
             <centerleft>50%</centerleft>
