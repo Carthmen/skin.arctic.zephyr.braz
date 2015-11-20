@@ -1198,7 +1198,7 @@
                     <width>PosterW</width>
                     <height>720</height>
                     <orientation>vertical</orientation>
-                    <onright>301</onright>
+                    <onright condition="!substring(Container(300).ListItem.Property(widget),Weather,left)">301</onright>
                     <onleft>302</onleft>
                     <scrolltime>200</scrolltime>
                     <itemlayout width="427" height="80">
@@ -1378,38 +1378,64 @@
                         <include>Animation.FadeOut</include>
                         <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                     </control>
-                    <control type="grouplist">
-                        <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
+                    <control type="group">
                         <animation effect="fade" start="100" end="33" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
                         <include>Animation.FadeOut</include>
                         <right>70</right>
                         <width>1322</width>
-                        <orientation>vertical</orientation>
-                        <top>672</top>
-                        <itemgap>0</itemgap>
+                        <top>662</top>
                         <control type="label">
+                            <left>0</left>
+                            <top>0</top>
+                            <right>0</right>
+                            <aligny>center</aligny>
+                            <height>80</height>
+                            <font>TinyBold</font>
+                            <textcolor>White70</textcolor>
+                            <selectedcolor>White70</selectedcolor>
+                            <label>$INFO[Container(300).ListItem.Property(widgetName)]</label>
+                            <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
+                        </control>
+                        <control type="label">
+                            <top>60</top>
                             <font>SmallBold</font>
                             <width>100%</width>
                             <align>left</align>
                             <textcolor>White100</textcolor>
                             <label>$VAR[WidgetTitle]</label>
                         </control>
+                        <control type="label">
+                            <top>60</top>
+                            <left>600</left>
+                            <right>0</right>
+                            <font>Flag</font>
+                            <align>right</align>
+                            <textcolor>White70</textcolor>
+                            <label>$VAR[WidgetSubLabel]</label>
+                            <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
+                        </control>
                         <control type="textbox">
+                            <top>120</top>
                             <font>Tiny</font>
                             <width>100%</width>
                             <height>110</height>
                             <align>left</align>
                             <textcolor>White70</textcolor>
                             <label>$VAR[WidgetPlot]</label>
+                            <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
                         </control>
-                        <control type="label">
+                        <control type="textbox">
+                            <top>120</top>
                             <font>Tiny</font>
                             <width>100%</width>
+                            <height>110</height>
                             <align>left</align>
                             <textcolor>White70</textcolor>
-                            <label>$VAR[WidgetSubLabel]</label>
+                            <label>$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°][CR]$INFO[Window(Weather).Property(Current.Humidity),, $LOCALIZE[406]][CR]$INFO[Window(Weather).Property(Current.Wind),Wind ]</label>
+                            <visible>substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
                         </control>
+
                     </control>
 
                     <!-- Widget -->

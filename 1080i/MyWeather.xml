@@ -423,7 +423,7 @@
                 <control type="button" id="9001" description="Select icons">
                     <include>DefContextButton</include>
                     <align>left</align>
-                    <label>31233</label>
+                    <label>Select weather icons</label>
                     <onclick>RunScript(script.image.resource.select,property=weathericons&amp;type=resource.images.weathericons)</onclick>
                     <enable>System.HasAddon(script.image.resource.select)</enable>
                 </control>
