@@ -36,6 +36,14 @@
         <value condition="System.HasAddon(service.nextup.notification)">Installed ($INFO[System.AddonVersion(service.nextup.notification)])</value>
         <value>Not installed</value>
     </variable>
+    <variable name="StatusGrabFanart">
+        <value condition="System.HasAddon(script.grab.fanart)">Installed ($INFO[System.AddonVersion(script.grab.fanart)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusArtistSlideshow">
+        <value condition="System.HasAddon(script.artistslideshow)">Installed ($INFO[System.AddonVersion(script.artistslideshow)])</value>
+        <value>Not installed</value>
+    </variable>
 
     <variable name="LabelYear">
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[20360])">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>

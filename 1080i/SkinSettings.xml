@@ -525,6 +525,15 @@
                         <onclick condition="System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">Addon.OpenSettings(resource.images.moviegenreicons.arctic.zephyr)</onclick>
                         <onclick condition="!System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">RunPlugin(plugin://resource.images.moviegenreicons.arctic.zephyr)</onclick>
                     </control>
+                    <control type="button" id="9299" description="Artist Slideshow">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.artistslideshow</label>
+                        <label2>$VAR[StatusArtistSlideshow]</label2>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
+                        <onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
+                    </control>
                     <control type="button" id="9291" description="Extended Info">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9109)</visible>
@@ -542,6 +551,15 @@
                         <label2>$VAR[StatusGlobalSearch]</label2>
                         <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
                         <onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+                    </control>
+                    <control type="button" id="9298" description="Grab Fanart">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.grab.fanart</label>
+                        <label2>$VAR[StatusGrabFanart]</label2>
+                        <onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.grab.fanart)</onclick>
+                        <onclick condition="!System.HasAddon(script.grab.fanart)">RunPlugin(plugin://script.grab.fanart)</onclick>
                     </control>
                     <control type="button" id="9292" description="Skin Helper Service">
                         <width>1310</width>
