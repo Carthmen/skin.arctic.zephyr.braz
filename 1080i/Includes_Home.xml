@@ -931,7 +931,7 @@
             <!-- Home Row -->
             <control type="image">
                 <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasPrevious</visible>
-                <top>962</top>
+                <top>968</top>
                 <left>32</left>
                 <width>16</width>
                 <height>16</height>
@@ -940,7 +940,7 @@
             <control type="image">
                 <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
                 <visible>!Skin.HasSetting(furniture.clock)</visible>
-                <top>962</top>
+                <top>968</top>
                 <right>470</right>
                 <width>16</width>
                 <height>16</height>
@@ -949,7 +949,7 @@
             <control type="image">
                 <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
                 <visible>Skin.HasSetting(furniture.clock)</visible>
-                <top>962</top>
+                <top>968</top>
                 <right>32</right>
                 <width>16</width>
                 <height>16</height>

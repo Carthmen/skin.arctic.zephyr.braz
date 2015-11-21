@@ -36,7 +36,7 @@
     
     <include name="View_55_Info_Right">
         <control type="group">
-            <posx>45</posx>
+            <posx>24</posx>
             <animation effect="fade" start="0" end="100" delay="1500" time="200" reversible="false">Focus</animation>
             <control type="label">
                 <posy>17</posy>
@@ -132,18 +132,22 @@
                         <animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">UnFocus</animation>
                         <animation effect="fade" start="0" end="0" delay="0" time="50" reversible="false">Hidden</animation>
                         <control type="image">
+                            <visible>Control.HasFocus(55)</visible>
                             <posx>10</posx>
                             <posy>10</posy>
                             <width>870</width>
                             <height>305</height>
-                            <texture colordiffuse="White100" border="5">common/box.png</texture>                         
-                            <animation effect="zoom" start="20,0,10,305" end="20,0,868,305" delay="1200" time="300" reversible="false">Focus</animation>
+                            <texture colordiffuse="White100" border="5">common/box.png</texture>
+                            <animation type="Focus">
+                                <effect type="zoom" start="10,0,202,305" end="10,0,868,305" delay="1200" time="300" reversible="false" />
+                                <effect type="fade" start="0" end="100" delay="200" time="150" tween="sine" easing="in" />
+                            </animation>
                         </control>
                         <include>View_55_Info_Left</include>
                     </control>
                     <!-- Right Poster Info -->
                     <control type="group">
-                        <posx>-690</posx>   
+                        <posx>-668</posx>   
                         <posy>0</posy>
                         <visible>Skin.HasSetting(55wall.showinfo)</visible>
                         <visible>Container(55).Column(4) | Container(55).Column(5) | Container(55).Column(6) | Container(55).Column(7)</visible>
@@ -155,7 +159,10 @@
                             <width>870</width>
                             <height>305</height>
                             <texture colordiffuse="White100" border="5">common/box.png</texture>
-                            <animation effect="zoom" start="866,0,1,305" end="-866,0,846,305" delay="1200" time="300" reversible="false">Focus</animation>
+                            <animation type="Focus">
+                                <effect type="zoom" start="675,0,202,305" end="0,0,868,305" delay="1200" time="300" reversible="false" />
+                                <effect type="fade" start="0" end="100" delay="200" time="150" tween="sine" easing="in" />
+                            </animation>
                         </control>
                         <include>View_55_Info_Right</include>
                     </control>
