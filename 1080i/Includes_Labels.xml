@@ -4,6 +4,38 @@
         <value condition="Container.Content(episodes) + !IsEmpty(ListItem.Title)">$INFO[ListItem.Title]</value>
         <value>$INFO[ListItem.Label]</value>
     </variable>
+    <variable name="StatusSkinShortcuts">
+        <value condition="System.HasAddon(script.skinshortcuts)">Installed ($INFO[System.AddonVersion(script.skinshortcuts)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusSkinHelperService">
+        <value condition="System.HasAddon(script.skin.helper.service)">Installed ($INFO[System.AddonVersion(script.skin.helper.service)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusLibraryDataProvider">
+        <value condition="System.HasAddon(service.library.data.provider)">Installed ($INFO[System.AddonVersion(service.library.data.provider)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusToolbox">
+        <value condition="System.HasAddon(script.toolbox)">Installed ($INFO[System.AddonVersion(script.toolbox)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusExtendedInfo">
+        <value condition="System.HasAddon(script.extendedinfo)">Installed ($INFO[System.AddonVersion(script.extendedinfo)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusVideoGenreIcons">
+        <value condition="System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">Installed ($INFO[System.AddonVersion(resource.images.moviegenreicons.arctic.zephyr)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusGlobalSearch">
+        <value condition="System.HasAddon(script.globalsearch)">Installed ($INFO[System.AddonVersion(script.globalsearch)])</value>
+        <value>Not installed</value>
+    </variable>
+    <variable name="StatusNextupNotification">
+        <value condition="System.HasAddon(service.nextup.notification)">Installed ($INFO[System.AddonVersion(service.nextup.notification)])</value>
+        <value>Not installed</value>
+    </variable>
 
     <variable name="LabelYear">
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[20360])">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>

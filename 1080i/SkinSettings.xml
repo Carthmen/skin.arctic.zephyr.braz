@@ -30,7 +30,7 @@
                     <description>Button Area</description>
                     <width>450</width>
                     <top>140</top>
-                    <bottom>0</bottom>
+                    <bottom>10</bottom>
                     <itemgap>0</itemgap>
                     <onleft>9000</onleft>
                     <onright>9200</onright>
@@ -87,6 +87,13 @@
                         <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <include>DefSettingsButton</include>
                         <label>Advanced</label>
+                    </control>
+
+                    <control type="togglebutton" id="9109" description="Scripts">
+                        <usealttexture>ControlGroup(9100).HasFocus(9109)</usealttexture>
+                        <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
+                        <include>DefSettingsButton</include>
+                        <label>Scripts</label>
                     </control>
                 </control>
                 
@@ -507,6 +514,81 @@
                         <label>Reset skin settings</label>
                         <onclick>RunScript(script.skin.helper.service,action=reset)</onclick>
                     </control>
+
+                    <!-- Scripts -->
+                    <control type="button" id="9290" description="Video Genre Icons">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>resource.images.moviegenreicons.arctic.zephyr</label>
+                        <label2>$VAR[StatusVideoGenreIcons]</label2>
+                        <onclick condition="System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">Addon.OpenSettings(resource.images.moviegenreicons.arctic.zephyr)</onclick>
+                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">RunPlugin(plugin://resource.images.moviegenreicons.arctic.zephyr)</onclick>
+                    </control>
+                    <control type="button" id="9291" description="Extended Info">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.extendedinfo</label>
+                        <label2>$VAR[StatusExtendedInfo]</label2>
+                        <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
+                        <onclick condition="!System.HasAddon(script.extendedinfo)">RunPlugin(plugin://script.extendedinfo)</onclick>
+                    </control>
+                    <control type="button" id="9296" description="Global Search">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.globalsearch</label>
+                        <label2>$VAR[StatusGlobalSearch]</label2>
+                        <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
+                        <onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+                    </control>
+                    <control type="button" id="9292" description="Skin Helper Service">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.skin.helper.service</label>
+                        <label2>$VAR[StatusSkinHelperService]</label2>
+                        <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
+                        <onclick condition="!System.HasAddon(script.skin.helper.service)">RunPlugin(plugin://script.skin.helper.service)</onclick>
+                    </control>
+                    <control type="button" id="9293" description="Skin Shortcuts">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.skinshortcuts</label>
+                        <label2>$VAR[StatusSkinShortcuts]</label2>
+                        <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
+                        <onclick condition="!System.HasAddon(script.skinshortcuts)">RunPlugin(plugin://script.skinshortcuts)</onclick>
+                    </control>
+                    <control type="button" id="9294" description="Toolbox">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.toolbox</label>
+                        <label2>$VAR[StatusToolbox]</label2>
+                        <onclick condition="System.HasAddon(script.toolbox)">Addon.OpenSettings(script.toolbox)</onclick>
+                        <onclick condition="!System.HasAddon(script.toolbox)">RunPlugin(plugin://script.toolbox)</onclick>
+                    </control>
+                    <control type="button" id="9295" description="Library Data Provider">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>service.library.data.provider</label>
+                        <label2>$VAR[StatusLibraryDataProvider]</label2>
+                        <onclick condition="System.HasAddon(service.library.data.provider)">Addon.OpenSettings(service.library.data.provider)</onclick>
+                        <onclick condition="!System.HasAddon(service.library.data.provider)">RunPlugin(plugin://service.library.data.provider)</onclick>
+                    </control>
+                    <control type="button" id="9297" description="Nextup Notification">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>service.nextup.notification</label>
+                        <label2>$VAR[StatusNextupNotification]</label2>
+                        <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
+                        <onclick condition="!System.HasAddon(service.nextup.notification)">RunPlugin(plugin://service.nextup.notification)</onclick>
+                    </control>
+                    
                 </control>
                 
                 
