@@ -172,10 +172,15 @@
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
-                        <label>Set library background</label>
+                        <label>Select library background</label>
                         <label2>$VAR[LibraryBackground]</label2>
-                        <onclick>Skin.SetBool(Edit.LibraryBackground)</onclick>
-                        <onclick>ActivateWindow(1111)</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,None)</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(global.hidefanart))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.Reset(global.hidefanart)||Skin.Reset(SkinHelper.EnableExtraFanart))</onclick>
+                        <onclick>SetProperty(Dialog.3.Label,Extra fanart)</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(global.hidefanart)||Skin.SetBool(SkinHelper.EnableExtraFanart))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Select library background)</onclick>
                     </control>
                     <control type="radiobutton" id="9224" description="Animate Fanart">
                         <width>1310</width>
@@ -189,10 +194,15 @@
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
-                        <label>Set music visualization background</label>
+                        <label>Select music visualization background</label>
                         <label2>$VAR[MusicVizBackground]</label2>
-                        <onclick>Skin.SetBool(Edit.MusicVizBackground)</onclick>
-                        <onclick>ActivateWindow(1111)</onclick>
+                        <onclick>SetProperty(Dialog.1.Label,None)</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.fanartfallback))</onclick>
+                        <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetBool(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled))</onclick>
+                        <onclick>SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(musicvis.fanartfallback)||Skin.Reset(ArtistSlideShow.Disabled))</onclick>
+                        <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
                     <control type="radiobutton" id="9227" description="Animate Artist slideshow">
                         <width>1310</width>
@@ -218,9 +228,7 @@
                         <include>DefSettingsButton</include>
                         <label>31150</label>
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
-                        <onclick>Skin.SetFile(fanart.fallback,.jpg,special://skin/extras/backgrounds)</onclick>
-                        <!--<onclick condition="IsEmpty(Skin.String(fanart.fallback))">Skin.SetImage(fanart.fallback,,special://skin/extras/backgrounds)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(fanart.fallback))">Skin.Reset(fanart.fallback)</onclick>-->
+                        <onclick>Skin.SetImage(fanart.fallback,special://skin/extras/backgrounds)</onclick>
                     </control>
                     <control type="radiobutton" id="9221" description="Show video in background">
                         <width>1310</width>
