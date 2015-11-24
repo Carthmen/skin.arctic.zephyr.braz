@@ -44,6 +44,10 @@
         <value condition="System.HasAddon(script.artistslideshow)">Installed ($INFO[System.AddonVersion(script.artistslideshow)])</value>
         <value>Not installed</value>
     </variable>
+    <variable name="StatusImageResourceSelect">
+        <value condition="System.HasAddon(script.image.resource.select)">Installed ($INFO[System.AddonVersion(script.image.resource.select)])</value>
+        <value>Not installed</value>
+    </variable>
 
     <variable name="LabelYear">
         <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[20360])">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>

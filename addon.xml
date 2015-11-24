@@ -9,6 +9,9 @@
         <import addon="script.skinshortcuts" version="0.5.3"/>
         <import addon="service.library.data.provider" version="0.1.0"/>
         <import addon="script.extendedinfo" version="3.0.0"/>
+        <import addon="script.toolbox" version="1.0.0"/>
+        <import addon="script.grab.fanart" version="0.14.1"/>
+        <import addon="script.image.resource.select" version="0.0.5"/>
         <import addon="resource.images.moviegenreicons.arctic.zephyr" version="0.0.1"/>
     </requires>
     <extension

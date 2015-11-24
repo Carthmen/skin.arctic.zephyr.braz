@@ -569,6 +569,15 @@
                         <onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.grab.fanart)</onclick>
                         <onclick condition="!System.HasAddon(script.grab.fanart)">RunPlugin(plugin://script.grab.fanart)</onclick>
                     </control>
+                    <control type="button" id="9300" description="Image Resource Select">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9109)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>script.image.resource.select</label>
+                        <label2>$VAR[StatusImageResourceSelect]</label2>
+                        <onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.image.resource.select)</onclick>
+                        <onclick condition="!System.HasAddon(script.grab.fanart)">RunPlugin(plugin://script.image.resource.select)</onclick>
+                    </control>
                     <control type="button" id="9292" description="Skin Helper Service">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9109)</visible>
