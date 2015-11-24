@@ -16,7 +16,7 @@
                 <bottom>-8</bottom>
                 <left>-8</left>
                 <right>-8</right>
-                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
+                <texture border="16" colordiffuse="White100">common/rounded-shadow100.png</texture>
             </control>
 
             <control type="label" id="500">
@@ -71,16 +71,6 @@
                         <width>100%</width>
                         <height>66</height>
                         <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/box.png</texture>
-                        <!-- <visible>Control.HasFocus(211)</visible> -->
-                    </control>
-                    <control type="image">
-                        <posx>0</posx>
-                        <posy>0</posy>
-                        <width>100%</width>
-                        <height>66</height>
-                        <texture border="5" colordiffuse="PanelBlack30">common/box.png</texture>
-                        <!-- <visible>!Control.HasFocus(211)</visible> -->
-                        <visible>false</visible>
                     </control>
                     <control type="label">
                         <left>30</left>
@@ -130,13 +120,13 @@
                     <texturenofocus colordiffuse="Black30">buttons/delete.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">buttons/delete.png</texturefocus>
                 </control>
-                <!-- <control type="button" id="301" description="Add">
+                <control type="button" id="301" description="Add">
                     <width>64</width>
                     <height>64</height>
                     <font>-</font>
                     <texturenofocus colordiffuse="Black30">buttons/add.png</texturenofocus>
                     <texturefocus colordiffuse="Selected">buttons/add.png</texturefocus>
-                </control> -->
+                </control>
                 <control type="button" id="303" description="Up">
                     <width>64</width>
                     <height>64</height>
@@ -223,7 +213,6 @@
                     <width>100%</width>
                     <height>66</height>
                     <label>31110</label>
-                    <!-- <label2>$INFO[Container(211).ListItem.Label]</label2> -->
                     <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
@@ -271,27 +260,13 @@
                     <visible>stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
                 </control>
-                <control type="button" id="301" description="Add">
-                    <width>100%</width>
-                    <height>66</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
-                    <align>left</align>
-                    <include>DefDialogButtons</include>
-                </control>
-                <!-- <control type="button" id="302" description="Delete">
-                    <width>100%</width>
-                    <height>66</height>
-                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
-                    <align>left</align>
-                    <include>DefDialogButtons</include>
-                </control> -->
                 <control type="button" id="308" description="Reset">
                     <width>100%</width>
                     <height>66</height>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <!--<visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>-->
                 </control>
             </control>
         

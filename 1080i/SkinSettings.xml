@@ -112,21 +112,14 @@
                     <ondown>9200</ondown>
                     <orientation>vertical</orientation>
                     <!-- Home -->
-                    <control type="button" id="9211" description="Customise Home">
+                    <control type="button" id="9210" description="Customise Home">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
                         <label>31109</label>
                         <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
                     </control>
-                    <control type="button" id="9212" description="Reset Home to Defaults">
-                        <width>1310</width>
-                        <visible>ControlGroup(9100).HasFocus(9101)</visible>
-                        <include>DefSettingsButton</include>
-                        <label>31132</label>
-                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
-                    </control>
-                    <control type="button" id="9214" description="Home Style">
+                    <control type="button" id="9211" description="Home Style">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
@@ -138,7 +131,7 @@
                         <onclick condition="Skin.HasSetting(home.vertical)">Skin.SetBool(home.classicwidgets)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="9213" description="Show Header">
+                    <control type="radiobutton" id="9212" description="Show Header">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
@@ -148,7 +141,7 @@
                         <enable>!Skin.HasSetting(home.vertical)</enable>
                     </control>
                 
-                    <control type="radiobutton" id="9216" description="Show Icons">
+                    <control type="radiobutton" id="9213" description="Show Icons">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
@@ -157,7 +150,7 @@
                         <onclick>Skin.ToggleSetting(home.showicons)</onclick>
                     </control>
                     
-                    <control type="radiobutton" id="9218" description="Horz Sub">
+                    <control type="radiobutton" id="9214" description="Horz Sub">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
@@ -168,7 +161,7 @@
                     </control>
                     
                     <!-- Background -->
-                    <control type="button" id="9223" description="Set library fanart">
+                    <control type="button" id="9220" description="Set library fanart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -182,7 +175,7 @@
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(global.hidefanart)||Skin.SetBool(SkinHelper.EnableExtraFanart))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select library background)</onclick>
                     </control>
-                    <control type="radiobutton" id="9224" description="Animate Fanart">
+                    <control type="radiobutton" id="9221" description="Animate Fanart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -190,7 +183,7 @@
                         <selected>Skin.HasSetting(Fanart.Animate)</selected>
                         <onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
                     </control>
-                    <control type="button" id="9226" description="Set music viz fanart">
+                    <control type="button" id="9222" description="Set music viz fanart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -204,7 +197,7 @@
                         <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(musicvis.fanartfallback)||Skin.Reset(ArtistSlideShow.Disabled))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
-                    <control type="radiobutton" id="9227" description="Animate Artist slideshow">
+                    <control type="radiobutton" id="9223" description="Animate Artist slideshow">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -213,7 +206,7 @@
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
                     </control>
-                    <control type="radiobutton" id="9228" description="Show slideshow in background">
+                    <control type="radiobutton" id="9224" description="Show slideshow in background">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -230,7 +223,7 @@
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
                         <onclick>Skin.SetImage(fanart.fallback,special://skin/extras/backgrounds)</onclick>
                     </control>
-                    <control type="radiobutton" id="9221" description="Show video in background">
+                    <control type="radiobutton" id="9226" description="Show video in background">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -238,7 +231,7 @@
                         <selected>Skin.HasSetting(global.showvideo)</selected>
                         <onclick>Skin.ToggleSetting(global.showvideo)</onclick>
                     </control>
-                    <control type="radiobutton" id="9222" description="Show vis in background">
+                    <control type="radiobutton" id="9227" description="Show vis in background">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
@@ -248,7 +241,7 @@
                     </control>
                     
                     <!-- OSD -->
-                    <control type="radiobutton" id="9236" description="Show detailed info on pause">
+                    <control type="radiobutton" id="9230" description="Show detailed info on pause">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <include>DefSettingsButton</include>
@@ -256,7 +249,7 @@
                         <selected>Skin.HasSetting(osd.showinfoonpause)</selected>
                         <onclick>Skin.ToggleSetting(osd.showinfoonpause)</onclick>
                     </control>
-                    <control type="radiobutton" id="9238" description="Always show osd info/controls in music visualisation">
+                    <control type="radiobutton" id="9231" description="Always show osd info/controls in music visualisation">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <include>DefSettingsButton</include>
@@ -264,7 +257,7 @@
                         <selected>Skin.HasSetting(osd.alwaysshowmusicosd)</selected>
                         <onclick>Skin.ToggleSetting(osd.alwaysshowmusicosd)</onclick>
                     </control>
-                    <control type="radiobutton" id="9237" description="Show clearart">
+                    <control type="radiobutton" id="9232" description="Show clearart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9103)</visible>
                         <include>DefSettingsButton</include>
@@ -274,16 +267,15 @@
                     </control>
                     
                     <!-- Widgets -->
-                    <control type="radiobutton" id="9242" description="Classic Widget Auto show">
+                    <control type="radiobutton" id="9240" description="Classic Widget Auto show">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
                         <label>Display only when pressing up (horizontal menu) or right (vertical menu)</label>
-                        <!--<enable>Skin.HasSetting(home.classicwidgets)</enable>-->
                         <selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
                         <onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
                     </control>
-                    <control type="radiobutton" id="9243" description="Show slideshow instead of fanart">
+                    <control type="radiobutton" id="9241" description="Show slideshow instead of fanart">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
@@ -292,7 +284,7 @@
                         <onclick condition="!Skin.HasSetting(home.dontshowfanart) + IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick>
                         <onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
                     </control>
-                    <control type="button" id="9241" description="Set Slideshow Path">
+                    <control type="button" id="9242" description="Set Slideshow Path">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
@@ -301,14 +293,14 @@
                         <onclick>Skin.SetPath(home.slideshowpath)</onclick>
                         <enable>Skin.HasSetting(home.dontshowfanart)</enable>
                     </control>
-                    <control type="button" id="9244" description="Reset Slideshow Path">
+                    <control type="button" id="9243" description="Reset Slideshow Path">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9104)</visible>
                         <include>DefSettingsButton</include>
                         <label>- Reset</label>
                         <onclick>Skin.Reset(home.dontshowfanart)</onclick>
                         <onclick>Skin.Reset(home.slideshowpath)</onclick>
-                        <onclick>SetFocus(9243)</onclick>
+                        <onclick>SetFocus(9241)</onclick>
                         <enable>Skin.HasSetting(home.dontshowfanart)</enable>
                     </control>
                                         
