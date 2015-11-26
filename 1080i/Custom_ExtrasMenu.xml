@@ -116,11 +116,18 @@
                 </control>
                 <control type="button" id="3113">
                     <include>DefContextButton</include>
-                    <label>Update rating</label>
+                    <label>Update IMDb rating</label>
                     <onclick>Dialog.Close(1110)</onclick>
                     <onclick>RunScript(script.ratingupdate,Single=Movie)</onclick>
                     <visible>System.HasAddon(script.ratingupdate)</visible>
                     <visible>Container.Content(movies) | Container.Content(tvshows)</visible>
+                </control>
+                <control type="button" id="3118">
+                    <include>DefContextButton</include>
+                    <label>Update user rating</label>
+                    <onclick>Dialog.Close(1110)</onclick>
+                    <onclick>SendClick(7)</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes)</visible>
                 </control>
                 <control type="button" id="3115">
                     <include>DefContextButton</include>
