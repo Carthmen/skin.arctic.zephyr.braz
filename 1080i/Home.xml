@@ -17,8 +17,8 @@
         <include condition="!Skin.HasSetting(home.vertical)">HomeBackgroundPlaylist</include>
         <include condition="!Skin.HasSetting(home.vertical)">HomeClassicWidgets</include>
         
-        <include condition="!Skin.HasSetting(home.vertical) + Skin.HasSetting(home.submenu2) + !Skin.HasSetting(home.showicons)">HomeSubMenu2</include>
-        <include condition="!Skin.HasSetting(home.vertical) + [!Skin.HasSetting(home.submenu2) | Skin.HasSetting(home.showicons)]">HomeSubMenu</include>
+        <include condition="!Skin.HasSetting(home.vertical) + Skin.HasSetting(home.submenu2)">HomeSubMenu2</include>
+        <include condition="!Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.submenu2)">HomeSubMenu</include>
 
         <control type="group">
             <include>Animation.FadeIn</include>

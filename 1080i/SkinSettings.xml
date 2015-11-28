@@ -155,7 +155,7 @@
                         <visible>ControlGroup(9100).HasFocus(9101)</visible>
                         <include>DefSettingsButton</include>
                         <label>31202</label>
-                        <enable>!Skin.HasSetting(home.showicons) + !Skin.HasSetting(home.vertical)</enable>
+                        <enable>!Skin.HasSetting(home.vertical)</enable>
                         <selected>Skin.HasSetting(home.submenu2)</selected>
                         <onclick>Skin.ToggleSetting(home.submenu2)</onclick>
                     </control>

@@ -468,11 +468,11 @@
                 <onright>302</onright>
                 <orientation>horizontal</orientation>
                 <scrolltime>200</scrolltime>
-                <top>921</top>
+                <top>910</top>
                 <itemlayout width="220" height="64">
                     <control type="label">
                         <align>center</align>
-                        <aligny>top</aligny>
+                        <aligny>center</aligny>
                         <width>180</width>
                         <top>30</top>
                         <centerleft>50%</centerleft>
@@ -483,18 +483,24 @@
                 </itemlayout>
 
                 <focusedlayout width="220" height="64">
+                    <control type="image">
+                        <top>30</top>
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
+                    </control>
                     <control type="label">
                         <align>center</align>
-                        <aligny>top</aligny>
+                        <aligny>center</aligny>
                         <width>90%</width>
                         <top>30</top>
                         <centerleft>50%</centerleft>
-                        <textcolor>$VAR[ColorHighlight]</textcolor>
+                        <textcolor>White100</textcolor>
                         <font>HomeIcon</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
                     <control type="image">
-                        <top>10</top>
+                        <top>8</top>
                         <centerleft>50%</centerleft>
                         <width>16</width>
                         <height>16</height>
@@ -930,27 +936,30 @@
             </control>
             <!-- Home Row -->
             <control type="image">
-                <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasPrevious</visible>
-                <top>968</top>
-                <left>32</left>
+                <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasPrevious] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasPrevious]</visible>
+                <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
+                <top>966</top>
+                <left>58</left>
                 <width>16</width>
                 <height>16</height>
                 <texture colordiffuse="White30" flipx="true">common/arrow-small-right.png</texture>
             </control>
             <control type="image">
-                <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
+                <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasNext]</visible>
                 <visible>!Skin.HasSetting(furniture.clock)</visible>
-                <top>968</top>
-                <right>470</right>
+                <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
+                <top>966</top>
+                <right>498</right>
                 <width>16</width>
                 <height>16</height>
                 <texture colordiffuse="White30" flipx="false">common/arrow-small-right.png</texture>
             </control>
             <control type="image">
-                <visible>IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext</visible>
+                <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasNext]</visible>
                 <visible>Skin.HasSetting(furniture.clock)</visible>
-                <top>968</top>
-                <right>32</right>
+                <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
+                <top>966</top>
+                <right>58</right>
                 <width>16</width>
                 <height>16</height>
                 <texture colordiffuse="White30" flipx="false">common/arrow-small-right.png</texture>
@@ -978,7 +987,7 @@
     </include>
     
     <include name="HomeContentNoIcon">
-        <top>948</top>
+        <top>940</top>
         <animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
         <animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
             <effect type="slide" start="0,-24" end="0" time="100" delay="200"/>
@@ -987,7 +996,7 @@
         <itemlayout width="220" height="64">
             <control type="label">
                 <align>center</align>
-                <aligny>top</aligny>
+                <aligny>center</aligny>
                 <width>180</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
@@ -998,13 +1007,18 @@
         </itemlayout>
 
         <focusedlayout width="220" height="64">
+            <control type="image">
+                <width>100%</width>
+                <height>100%</height>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
+            </control>
             <control type="label">
                 <align>center</align>
-                <aligny>top</aligny>
+                <aligny>center</aligny>
                 <width>90%</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
-                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <textcolor>White100</textcolor>
                 <font>Home</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -1026,12 +1040,17 @@
     
     <include name="HomeContentIcon">
         <top>848</top>
+        <animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
+        <animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
+            <effect type="slide" start="0,-24" end="0" time="100" delay="200"/>
+            <effect type="fade" start="0" end="100" time="200" delay="200"/>
+        </animation>
         <itemlayout width="220" height="220">
             <control type="image">
                 <width>128</width>
                 <height>128</height>
                 <centerleft>50%</centerleft>
-                <centertop>40%</centertop>
+                <centertop>45%</centertop>
                 <texture colordiffuse="White70">$INFO[ListItem.Icon]</texture>
                 <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
             </control>
@@ -1039,7 +1058,7 @@
                 <align>center</align>
                 <aligny>top</aligny>
                 <width>180</width>
-                <bottom>0</bottom>
+                <bottom>5</bottom>
                 <centerleft>50%</centerleft>
                 <textcolor>White70</textcolor>
                 <font>HomeIcon</font>
@@ -1049,20 +1068,26 @@
 
         <focusedlayout width="220" height="220">
             <control type="image">
+                <top>46</top>
+                <width>100%</width>
+                <height>154</height>
+                <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
+            </control>
+            <control type="image">
                 <width>128</width>
                 <height>128</height>
                 <centerleft>50%</centerleft>
-                <centertop>40%</centertop>
-                <texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Icon]</texture>
+                <centertop>45%</centertop>
+                <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
                 <visible>substring(ListItem.Icon,special://skin/extras/icons)</visible>
             </control>
             <control type="label">
                 <align>center</align>
                 <aligny>top</aligny>
                 <width>180</width>
-                <bottom>0</bottom>
+                <bottom>5</bottom>
                 <centerleft>50%</centerleft>
-                <textcolor>$VAR[ColorHighlight]</textcolor>
+                <textcolor>White100</textcolor>
                 <font>HomeIcon</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -1184,13 +1209,18 @@
                     </itemlayout>
 
                     <focusedlayout width="427" height="80">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
+                        </control>
                         <control type="label">
                             <right>30</right>
                             <left>0</left>
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>$VAR[ColorHighlight]</textcolor>
+                            <textcolor>White100</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>!Skin.HasSetting(home.showicons)</visible>
@@ -1201,7 +1231,7 @@
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>$VAR[ColorHighlight]</textcolor>
+                            <textcolor>White100</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                             <visible>Skin.HasSetting(home.showicons)</visible>
@@ -1210,7 +1240,7 @@
                             <right>10</right>
                             <width>80</width>
                             <height>80</height>
-                            <texture colordiffuse="$VAR[ColorHighlight]">$INFO[ListItem.Icon]</texture>
+                            <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
                             <visible>Skin.HasSetting(home.showicons)</visible>
                         </control>
                     </focusedlayout>
@@ -1252,13 +1282,18 @@
                     </itemlayout>
 
                     <focusedlayout width="427" height="80">
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
+                        </control>
                         <control type="label">
                             <right>30</right>
                             <left>0</left>
                             <align>right</align>
                             <aligny>center</aligny>
                             <height>100%</height>
-                            <textcolor>$VAR[ColorHighlight]</textcolor>
+                            <textcolor>White100</textcolor>
                             <font>Home</font>
                             <label>$INFO[ListItem.Label]</label>
                         </control>
