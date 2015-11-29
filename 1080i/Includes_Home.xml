@@ -938,7 +938,7 @@
             <control type="image">
                 <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasPrevious] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasPrevious]</visible>
                 <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
-                <top>966</top>
+                <top>964</top>
                 <left>58</left>
                 <width>16</width>
                 <height>16</height>
@@ -948,7 +948,7 @@
                 <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasNext]</visible>
                 <visible>!Skin.HasSetting(furniture.clock)</visible>
                 <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
-                <top>966</top>
+                <top>964</top>
                 <right>498</right>
                 <width>16</width>
                 <height>16</height>
@@ -958,7 +958,7 @@
                 <visible>[Control.HasFocus(300) + IntegerGreaterThan(Container(300).NumItems,6) + Container(300).HasNext] | [Control.HasFocus(302) + IntegerGreaterThan(Container(302).NumItems,6) + Container(302).HasNext]</visible>
                 <visible>Skin.HasSetting(furniture.clock)</visible>
                 <animation effect="fade" end="100" start="0" delay="300" time="400" reversible="false">Visible</animation>
-                <top>966</top>
+                <top>964</top>
                 <right>58</right>
                 <width>16</width>
                 <height>16</height>
@@ -987,7 +987,7 @@
     </include>
     
     <include name="HomeContentNoIcon">
-        <top>940</top>
+        <top>938</top>
         <animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
         <animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
             <effect type="slide" start="0,-24" end="0" time="100" delay="200"/>
@@ -1039,7 +1039,7 @@
     </include>
     
     <include name="HomeContentIcon">
-        <top>848</top>
+        <top>847</top>
         <animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Control.HasFocus(302) + Skin.HasSetting(home.submenu2)">Conditional</animation>
         <animation type="Conditional" condition="!Control.HasFocus(302) + Skin.HasSetting(home.submenu2)" reversible="false">
             <effect type="slide" start="0,-24" end="0" time="100" delay="200"/>
