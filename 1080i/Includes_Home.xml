@@ -997,7 +997,7 @@
             <control type="label">
                 <align>center</align>
                 <aligny>center</aligny>
-                <width>180</width>
+                <width>95%</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
                 <textcolor>White70</textcolor>
@@ -1015,7 +1015,7 @@
             <control type="label">
                 <align>center</align>
                 <aligny>center</aligny>
-                <width>90%</width>
+                <width>95%</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
                 <textcolor>White100</textcolor>

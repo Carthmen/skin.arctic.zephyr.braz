@@ -472,7 +472,7 @@
                         <include>DefSettingsButton</include>
                         <label>31216</label>
                         <label2>$INFO[Skin.String(busyloader)]</label2>
-                        <onclick>Skin.SetFile(busyloader,.png,special://skin/extras/spinners)</onclick>
+                        <onclick>Skin.SetImage(busyloader,special://skin/extras/spinners)</onclick>
                     </control>
 
                     <!-- Advanced -->
