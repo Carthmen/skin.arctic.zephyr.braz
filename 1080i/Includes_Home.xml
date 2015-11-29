@@ -553,7 +553,7 @@
                     <height>297</height>
                     <control type="list" id="301">
                         <description>Plugin Content Widget</description>
-                        <visible>!substring(Container(300).ListItem.Property(widget),Weather,left) + ![Container(300).OnNext | Container(300).OnPrevious]</visible>
+                        <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
                         <visible>IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                         <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
                         <include>Animation.FadeIn</include>
