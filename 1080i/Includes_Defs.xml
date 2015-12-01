@@ -32,7 +32,8 @@
         <value>Fanart</value>
     </variable>
     <variable name="MusicVizBackground">
-        <value condition="Skin.HasSetting(ArtistSlideShow.Disabled) + !Skin.HasSetting(musicvis.fanartfallback)">None</value>
+        <value condition="Skin.HasSetting(ArtistSlideShow.Disabled) + !Skin.HasSetting(musicvis.fanartfallback) + !Skin.HasSetting(musicvis.albumwall)">None</value>
+        <value condition="Skin.HasSetting(ArtistSlideShow.Disabled) + !Skin.HasSetting(musicvis.fanartfallback) + Skin.HasSetting(musicvis.albumwall)">Album wall</value>
         <value condition="Skin.HasSetting(ArtistSlideShow.Disabled) + Skin.HasSetting(musicvis.fanartfallback)">Fanart</value>
         <value>Artist slideshow</value>
     </variable>

@@ -179,7 +179,7 @@
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
-                        <label>- Animate library fanart</label>
+                        <label>- Animate library background</label>
                         <selected>Skin.HasSetting(Fanart.Animate)</selected>
                         <onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
                     </control>
@@ -190,18 +190,20 @@
                         <label>Select music visualization background</label>
                         <label2>$VAR[MusicVizBackground]</label2>
                         <onclick>SetProperty(Dialog.1.Label,None)</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.fanartfallback))</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.fanartfallback)||Skin.Reset(musicvis.albumwall))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetBool(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled))</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetBool(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.albumwall))</onclick>
                         <onclick>SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(musicvis.fanartfallback)||Skin.Reset(ArtistSlideShow.Disabled))</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(musicvis.fanartfallback)||Skin.Reset(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.albumwall))</onclick>
+                        <onclick>SetProperty(Dialog.4.Label,Album wall)</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetBool(musicvis.albumwall)||Skin.Reset(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
                     <control type="radiobutton" id="9223" description="Animate Artist slideshow">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
-                        <label>- Animate music visualization fanart</label>
+                        <label>- Animate music visualization background</label>
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
                         <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
@@ -210,10 +212,10 @@
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
-                        <label>- Show visualization behind fanart</label>
+                        <label>- Show visualization behind background</label>
                         <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
                         <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        <enable>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(musicvis.albumwall) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
                     </control>
                     <control type="button" id="9225" description="Set Fallback Image">
                         <width>1310</width>
