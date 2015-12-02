@@ -3,11 +3,13 @@
 <window>
     <defaultcontrol always="true">9315</defaultcontrol>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
+    <onload condition="System.HasAddon(script.toolbox)">RunScript(script.toolbox,daemon=True,radius=30)</onload>
     <controls>
         <control type="button" id="9315">
             <description>trigger</description>
             <onfocus condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onfocus>
             <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
+            <!--<onfocus>RunScript(script.colorbox,info=firstrun)</onfocus>-->
             <texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
         </control>

@@ -190,23 +190,27 @@
                         <label>Select music visualization background</label>
                         <label2>$VAR[MusicVizBackground]</label2>
                         <onclick>SetProperty(Dialog.1.Label,None)</onclick>
-                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.fanartfallback)||Skin.Reset(musicvis.albumwall))</onclick>
+                        <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(musicvis.background))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
-                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetBool(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.albumwall))</onclick>
+                        <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(musicvis.background,fanart))</onclick>
                         <onclick>SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.Reset(musicvis.fanartfallback)||Skin.Reset(ArtistSlideShow.Disabled)||Skin.Reset(musicvis.albumwall))</onclick>
+                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(musicvis.background,artistslideshow))</onclick>
                         <onclick>SetProperty(Dialog.4.Label,Album wall)</onclick>
-                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetBool(musicvis.albumwall)||Skin.Reset(musicvis.fanartfallback)||Skin.SetBool(ArtistSlideShow.Disabled))</onclick>
+                        <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(musicvis.background,albumwall))</onclick>
+                        <onclick>SetProperty(Dialog.5.Label,Blurred album cover)</onclick>
+                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(musicvis.background,bluralbum))</onclick>
+                        <!--<onclick>SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
+                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>-->
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
-                    <control type="radiobutton" id="9223" description="Animate Artist slideshow">
+                    <control type="radiobutton" id="9223" description="Animate background">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
                         <include>DefSettingsButton</include>
                         <label>- Animate music visualization background</label>
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        <enable>!IsEmpty(Skin.String(musicvis.background)) + !StringCompare(Skin.String(musicvis.background),albumwall)</enable>
                     </control>
                     <control type="radiobutton" id="9224" description="Show slideshow in background">
                         <width>1310</width>
@@ -215,7 +219,7 @@
                         <label>- Show visualization behind background</label>
                         <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
                         <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <enable>Skin.HasSetting(musicvis.fanartfallback) | Skin.HasSetting(musicvis.albumwall) | [!Skin.HasSetting(ArtistSlideShow.Disabled) + System.HasAddon(script.artistslideshow)]</enable>
+                        <enable>!IsEmpty(Skin.String(musicvis.background))</enable>
                     </control>
                     <control type="button" id="9225" description="Set Fallback Image">
                         <width>1310</width>
