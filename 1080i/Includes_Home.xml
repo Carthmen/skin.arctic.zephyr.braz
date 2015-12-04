@@ -556,6 +556,7 @@
                         <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
                         <visible>IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating</visible>
                         <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
+                        <autoscroll time="7000">Skin.HasSetting(WidgetScroll.Enable) + !Control.HasFocus(301)</autoscroll>
                         <include>Animation.FadeIn</include>
                         <oninfo condition="StringCompare(Container(300).ListItem.Property(widgetType),movies)">RunScript(script.extendedinfo,info=extendedinfo,name=$INFO[Container(301).ListItem.Label])</oninfo>
                         <oninfo condition="StringCompare(Container(300).ListItem.Property(widgetType),episodes)">RunScript(script.extendedinfo,info=extendedtvinfo,name=$INFO[Container(301).ListItem.TvShowTitle])</oninfo>
@@ -573,7 +574,6 @@
                         <onright>301</onright>
                         <preloaditems>2</preloaditems>
                         <orientation>horizontal</orientation>
-                        <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                         <scrolltime tween="quadratic">400</scrolltime>
                         <itemlayout width="178" height="257" condition="!StringCompare(Container(300).ListItem.Property(widgetIcon),Square) + !StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
                             <control type="image">
@@ -1411,7 +1411,7 @@
                         <visible allowhiddenfocus="true">Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)</visible>
                         <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                         <include>Animation.FadeIn</include>
-                        <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
+                        <autoscroll time="7000">Skin.HasSetting(WidgetScroll.Enable) + !Control.HasFocus(301)</autoscroll>
                         <top>330</top>
                         <left>518</left>
                         <width>1554</width>

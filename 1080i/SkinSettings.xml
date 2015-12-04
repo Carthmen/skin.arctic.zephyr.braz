@@ -199,8 +199,8 @@
                         <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(musicvis.background,albumwall))</onclick>
                         <onclick>SetProperty(Dialog.5.Label,Blurred album cover)</onclick>
                         <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(musicvis.background,bluralbum))</onclick>
-                        <!--<onclick>SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>-->
+                        <onclick>SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
+                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
                     <control type="radiobutton" id="9223" description="Animate background">
@@ -280,6 +280,14 @@
                         <label>Display only when pressing up (horizontal menu) or right (vertical menu)</label>
                         <selected>Skin.HasSetting(home.dontautoshowwidget)</selected>
                         <onclick>Skin.ToggleSetting(home.dontautoshowwidget)</onclick>
+                    </control>
+                    <control type="radiobutton" id="9244" description="Autoscroll">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9104)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>Auto scroll widgets</label>
+                        <selected>Skin.HasSetting(WidgetScroll.Enable)</selected>
+                        <onclick>Skin.ToggleSetting(WidgetScroll.Enable)</onclick>
                     </control>
                     <control type="radiobutton" id="9241" description="Show slideshow instead of fanart">
                         <width>1310</width>
