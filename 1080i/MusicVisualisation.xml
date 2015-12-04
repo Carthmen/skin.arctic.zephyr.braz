@@ -3,7 +3,6 @@
 <window id="2006">
     <defaultcontrol always="true">-</defaultcontrol>
     <onload condition="Skin.HasSetting(osd.alwaysshowmusicosd)">ActivateWindow(musicosd)</onload>
-    <!--<onload>RunScript(script.colorbox,info=pixelate,id='"$INFO[Player.Art(fanart)]"',pixels=10,prefix=pixelatedfanart)</onload>-->
 
     <controls>
         <control type="visualisation" id="2">
@@ -23,21 +22,21 @@
         <control type="image">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
-            <texture background="true">$INFO[Window(home).Property(ImageFilter)]</texture>
+            <texture background="true">$INFO[Window(home).Property(ImageFilter1)]</texture>
             <visible>StringCompare(Skin.String(musicvis.background),bluralbum)</visible>
             <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
         </control>
-        <!--<control type="image">
+        <control type="image">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
-            <texture background="true">$INFO[Window(home).Property(pixelatedfanart.ImageFilter)]</texture>
+            <texture background="true">$INFO[Window(home).Property(ImageFilter2)]</texture>
             <visible>StringCompare(Skin.String(musicvis.background),pixelfanart)</visible>
             <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
-        </control>-->
+        </control>
         <control type="multiimage">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
