@@ -31,8 +31,17 @@
         <control type="image">
             <aspectratio>scale</aspectratio>
             <include>Dimensions_Fullscreen</include>
-            <texture background="true">$INFO[Window(home).Property(ImageFilter2)]</texture>
+            <texture background="true">$INFO[Window(home).Property(ImageFilterfa2)]</texture>
             <visible>StringCompare(Skin.String(musicvis.background),pixelfanart)</visible>
+            <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
+            <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+            <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
+        </control>
+        <control type="image">
+            <aspectratio>scale</aspectratio>
+            <include>Dimensions_Fullscreen</include>
+            <texture background="true">$INFO[Window(home).Property(ImageFilterfa3)]</texture>
+            <visible>StringCompare(Skin.String(musicvis.background),posterizefanart)</visible>
             <animation effect="fade" start="100" end="40" time="0" condition="Skin.HasSetting(OSDVisualisation.ShowFanart) + Visualisation.Enabled">Conditional</animation>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(ArtistSlideshow.Animate)">Conditional</animation>

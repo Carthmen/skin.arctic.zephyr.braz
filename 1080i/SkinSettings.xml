@@ -193,14 +193,16 @@
                         <onclick>SetProperty(Dialog.1.BuiltIn,Skin.Reset(musicvis.background))</onclick>
                         <onclick>SetProperty(Dialog.2.Label,Fanart)</onclick>
                         <onclick>SetProperty(Dialog.2.BuiltIn,Skin.SetString(musicvis.background,fanart))</onclick>
-                        <onclick>SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
-                        <onclick>SetProperty(Dialog.3.BuiltIn,Skin.SetString(musicvis.background,artistslideshow))</onclick>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">SetProperty(Dialog.3.Label,Artist slideshow)</onclick>
+                        <onclick condition="System.HasAddon(script.artistslideshow)">SetProperty(Dialog.3.BuiltIn,Skin.SetString(musicvis.background,artistslideshow))</onclick>
                         <onclick>SetProperty(Dialog.4.Label,Album wall)</onclick>
                         <onclick>SetProperty(Dialog.4.BuiltIn,Skin.SetString(musicvis.background,albumwall))</onclick>
-                        <onclick>SetProperty(Dialog.5.Label,Blurred album cover)</onclick>
-                        <onclick>SetProperty(Dialog.5.BuiltIn,Skin.SetString(musicvis.background,bluralbum))</onclick>
-                        <onclick>SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
-                        <onclick>SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.5.Label,Blurred album cover)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.5.BuiltIn,Skin.SetString(musicvis.background,bluralbum))</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.6.Label,Pixelated fanart)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.6.BuiltIn,Skin.SetString(musicvis.background,pixelfanart))</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.7.Label,Posterized fanart)</onclick>
+                        <onclick condition="System.HasAddon(script.colorbox)">SetProperty(Dialog.7.BuiltIn,Skin.SetString(musicvis.background,posterizefanart))</onclick>
                         <onclick>RunScript(script.toolbox,info=selectdialog,header=Select music visualization background)</onclick>
                     </control>
                     <control type="radiobutton" id="9223" description="Animate background">

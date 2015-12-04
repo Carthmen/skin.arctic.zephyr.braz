@@ -37,6 +37,7 @@
         <value condition="StringCompare(Skin.String(musicvis.background),albumwall)">Album wall</value>
         <value condition="StringCompare(Skin.String(musicvis.background),bluralbum)">Blurred album cover</value>
         <value condition="StringCompare(Skin.String(musicvis.background),pixelfanart)">Pixelated fanart</value>
+        <value condition="StringCompare(Skin.String(musicvis.background),posterizefanart)">Posterized fanart</value>
         <value>None</value>
     </variable>
     <variable name="BackgroundCustomizerHeader">
