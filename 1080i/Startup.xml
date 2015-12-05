@@ -7,8 +7,9 @@
         <control type="button" id="9315">
             <description>trigger</description>
             <onfocus condition="System.HasAddon(script.skin.info.service)">RunScript(script.skin.info.service)</onfocus>
+            <onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,info=firstrun)</onfocus>
+            <onfocus condition="System.HasAddon(script.colorbox)">RunScript(script.colorbox,daemon=True,pixels=10,bits=1,radius=30)</onfocus>
             <onfocus>ReplaceWindow($INFO[System.StartupWindow])</onfocus>
-            <onfocus>RunScript(script.colorbox,daemon=True,pixels=10,bits=1,radius=30)</onfocus>
             <texturenofocus>-</texturenofocus>
             <texturefocus>-</texturefocus>
         </control>
