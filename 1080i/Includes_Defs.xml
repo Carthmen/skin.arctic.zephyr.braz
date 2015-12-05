@@ -835,6 +835,12 @@
                     <onclick>Container.SetViewMode(55)</onclick>
                     <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)</visible>
                 </control>
+                <control type="button" id="3127">
+                    <include>DefContextButton</include>
+                    <label>Infowall</label>
+                    <onclick>Container.SetViewMode(56)</onclick>
+                    <visible>Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons)</visible>
+                </control>
                 <control type="button" id="3126">
                     <include>DefContextButton</include>
                     <label>Icons</label>
