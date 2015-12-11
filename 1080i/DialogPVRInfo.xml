@@ -139,7 +139,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumber, (,)]$VAR[PVRInfoStatus,  ,]</label>
+                                <label fallback="19055">$INFO[ListItem.ChannelName]$INFO[ListItem.ChannelNumberLabel, (,)]$VAR[PVRInfoStatus,  ,]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
