@@ -125,7 +125,7 @@
     
     <include name="DefDialogInfoHeader">
         <left>30</left>
-        <right>320</right>
+        <right>30</right>
         <posy>18</posy>
         <font>MediumBold</font>
         <align>left</align>
