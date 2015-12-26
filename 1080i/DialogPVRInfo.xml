@@ -7,6 +7,11 @@
         <control type="image">
             <width>100%</width>
             <height>100%</height>
+            <texture fallback="special://skin/extras/backgrounds/default_bg.jpg">$INFO[Skin.String(fanart.fallback)]</texture>
+        </control>
+        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
             <texture colordiffuse="$VAR[ColorBackground]">common/white.png</texture>
             <!--<visible>Window.IsVisible(fullscreenvideo)</visible>-->
             <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>

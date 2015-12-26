@@ -231,6 +231,15 @@
                         <label2>$INFO[Skin.String(fanart.fallback)]</label2>
                         <onclick>Skin.SetImage(fanart.fallback,special://skin/extras/backgrounds)</onclick>
                     </control>
+                    <control type="button" id="9228" description="Reset Fallback Image">
+                        <width>1310</width>
+                        <visible>ControlGroup(9100).HasFocus(9102)</visible>
+                        <include>DefSettingsButton</include>
+                        <label>- Reset</label>
+                        <onclick>Skin.Reset(fanart.fallback)</onclick>
+                        <onclick>SetFocus(9225)</onclick>
+                        <visible>!IsEmpty(Skin.String(fanart.fallback))</visible>
+                    </control>
                     <control type="radiobutton" id="9226" description="Show video in background">
                         <width>1310</width>
                         <visible>ControlGroup(9100).HasFocus(9102)</visible>
