@@ -363,7 +363,7 @@
                 <visible>!Playlist.IsRepeatOne + !Playlist.IsRepeat</visible>
                 <visible>Control.HasFocus(1)</visible>
             </control>
-            <control type="image" description="repeat-check-fo">
+            <!--<control type="image" description="repeat-check-fo">
                 <top>42</top>
                 <left>42</left>
                 <width>16</width>
@@ -380,7 +380,7 @@
                 <texture colordiffuse="PanelWhite70">osd/minicheck.png</texture>
                 <visible>Playlist.IsRepeat | Playlist.IsRepeatOne</visible>
                 <visible>!Control.HasFocus(1)</visible>
-            </control>
+            </control>-->
         </control>
 
         <control type="button" id="2">
@@ -513,7 +513,7 @@
             <texturenofocus colordiffuse="PanelWhite70">osd/preset.png</texturenofocus>
         </control> -->
 
-        <control type="button" id="6">
+        <control type="togglebutton" id="6">
             <description>Random</description>
             <onclick>XBMC.PlayerControl(Random)</onclick>
             <width>48</width>
@@ -521,8 +521,11 @@
             <label></label>
             <font>noop</font>
             <include>DefOSDUpDown</include>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/shuffle.png</texturefocus>
-            <texturenofocus colordiffuse="PanelWhite70">osd/shuffle.png</texturenofocus>
+            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/straight.png</texturefocus>
+            <texturenofocus colordiffuse="PanelWhite70">osd/straight.png</texturenofocus>
+            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/shuffle.png</alttexturefocus>
+            <alttexturenofocus colordiffuse="PanelWhite70">osd/shuffle.png</alttexturenofocus>
+            <usealttexture>Playlist.IsRandom</usealttexture>
         </control>
 
         <control type="group" description="shuffle-check">
@@ -530,7 +533,7 @@
             <right>380</right>
             <width>48</width>
             <height>48</height>
-            <control type="image" description="shuffle-check-fo">
+            <!--<control type="image" description="shuffle-check-fo">
                 <top>42</top>
                 <left>42</left>
                 <width>16</width>
@@ -547,7 +550,7 @@
                 <texture colordiffuse="PanelWhite70">osd/minicheck.png</texture>
                 <visible>Playlist.IsRandom</visible>
                 <visible>!Control.HasFocus(6)</visible>
-            </control>
+            </control>-->
         </control>
     </include>
 
