@@ -20,6 +20,58 @@
         <include>Furniture_Clock</include>
         <include>Furniture_Weather</include>
 
+        <control type="button" id ="9601">
+            <width>1</width>
+            <height>1</height>
+            <visible allowhiddenfocus="true">false</visible>
+            <onback>50</onback>
+            <onup>50</onup>
+            <ondown>50</ondown>
+            <onleft>50</onleft>
+            <onright>50</onright>
+        </control>
+        <control type="group">
+            <visible>Control.HasFocus(9601)</visible>
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
+                <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
+            </control>
+        </control>
+
+        <control type="group">
+            <left>SidePad</left>
+            <right>SidePad</right>
+            <top>PosterPad</top>
+            <height>670</height>
+            <visible>Control.HasFocus(9601)</visible>
+            <include>Animation.FadeIn.Slide</include>
+            <include>Animation.FadeOut</include>            
+            <control type="label">
+                <description>header label</description>
+                <left>60</left>
+                <right>60</right>
+                <posy>60</posy>
+                <font>EpisodeNumber</font>
+                <textcolor>White100</textcolor>
+                <height>45</height>
+                <label>$INFO[ListItem.Label]</label>
+            </control>
+            <control type="textbox">
+                <description>textarea</description>
+                <left>60</left>
+                <right>60</right>
+                <top>150</top>
+                <bottom>0</bottom>
+                <font>Medium</font>
+                <textcolor>White100</textcolor>
+                <label>$INFO[ListItem.Plot]</label>
+            </control>
+        </control>
+
         <control type="group">
             <include>Animation.FadeIn</include>
             <include>Animation.FadeOut</include>
@@ -96,6 +148,15 @@
                     <label2>$VAR[SortDirection]</label2>
                     <onclick>SendClick(4)</onclick>
                     <enable>Control.IsEnabled(4)</enable>
+                </control>
+
+                <control type="radiobutton" id="9009" description="Show plot (50)">
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>31214</label>
+                    <selected>Skin.HasSetting(50list.showplot)</selected>
+                    <onclick>Skin.ToggleSetting(50list.showplot)</onclick>
+                    <visible>Control.IsVisible(50)</visible>
                 </control>
                 <include name="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="4" />
