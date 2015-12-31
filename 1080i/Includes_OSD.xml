@@ -14,7 +14,7 @@
             <height>40</height>
             <font>Flag</font>
             <textcolor>$VAR[OSDPanelWhite30]</textcolor>
-            <label>$INFO[VideoPlayer.AudioCodec,,  •  ]$VAR[LabelOSDAudioChannels,,  •  ]$INFO[VideoPlayer.VideoResolution,,  •  ]$INFO[VideoPlayer.VideoCodec,,]$INFO[VideoPlayer.RatingAndVotes,  •  ,]</label>
+            <label>$INFO[VideoPlayer.AudioCodec,,  •  ]$VAR[LabelOSDAudioChannels,,  •  ]$INFO[VideoPlayer.VideoResolution,,  •  ]$INFO[VideoPlayer.VideoCodec,,]$INFO[VideoPlayer.Rating,  •  ,]</label>
             <visible>!Skin.HasSetting(furniture.flagicons)</visible>
         </control>
         
