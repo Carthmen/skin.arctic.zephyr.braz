@@ -1112,7 +1112,7 @@
                     <width>108</width>
                     <height>108</height>
                     <texture colordiffuse="PanelWhite100" border="8">$VAR[HeaderIcon]</texture>
-                    <visible>!Container.Scrolling</visible>
+                    <visible>![Container.Scrolling + stringcompare(Container.SortMethod,$LOCALIZE[369])]</visible>
                     <visible>!Skin.HasSetting(hide.busydialog) | !Window.IsVisible(DialogBusy.xml)</visible>
                     <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
                 </control>
@@ -1126,7 +1126,7 @@
                     <aligny>center</aligny>
                     <label>$INFO[ListItem.SortLetter,[UPPERCASE],[/UPPERCASE]]</label>
                     <textcolor>PanelWhite100</textcolor>
-                    <visible>Container.Scrolling</visible>
+                    <visible>Container.Scrolling + stringcompare(Container.SortMethod,$LOCALIZE[369])</visible>
                     <visible>!Skin.HasSetting(hide.busydialog) | !Window.IsVisible(DialogBusy.xml)</visible>
                     <animation effect="fade" start="0" end="100" time="150">VisibleChange</animation>
                 </control>
