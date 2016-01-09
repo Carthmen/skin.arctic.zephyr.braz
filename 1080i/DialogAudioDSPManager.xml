@@ -24,7 +24,7 @@
                 <bordersize>24</bordersize>
                 <texture colordiffuse="White100" border="16">common/box.png</texture>
             </control>
-            <control type="label" id="2">
+            <control type="label">
                 <description>Header Label</description>
                 <centerleft>50%</centerleft>
                 <width>1000</width>

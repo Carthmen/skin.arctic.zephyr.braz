@@ -386,6 +386,7 @@
         <control type="button" id="2">
             <description>Lyrics</description>
             <!-- <onclick condition="!Skin.HasSetting(osd.alwaysshowmusicosd)">Action(Close)</onclick> -->
+            <onclick>Dialog.Close(musicosd)</onclick>
             <onclick>RunScript(script.cu.lrclyrics)</onclick>
             <width>48</width>
             <height>48</height>
