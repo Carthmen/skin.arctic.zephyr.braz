@@ -29,7 +29,7 @@
                 <centerleft>50%</centerleft>
                 <width>1000</width>
                 <align>center</align>
-                <label>DSP Manager</label>
+                <label>15020</label>
                 <posy>15</posy>
                 <font>MediumBold</font>
             </control>
@@ -175,7 +175,6 @@
                                 <top>10</top>
                                 <right>10</right>
                                 <height>60</height>
-                                <textcolor>Black70</textcolor>
                                 <label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
                             </control>
                             <control type="label">
