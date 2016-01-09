@@ -13,7 +13,6 @@
             <centerleft>50%</centerleft>
             <posy>120</posy>
             <width>1320</width>
-            <height>840</height>
             <control type="image">
                 <left>-24</left>
                 <right>-24</right>
