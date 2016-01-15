@@ -89,11 +89,11 @@
                         <label>Advanced</label>
                     </control>
 
-                    <control type="togglebutton" id="9109" description="Scripts">
+                    <control type="togglebutton" id="9109" description="Add-ons">
                         <usealttexture>ControlGroup(9100).HasFocus(9109)</usealttexture>
                         <alttexturenofocus colordiffuse="$VAR[ColorHighlight]">common/white.png</alttexturenofocus>
                         <include>DefSettingsButton</include>
-                        <label>Scripts</label>
+                        <label>Add-ons</label>
                     </control>
                 </control>
                 
