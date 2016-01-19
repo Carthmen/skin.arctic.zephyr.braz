@@ -71,14 +71,6 @@
                 <include>Def9000GroupList</include>
 
                 <!-- Sort Options -->
-                <!--<control type="button" id="1802">
-                    <description>View</description>
-                    <label>View</label>
-                    <label2>$INFO[Container.Viewmode]</label2>
-                    <include>DefContextButton</include>
-                    <align>left</align>
-                    <onclick>Container.NextViewMode</onclick>
-                </control>-->
                 <control type="button" id="1802">
                     <description>View</description>
                     <label>View</label>
@@ -232,15 +224,6 @@
                     <label>137</label>
                     <onclick>SetFocus(50)</onclick>
                     <onclick>RunScript(script.globalsearch,tvshows=true&amp;movies=true&amp;episodes=true&amp;actors=true)</onclick>
-                </control>
-                
-                <control type="button" id="9098">
-                    <description>Video Playlist</description>
-                    <include>DefContextButton</include>
-                    <label>559</label>
-                    <align>left</align>
-                    <onclick>ActivateWindow(VideoPlaylist)</onclick>
-                    <visible>IntegerGreaterThan(Playlist.Length(video),1)</visible>
                 </control>
 
                 <control type="togglebutton" id="20">

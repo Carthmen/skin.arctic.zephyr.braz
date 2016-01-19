@@ -3,10 +3,11 @@
 <window id="6">
     <defaultcontrol always="true">52</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <views>52,500</views>
+    <views>50,52,500</views>
     <controls>
 
         <include>GlobalBackground</include>
+        <include>View_50_List</include>
         <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
         <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
         <include>View_500_Thumbnails</include>
@@ -32,16 +33,29 @@
                 <onback>52</onback>
                 <include>Def9000GroupList</include>
 
-                <control type="button" id="2">
+                <control type="button" id="1802">
                     <description>View</description>
+                    <label>View</label>
+                    <label2>$INFO[Container.Viewmode]</label2>
                     <include>DefContextButton</include>
                     <align>left</align>
+                    <onclick>ActivateWindow(1109)</onclick>
                 </control>
 
                 <control type="button" id="3">
                     <description>Sort</description>
                     <include>DefContextButton</include>
                     <align>left</align>
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="1803">
+                    <description>Sort by button</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>Sort by</label>
+                    <label2>$INFO[Container.SortMethod]</label2>
+                    <onclick>Container.NextSortMethod</onclick>
+                    <enable>Control.IsEnabled(3)</enable>
                 </control>
 
                 <control type="togglebutton" id="4">
@@ -50,6 +64,26 @@
                     <align>left</align>
                     <label>584</label>
                     <altlabel>585</altlabel>
+                    <visible>false</visible>
+                </control>
+                <control type="button" id="1804">
+                    <description>Sort Direction</description>
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>Sort direction</label>
+                    <label2>$VAR[SortDirection]</label2>
+                    <onclick>SendClick(4)</onclick>
+                    <enable>Control.IsEnabled(4)</enable>
+                </control>
+
+                <control type="radiobutton" id="9012" description="Big List Double Pane (52)">
+                    <include>DefContextButton</include>
+                    <align>left</align>
+                    <label>31235</label>
+                    <selected>!Skin.HasSetting(52biglist.singlepane)</selected>
+                    <onclick>Skin.ToggleSetting(52biglist.singlepane)</onclick>
+                    <onclick>ReloadSkin()</onclick>
+                    <visible>Control.IsVisible(52)</visible>
                 </control>
                 
                 <control type="radiobutton" id="20">
