@@ -176,6 +176,8 @@
                                 <right>10</right>
                                 <height>60</height>
                                 <label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+                                <textcolor>Black70</textcolor>
+                                <selectedcolor>Black70</selectedcolor>
                             </control>
                             <control type="label">
                                 <left>150</left>
@@ -184,6 +186,8 @@
                                 <height>60</height>
                                 <font>Tiny</font>
                                 <label>$INFO[ListItem.Property(Description)]</label>
+                                <textcolor>Black70</textcolor>
+                                <selectedcolor>Black70</selectedcolor>
                             </control>
                         </itemlayout>
                         <focusedlayout height="138" width="860">
@@ -215,8 +219,9 @@
                                 <top>10</top>
                                 <right>10</right>
                                 <height>60</height>
-                                <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
                             </control>
                             <control type="label">
                                 <left>150</left>
@@ -224,8 +229,9 @@
                                 <right>10</right>
                                 <height>60</height>
                                 <font>Tiny</font>
-                                <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(Description)]</label>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
                             </control>
                         </focusedlayout>
                     </control>
@@ -275,6 +281,8 @@
                                 <right>10</right>
                                 <height>60</height>
                                 <label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+                                <textcolor>Black70</textcolor>
+                                <selectedcolor>Black70</selectedcolor>
                             </control>
                             <control type="label">
                                 <left>150</left>
@@ -283,6 +291,8 @@
                                 <height>60</height>
                                 <font>Tiny</font>
                                 <label>$INFO[ListItem.Property(Description)]</label>
+                                <textcolor>Black70</textcolor>
+                                <selectedcolor>Black70</selectedcolor>
                             </control>
                         </itemlayout>
                         <focusedlayout height="138" width="860">
@@ -314,8 +324,9 @@
                                 <top>10</top>
                                 <right>10</right>
                                 <height>60</height>
-                                <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(Number)].  $INFO[ListItem.Property(AddonName)]: $INFO[ListItem.Property(Name)]</label>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
                             </control>
                             <control type="label">
                                 <left>150</left>
@@ -323,8 +334,9 @@
                                 <right>10</right>
                                 <height>60</height>
                                 <font>Tiny</font>
-                                <textcolor>Selected</textcolor>
                                 <label>$INFO[ListItem.Property(Description)]</label>
+                                <textcolor>Selected</textcolor>
+                                <selectedcolor>Selected</selectedcolor>
                             </control>
                         </focusedlayout>
                     </control>

@@ -7,7 +7,7 @@
             <include>GlobalOverlay</include>
         </control>-->
         <control type="group">
-            <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+            <!--<animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>-->
             <height>866</height>
             <!--<include>DefDialogInfoPanel</include>-->
             <centerleft>50%</centerleft>
