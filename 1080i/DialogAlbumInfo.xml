@@ -230,27 +230,6 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(Window(home).Property(Album.Songs.Duration))</visible>
-                            <height>36</height>
-                            <control type="label">
-                                <width>150</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White100</textcolor>
-                                <label>[B]$LOCALIZE[2050][/B]</label>
-                                <aligny>center</aligny>
-                            </control>
-                            <control type="label">
-                                <left>160</left>
-                                <width>100%</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[Window(home).Property(Album.Songs.Duration)]$INFO[Window(home).Property(Album.Songs.Count),  -  , $LOCALIZE[182]]</label>
-                                <aligny>center</aligny>
-                            </control>
-                        </control>
-                        <control type="group">
                             <visible>!IsEmpty(ListItem.Property(Album_Label))</visible>
                             <height>36</height>
                             <control type="label">
@@ -273,7 +252,7 @@
                         </control>
                         <control type="group">
                             <visible>!IsEmpty(ListItem.Genre)</visible>
-                            <height>50</height>
+                            <height>36</height>
                             <control type="label">
                                 <width>150</width>
                                 <height>36</height>
@@ -310,32 +289,13 @@
                             <visible>Container.Content(Albums) + [IsEmpty(Control.GetLabel(4)) | !IsEmpty(Window.Property(tracklist))]</visible>
                             <height>auto</height>
                             <width>100%</width>
-                            <control type="label">
-                                <width>150</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White100</textcolor>
-                                <label>[B]$LOCALIZE[182][/B]</label>
-                                <aligny>center</aligny>
-                            </control>
-                            <control type="label">
-                                <left>160</left>
-                                <width>439</width>
-                                <height>250</height>
+                            <control type="textbox">
+                                <top>10</top>
+                                <width>100%</width>
+                                <height>313</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <scroll>false</scroll>
-                                <label fallback="19055">$INFO[Window(home).Property(Album.Song.1.Title),[B]1.[/B] ,]$INFO[Window(home).Property(Album.Song.2.Title),[CR][B]2.[/B] ,]$INFO[Window(home).Property(Album.Song.3.Title),[CR][B]3.[/B] ,]$INFO[Window(home).Property(Album.Song.4.Title),[CR][B]4.[/B] ,]$INFO[Window(home).Property(Album.Song.5.Title),[CR][B]5.[/B] ,]$INFO[Window(home).Property(Album.Song.6.Title),[CR][B]6.[/B] ,]$INFO[Window(home).Property(Album.Song.7.Title),[CR][B]7.[/B] ,]$INFO[Window(home).Property(Album.Song.8.Title),[CR][B]8.[/B] ,]</label>
-                                <aligny>top</aligny>
-                            </control>
-                            <control type="label">
-                                <left>599</left>
-                                <width>439</width>
-                                <height>250</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <scroll>false</scroll>
-                                <label fallback="19055">$INFO[Window(home).Property(Album.Song.9.Title),[B]9.[/B] ,]$INFO[Window(home).Property(Album.Song.10.Title),[CR][B]10.[/B] ,]$INFO[Window(home).Property(Album.Song.11.Title),[CR][B]11.[/B] ,]$INFO[Window(home).Property(Album.Song.12.Title),[CR][B]12.[/B] ,]$INFO[Window(home).Property(Album.Song.13.Title),[CR][B]13.[/B] ,]$INFO[Window(home).Property(Album.Song.14.Title),[CR][B]14.[/B] ,]$INFO[Window(home).Property(Album.Song.15.Title),[CR][B]15.[/B] ,]$INFO[Window(home).Property(Album.Song.16.Title),[CR][B]16.[/B] ,]</label>
+                                <label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
                                 <aligny>top</aligny>
                             </control>
                         </control>
