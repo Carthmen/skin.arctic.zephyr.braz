@@ -96,7 +96,7 @@
                     <label>13319</label>
                 </control>
 
-                <include name="MenuPlayerControls">
+                <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="9" />
                     <param name="PlayerControlsOnDown" value="1802" />
                 </include>

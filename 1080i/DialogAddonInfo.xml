@@ -64,7 +64,6 @@
                     <left>ListSquareX</left>
                     <right>SidePad</right>
                     <height>68</height>
-                    <bottom>33</bottom>
                     <itemgap>16</itemgap>
                     <ondown>9000</ondown>
                     <onup condition="Control.IsVisible(50)">51</onup>
@@ -143,7 +142,7 @@
                             <description>Header Label</description>
                             <textcolor>White100</textcolor>
                             <include>DefDialogInfoHeader</include>
-                            <label>$INFO[ListItem.Property(Addon.Name)]</label>
+                            <label>$INFO[ListItem.AddonName]</label>
                         </control>
                         <control type="group">
                             <height>50</height>
@@ -153,7 +152,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Property(Addon.Summary)]</label>
+                                <label fallback="19055">$INFO[ListItem.AddonSummary]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
@@ -173,7 +172,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Property(Addon.Type)]</label>
+                                <label fallback="19055">$INFO[ListItem.AddonType]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
@@ -193,7 +192,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Property(Addon.Version)]</label>
+                                <label fallback="19055">$INFO[ListItem.AddonVersion]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
@@ -213,7 +212,7 @@
                                 <height>36</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Property(Addon.Creator)]</label>
+                                <label fallback="19055">$INFO[ListItem.AddonCreator]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
@@ -250,8 +249,7 @@
                                 <height>240</height>
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
-                                <scroll>false</scroll>
-                                <info>ListItem.Property(Addon.Description)</info>
+                                <info>ListItem.AddonDescription</info>
                                 <aligny>top</aligny>
                             </control>
                         </control>
@@ -301,7 +299,7 @@
                 <font>EpisodeNumber</font>
                 <textcolor>White100</textcolor>
                 <height>45</height>
-                <label>$INFO[ListItem.Property(Addon.Name)]</label>
+                <label>$INFO[ListItem.AddonName]</label>
             </control>
 
             <control type="textbox">
@@ -312,7 +310,7 @@
                 <bottom>0</bottom>
                 <font>Medium</font>
                 <textcolor>White100</textcolor>
-                <label>$INFO[ListItem.Property(Addon.Summary),[B],[/B][CR][CR]]$INFO[ListItem.Property(Addon.Description)]</label>
+                <label>$INFO[ListItem.AddonSummary,[B],[/B][CR][CR]]$INFO[ListItem.AddonDescription]</label>
             </control>
         </control>
     </controls>

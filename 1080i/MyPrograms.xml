@@ -158,7 +158,7 @@
                     <onclick>Skin.ToggleSetting(50list.showplot)</onclick>
                     <visible>Control.IsVisible(50)</visible>
                 </control>
-                <include name="MenuPlayerControls">
+                <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="4" />
                     <param name="PlayerControlsOnDown" value="1802" />
                 </include>

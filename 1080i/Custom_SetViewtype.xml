@@ -5,15 +5,15 @@
     <zorder>10</zorder>
     <controls>
 
-        <include condition="Window.IsActive(videolibrary)" name="DefViewLayout">
+        <include condition="Window.IsActive(videolibrary)" content="DefViewLayout">
             <param name="containerheight" value="522" />
             <param name="listheight" value="490" />
         </include>
-        <include condition="Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(pictures)" name="DefViewLayout">
+        <include condition="Window.IsActive(musiclibrary) | Window.IsActive(musicplaylist) | Window.IsActive(videoplaylist) | Window.IsActive(addonbrowser) | Window.IsActive(pictures)" content="DefViewLayout">
             <param name="containerheight" value="382" />
             <param name="listheight" value="350" />
         </include>
-        <include condition="Window.IsActive(programs)" name="DefViewLayout">
+        <include condition="Window.IsActive(programs)" content="DefViewLayout">
             <param name="containerheight" value="242" />
             <param name="listheight" value="210" />
         </include>

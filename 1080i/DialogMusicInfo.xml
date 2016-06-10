@@ -95,7 +95,6 @@
                     <left>ListSquareX</left>
                     <right>SidePad</right>
                     <height>68</height>
-                    <bottom>33</bottom>
                     <itemgap>16</itemgap>
                     <ondown>9000</ondown>
                     <onup condition="Control.IsVisible(50)">51</onup>
@@ -566,12 +565,12 @@
                     <preloaditems>2</preloaditems>
                     <scrolltime tween="quadratic">400</scrolltime>
                     <itemlayout height="415" width="554">
-                        <include name="DefExtendedInfoItemContent">
+                        <include content="DefExtendedInfoItemContent">
                             <param name="diffusetexture" value="diffuse/wall-fanart.png" />
                         </include>
                     </itemlayout>
                     <focusedlayout height="415" width="554">
-                        <include name="DefExtendedInfoFocusContent">
+                        <include content="DefExtendedInfoFocusContent">
                             <param name="diffusetexture" value="diffuse/wall-fanart.png" />
                         </include>
                     </focusedlayout>
@@ -663,7 +662,6 @@
                                 <centerbottom>45</centerbottom>
                                 <height>64</height>
                                 <font>Mini</font>
-                                <scroll>true</scroll>
                                 <textcolor>PanelWhite100</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                                 <aligny>center</aligny>
@@ -685,7 +683,6 @@
                                 <centerbottom>45</centerbottom>
                                 <height>64</height>
                                 <font>Mini</font>
-                                <scroll>true</scroll>
                                 <textcolor>White70</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                                 <aligny>center</aligny>

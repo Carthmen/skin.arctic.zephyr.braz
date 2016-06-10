@@ -77,7 +77,7 @@
                     <itemgap>0</itemgap>
                     <pagecontrol>60</pagecontrol>
                     <orientation>vertical</orientation>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(tvguide)" />
                         <param name="iconimage" value="DefaultTVShows.png" />
                         <param name="buttonid" value="9610" />
@@ -88,7 +88,7 @@
                         <param name="onleft" value="181" />
                         <param name="onright" value="111" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,movietitles,return)" />
                         <param name="iconimage" value="DefaultAddonMovieInfo.png" />
                         <param name="buttonid" value="9602" />
@@ -99,7 +99,7 @@
                         <param name="onleft" value="221" />
                         <param name="onright" value="211" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,movieactors,return)" />
                         <param name="iconimage" value="DefaultActor.png" />
                         <param name="buttonid" value="9601" />
@@ -110,7 +110,7 @@
                         <param name="onleft" value="111" />
                         <param name="onright" value="121" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,tvshowtitles,return)" />
                         <param name="iconimage" value="DefaultTVShows.png" />
                         <param name="buttonid" value="9603" />
@@ -121,7 +121,7 @@
                         <param name="onleft" value="211" />
                         <param name="onright" value="131" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,tvshowtitles,return)" />
                         <param name="iconimage" value="DefaultTVShows.png" />
                         <param name="buttonid" value="9604" />
@@ -132,7 +132,7 @@
                         <param name="onleft" value="121" />
                         <param name="onright" value="141" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,tvshowtitles,return)" />
                         <param name="iconimage" value="DefaultTVShows.png" />
                         <param name="buttonid" value="9605" />
@@ -143,7 +143,7 @@
                         <param name="onleft" value="131" />
                         <param name="onright" value="151" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(videos,musicvideotitles,return)" />
                         <param name="iconimage" value="DefaultMusicVideos.png" />
                         <param name="buttonid" value="9606" />
@@ -154,7 +154,7 @@
                         <param name="onleft" value="141" />
                         <param name="onright" value="161" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(music,artists,return)" />
                         <param name="iconimage" value="DefaultAddonAlbumInfo.png" />
                         <param name="buttonid" value="9607" />
@@ -165,7 +165,7 @@
                         <param name="onleft" value="151" />
                         <param name="onright" value="171" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(music,albums,return)" />
                         <param name="iconimage" value="DefaultAddonAlbumInfo.png" />
                         <param name="buttonid" value="9608" />
@@ -176,7 +176,7 @@
                         <param name="onleft" value="161" />
                         <param name="onright" value="181" />
                     </include>
-                    <include name="GlobalSearchListGroupParams">
+                    <include content="GlobalSearchListGroupParams">
                         <param name="buttonclick" value="ActivateWindow(music,songs,return)" />
                         <param name="iconimage" value="DefaultAddonAlbumInfo.png" />
                         <param name="buttonid" value="9609" />
@@ -261,7 +261,7 @@
                     <include>DefContextButton</include>
                     <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
                 </control>
-                <include name="MenuPlayerControls">
+                <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="4" />
                     <param name="PlayerControlsOnDown" value="1802" />
                 </include>

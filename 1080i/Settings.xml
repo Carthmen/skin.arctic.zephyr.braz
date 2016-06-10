@@ -133,27 +133,27 @@
                 </focusedlayout>
                 <content>
                     <item id="1">
-                        <label>480</label>
+                        <label>14206</label>
                         <label2>31156</label2>
                         <icon>special://skin/extras/icons/eye.png</icon>
-                        <onclick>activatewindow(AppearanceSettings)</onclick>
+                        <onclick>activatewindow(InterfaceSettings)</onclick>
                     </item>
                     
                     <item id="2">
-                        <label>3</label>
+                        <label>14202</label>
                         <label2>31157</label2>
                         <icon>special://skin/extras/icons/film.png</icon>
-                        <onclick>activatewindow(VideosSettings)</onclick>
+                        <onclick>activatewindow(LibrarySettings)</onclick>
                     </item>
                     <item id="3">
-                        <label>2</label>
+                        <label>14201</label>
                         <label2>31158</label2>
                         <icon>special://skin/extras/icons/songs.png</icon>
-                        <onclick>activatewindow(MusicSettings)</onclick>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
                     </item>
                     
                     
-                    <item id="5">
+                    <!--<item id="5">
                         <label>1</label>
                         <label2>31159</label2>
                         <icon>special://skin/extras/icons/pictures.png</icon>
@@ -164,7 +164,7 @@
                         <label2>31160</label2>
                         <icon>special://skin/extras/icons/sun.png</icon>
                         <onclick>activatewindow(WeatherSettings)</onclick>
-                    </item>
+                    </item>-->
                     
                     <item id="12">
                         <label>20077</label>

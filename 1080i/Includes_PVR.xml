@@ -149,7 +149,7 @@
                     <align>left</align>
                     <visible>Window.IsVisible(MyPVRChannels.xml)</visible>
                 </control>
-                <include name="MenuPlayerControls">
+                <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="31" />
                     <param name="PlayerControlsOnDown" value="9001" />
                 </include>

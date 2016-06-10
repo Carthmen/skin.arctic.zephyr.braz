@@ -235,7 +235,7 @@
                     <include>DefContextButton</include>
                 </control>
 
-                <include name="MenuPlayerControls">
+                <include content="MenuPlayerControls">
                     <param name="PlayerControlsOnUp" value="20" />
                     <param name="PlayerControlsOnDown" value="1802" />
                 </include>
