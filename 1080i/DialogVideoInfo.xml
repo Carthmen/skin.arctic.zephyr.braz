@@ -7,6 +7,18 @@
     <onload>ClearProperty(movie.Fanart,home)</onload>
     <controls>
         <control type="group">
+            <visible>Window.IsActive(home)</visible>
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+            </control>
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
+            </control>
+        </control>
+        <control type="group">
             <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | Window.IsVisible(1110)">
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
@@ -91,7 +103,6 @@
                     <left>540</left>
                     <right>SidePad</right>
                     <height>68</height>
-                    <bottom>33</bottom>
                     <itemgap>16</itemgap>
                     <onup condition="Control.IsVisible(50)">51</onup>
                     <onup condition="Control.IsVisible(9501)">9501</onup>
@@ -634,7 +645,6 @@
                                     <centerbottom>45</centerbottom>
                                     <height>64</height>
                                     <font>Mini</font>
-                                    <scroll>true</scroll>
                                     <textcolor>PanelWhite100</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                     <aligny>center</aligny>
@@ -656,7 +666,6 @@
                                     <centerbottom>45</centerbottom>
                                     <height>64</height>
                                     <font>Mini</font>
-                                    <scroll>true</scroll>
                                     <textcolor>White70</textcolor>
                                     <label>$INFO[ListItem.Label]</label>
                                     <aligny>center</aligny>
@@ -837,7 +846,6 @@
                                 <centerbottom>45</centerbottom>
                                 <height>64</height>
                                 <font>Mini</font>
-                                <scroll>true</scroll>
                                 <textcolor>PanelWhite100</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                                 <aligny>center</aligny>
@@ -859,7 +867,6 @@
                                 <centerbottom>45</centerbottom>
                                 <height>64</height>
                                 <font>Mini</font>
-                                <scroll>true</scroll>
                                 <textcolor>White70</textcolor>
                                 <label>$INFO[ListItem.Label]</label>
                                 <aligny>center</aligny>
