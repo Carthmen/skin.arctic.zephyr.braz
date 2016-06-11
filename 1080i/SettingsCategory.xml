@@ -85,7 +85,6 @@
                     <height>30</height>
                     <font>Tiny</font>
                     <textcolor>PanelWhite70</textcolor>
-                    <scroll>true</scroll>
                     <align>left</align>
                     <textoffsetx>0</textoffsetx>
                     <texturenofocus>noop</texturenofocus>
@@ -142,6 +141,8 @@
 
         <control type="label" id="14">
             <textoffsetx>30</textoffsetx>
+            <align>center</align>
+            <textcolor>$VAR[ColorHighlight]</textcolor>
             <include>DefSettingsButton</include>
         </control>
 

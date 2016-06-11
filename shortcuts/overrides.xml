@@ -5,7 +5,6 @@
 
      <!-- Widgets -->
     <widget label="12600" condition="!IsEmpty(Weather.Plugin)">weather</widget>
-    <widget label="Daily Babes" condition="System.HasAddon(script.extendedinfo)" path="plugin://script.extendedinfo?info=dailybabes" target="picture">dailybabes</widget>
     
     <!-- Widget Icon Aspect Ratio -->
     <propertySettings property="widgetIcon" title="Select Icon" showNone="False" />
@@ -54,7 +53,7 @@
     <icon labelID="moviehub">special://skin/extras/icons/film.png</icon>
     <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
-    <icon labelID="weather">special://skin/extras/icons/sun.png</icon>
+    <icon labelID="weather">special://skin/extras/icons/weather.png</icon>
     <icon labelID="settings">special://skin/extras/icons/settings.png</icon>
     <icon labelID="13200">special://skin/extras/icons/actor.png</icon>
     <icon labelID="10007">special://skin/extras/icons/sysinfo.png</icon>
@@ -65,9 +64,9 @@
     <icon labelID="480">special://skin/extras/icons/eye.png</icon>
     <icon labelID="3">special://skin/extras/icons/film.png</icon>
     <icon labelID="19020">special://skin/extras/icons/livetv.png</icon>
-    <icon labelID="2">special://skin/extras/icons/songs.png</icon>
+    <icon labelID="2">special://skin/extras/icons/music.png</icon>
     <icon labelID="1">special://skin/extras/icons/pictures.png</icon>
-    <icon labelID="8">special://skin/extras/icons/sun.png</icon>
+    <icon labelID="8">special://skin/extras/icons/weather.png</icon>
     <icon labelID="24001">special://skin/extras/icons/addons.png</icon>
     <icon labelID="14036">special://skin/extras/icons/network.png</icon>
     <icon labelID="13000">special://skin/extras/icons/configure.png</icon>
@@ -91,8 +90,8 @@
     <icon image="DefaultVideo.png">special://skin/extras/icons/video.png</icon>
     <icon image="DefaultMovies.png">special://skin/extras/icons/film.png</icon>
     <icon image="DefaultTVShows.png">special://skin/extras/icons/tv.png</icon>
-    <icon image="DefaultAudio.png">special://skin/extras/icons/songs.png</icon>
-    <icon image="DefaultMusicAlbums.png">special://skin/extras/icons/songs.png</icon>
+    <icon image="DefaultAudio.png">special://skin/extras/icons/music.png</icon>
+    <icon image="DefaultMusicAlbums.png">special://skin/extras/icons/music.png</icon>
     <icon image="DefaultMusicVideos.png">special://skin/extras/icons/musicvideo.png</icon>
     <icon image="DefaultPicture.png">special://skin/extras/icons/pictures.png</icon>
     <icon image="DefaultProgram.png">special://skin/extras/icons/addons.png</icon>
@@ -125,7 +124,7 @@
     <icon image="DefaultMusicRecentlyAdded.png">special://skin/extras/icons/recentlyadded.png</icon>
     <icon image="DefaultMusicRecentlyPlayed.png">special://skin/extras/icons/recent.png</icon>
     <icon image="DefaultAddonVideo.png">special://skin/extras/icons/video-addons.png</icon>
-    <icon image="DefaultAddonMusic.png">special://skin/extras/icons/songs.png</icon>
+    <icon image="DefaultAddonMusic.png">special://skin/extras/icons/music.png</icon>
     <icon image="DefaultAddonProgram.png">special://skin/extras/icons/addons.png</icon>
     
     <!-- Thumbs -->
@@ -187,10 +186,10 @@
     <thumbnail label="settings.png">special://skin/extras/icons/settings.png</thumbnail>
     <thumbnail label="signpost.png">special://skin/extras/icons/signpost.png</thumbnail>
     <thumbnail label="song.png">special://skin/extras/icons/song.png</thumbnail>
-    <thumbnail label="songs.png">special://skin/extras/icons/songs.png</thumbnail>
+    <thumbnail label="music.png">special://skin/extras/icons/music.png</thumbnail>
     <thumbnail label="sort-up.png">special://skin/extras/icons/sort-up.png</thumbnail>
     <thumbnail label="soundwave.png">special://skin/extras/icons/soundwave.png</thumbnail>
-    <thumbnail label="sun.png">special://skin/extras/icons/sun.png</thumbnail>
+    <thumbnail label="weather.png">special://skin/extras/icons/weather.png</thumbnail>
     <thumbnail label="swissarmy.png">special://skin/extras/icons/swissarmy.png</thumbnail>
     <thumbnail label="sysinfo.png">special://skin/extras/icons/sysinfo.png</thumbnail>
     <thumbnail label="timer.png">special://skin/extras/icons/timer.png</thumbnail>
@@ -307,7 +306,7 @@
     <thumbnail label="signpost.png">special://skin/extras/icons/signpost.png</thumbnail>
     <thumbnail label="skype.png">special://skin/extras/icons/skype.png</thumbnail>
     <thumbnail label="song.png">special://skin/extras/icons/song.png</thumbnail>
-    <thumbnail label="songs.png">special://skin/extras/icons/songs.png</thumbnail>
+    <thumbnail label="music.png">special://skin/extras/icons/music.png</thumbnail>
     <thumbnail label="songza.png">special://skin/extras/icons/songza.png</thumbnail>
     <thumbnail label="sort-up.png">special://skin/extras/icons/sort-up.png</thumbnail>
     <thumbnail label="soundcloud.png">special://skin/extras/icons/soundcloud.png</thumbnail>
@@ -315,7 +314,7 @@
     <thumbnail label="spotify.png">special://skin/extras/icons/spotify.png</thumbnail>
     <thumbnail label="stream-music.png">special://skin/extras/icons/stream-music.png</thumbnail>
     <thumbnail label="stream-video.png">special://skin/extras/icons/stream-video.png</thumbnail>
-    <thumbnail label="sun.png">special://skin/extras/icons/sun.png</thumbnail>
+    <thumbnail label="weather.png">special://skin/extras/icons/weather.png</thumbnail>
     <thumbnail label="supernes.png">special://skin/extras/icons/supernes.png</thumbnail>
     <thumbnail label="swissarmy.png">special://skin/extras/icons/swissarmy.png</thumbnail>
     <thumbnail label="sysinfo.png">special://skin/extras/icons/sysinfo.png</thumbnail>

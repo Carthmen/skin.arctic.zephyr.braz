@@ -14,11 +14,11 @@
             <top>PosterPad</top>
             <height>652</height>
             <include>Animation.Common</include>
-            <control type="image">
+            <!--<control type="image">
                 <width>100%</width>
                 <height>100%</height>
                 <texture border="5" colordiffuse="PanelFull">common/box.png</texture>
-            </control>
+            </control>-->
             <control type="group">
                 <top>10</top>
                 <bottom>10</bottom>
@@ -73,143 +73,141 @@
                
             </control>
             <control type="Panel" id="9100">
+                <top>5</top>
                 <left>0</left>
-                <width>1150</width>
-                <top>10</top>
-                <height>642</height>
-                <orientation>horizontal</orientation>
-                <itemlayout width="575" height="107">
-                    <!--<control type="image">
+                <width>1770</width>
+                <height>650</height>
+                <oninfo condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">SetFocus(9601)</oninfo>
+                <onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
+                <onright>60</onright>
+                <ondown>52</ondown>
+                <onup>52</onup>
+                <preloaditems>2</preloaditems>
+                <pagecontrol>60</pagecontrol>
+                <orientation>vertical</orientation>
+                <viewtype label="537">list</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout height="130" width="885">
+                    <control type="image">
                         <left>0</left>
-                        <top>0</top>
                         <right>10</right>
-                        <bottom>10</bottom>
-                        <texture border="5" colordiffuse="PanelWhite12">common/box.png</texture>
-                    </control>-->
-                    <control type="label">
-                        <top>0</top>
-                        <height>97</height>
-                        <aligny>center</aligny>
-                        <right>30</right>
-                        <left>130</left>
-                        <align>left</align>
-                        <font>SmallBold</font>
-                        <textcolor>PanelWhite100</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <height>120</height>
+                        <texture border="5" colordiffuse="White12">common/box.png</texture>
                     </control>
                     <control type="image">
                         <left>10</left>
-                        <width>96</width>
-                        <height>96</height>
-                        <texture colordiffuse="PanelWhite100">$INFO[ListItem.Icon]</texture>
+                        <top>10</top>
+                        <width>100</width>
+                        <height>100</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture diffuse="diffuse/wall-square.png" colordiffuse="Background">common/white100.png</texture>
                     </control>
-                
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>90</width>
+                        <height>90</height>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <top>10</top>
+                        <right>40</right>
+                        <height>100</height>
+                        <aligny>center</aligny>
+                        <font>SmallBold</font>
+                        <textcolor>White100</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
                 </itemlayout>
-                <focusedlayout width="575" height="107">
+
+                <focusedlayout height="130" width="885">
                     <control type="image">
                         <left>0</left>
-                        <top>0</top>
-                        <right>0</right>
-                        <bottom>10</bottom>
-                        <texture border="5" colordiffuse="$VAR[ColorHighlight]">common/white.png</texture>
-                    </control>
-                    <control type="label">
-                        <top>0</top>
-                        <height>97</height>
-                        <aligny>center</aligny>
-                        <right>30</right>
-                        <left>130</left>
-                        <align>left</align>
-                        <font>SmallBold</font>
-                        <textcolor>Selected</textcolor>
-                        <label>$INFO[ListItem.Label]</label>
+                        <right>10</right>
+                        <height>120</height>
+                        <texture border="5" colordiffuse="White100">common/box.png</texture>
                     </control>
                     <control type="image">
                         <left>10</left>
-                        <width>96</width>
-                        <height>96</height>
-                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                        <top>10</top>
+                        <width>100</width>
+                        <height>100</height>
+                        <aspectratio scalediffuse="false">scale</aspectratio>
+                        <texture diffuse="diffuse/wall-square.png" colordiffuse="Background">common/white100.png</texture>
+                    </control>
+                    <control type="image">
+                        <left>15</left>
+                        <top>15</top>
+                        <width>90</width>
+                        <height>90</height>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <texture background="true">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>130</left>
+                        <top>10</top>
+                        <right>40</right>
+                        <height>100</height>
+                        <aligny>center</aligny>
+                        <font>SmallBold</font>
+                        <textcolor>Dark1</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
                     </control>
                 </focusedlayout>
                 <content>
                     <item id="1">
                         <label>14206</label>
-                        <label2>31156</label2>
-                        <icon>special://skin/extras/icons/eye.png</icon>
+                        <icon>DefaultAddonVisualization.png</icon>
                         <onclick>activatewindow(InterfaceSettings)</onclick>
                     </item>
-                    
                     <item id="2">
-                        <label>14202</label>
-                        <label2>31157</label2>
-                        <icon>special://skin/extras/icons/film.png</icon>
-                        <onclick>activatewindow(LibrarySettings)</onclick>
-                    </item>
-                    <item id="3">
-                        <label>14201</label>
-                        <label2>31158</label2>
-                        <icon>special://skin/extras/icons/songs.png</icon>
-                        <onclick>activatewindow(PlayerSettings)</onclick>
-                    </item>
-                    
-                    
-                    <!--<item id="5">
-                        <label>1</label>
-                        <label2>31159</label2>
-                        <icon>special://skin/extras/icons/pictures.png</icon>
-                        <onclick>activatewindow(PicturesSettings)</onclick>
-                    </item>
-                    <item id="6">
-                        <label>8</label>
-                        <label2>31160</label2>
-                        <icon>special://skin/extras/icons/sun.png</icon>
-                        <onclick>activatewindow(WeatherSettings)</onclick>
-                    </item>-->
-                    
-                    <item id="12">
-                        <label>20077</label>
-                        <label2>31166</label2>
-                        <icon>special://skin/extras/icons/year.png</icon>
+                        <label>166</label>
+                        <icon>DefaultAddonSkin.png</icon>
                         <onclick>activatewindow(SkinSettings)</onclick>
                     </item>
-                    <item id="8">
+                    <item id="3">
+                        <label>16003</label>
+                        <icon>DefaultIconPlay.png</icon>
+                        <onclick>activatewindow(PlayerSettings)</onclick>
+                    </item>
+                    <item id="4">
+                        <label>14202</label>
+                        <icon>DefaultSets.png</icon>
+                        <onclick>activatewindow(LibrarySettings)</onclick>
+                    </item>
+                    <item id="5">
+                        <label>19191</label>
+                        <icon>DefaultTVShows.png</icon>
+                        <onclick>activatewindow(TVSettings)</onclick>
+                    </item>
+                    <item id="6">
                         <label>13000</label>
-                        <label2>31161</label2>
-                        <icon>special://skin/extras/icons/configure.png</icon>
+                        <icon>DefaultProgram.png</icon>
                         <onclick>activatewindow(SystemSettings)</onclick>
                     </item>
                     <item id="7">
                         <label>705</label>
-                        <label2>31164</label2>
-                        <icon>special://skin/extras/icons/network.png</icon>
-                        <onclick>activatewindow(NetworkSettings)</onclick>
+                        <icon>DefaultAddonService.png</icon>
+                        <onclick>activatewindow(ServiceSettings)</onclick>
                     </item>
-                    
-                    <item id="9">
+                    <item id="8">
                         <label>13200</label>
-                        <label2>31165</label2>
-                        <icon>special://skin/extras/icons/actor.png</icon>
+                        <icon>DefaultActor.png</icon>
                         <onclick>activatewindow(Profiles)</onclick>
                     </item>
-                    <item id="4">
+                    <item id="9">
                         <label>24001</label>
-                        <label2>31162</label2>
-                        <icon>special://skin/extras/icons/addons.png</icon>
+                        <icon>DefaultAddon.png</icon>
                         <onclick>activatewindow(AddonBrowser)</onclick>
                     </item>
-                    
                     <item id="10">
                         <label>130</label>
-                        <label2>31167</label2>
-                        <icon>special://skin/extras/icons/sysinfo.png</icon>
-                        <onclick>activatewindow(7)</onclick>
+                        <icon>DefaultHardDisk.png</icon>
+                        <onclick>activatewindow(systeminfo)</onclick>
                     </item>
-                    <item id="11">
-                        <label>19191</label>
-                        <label2>31163</label2>
-                        <icon>special://skin/extras/icons/livetv.png</icon>
-                        <onclick>activatewindow(pvrsettings)</onclick>
-                    </item>
+                    
                     
                     
                 </content>

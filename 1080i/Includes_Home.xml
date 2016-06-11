@@ -880,7 +880,7 @@
                     <visible>[Control.HasFocus(301) | ControlGroup(303).HasFocus()] + !Container(301).IsUpdating</visible>
                     <posy>355</posy>
                     <animation type="Visible">
-                        <effect type="fade" start="0" end="100" time="350" delay="50" tween="cubic" easing="inout" reversible="false"/>
+                        <effect type="fade" start="0" end="100" time="350" delay="50" tween="cubic" easing="inout" />
                     </animation>
                     <control type="group">
                         <left>SidePad</left>
@@ -924,7 +924,6 @@
                             <top>85</top>
                             <height>40</height>
                             <align>right</align>
-                            <autoscroll>false</autoscroll>
                             <textcolor>White70</textcolor>
                             <selectedcolor>White70</selectedcolor>
                             <label>$VAR[WidgetSubLabel]</label>
@@ -1047,8 +1046,8 @@
         </animation>
         <itemlayout width="220" height="220">
             <control type="image">
-                <width>128</width>
-                <height>128</height>
+                <width>90</width>
+                <height>90</height>
                 <centerleft>50%</centerleft>
                 <centertop>45%</centertop>
                 <texture colordiffuse="White70">$INFO[ListItem.Icon]</texture>
@@ -1074,8 +1073,8 @@
                 <texture colordiffuse="$VAR[ColorHighlight]" border="8">common/box.png</texture>
             </control>
             <control type="image">
-                <width>128</width>
-                <height>128</height>
+                <width>90</width>
+                <height>90</height>
                 <centerleft>50%</centerleft>
                 <centertop>45%</centertop>
                 <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
