@@ -81,9 +81,9 @@
                     <include>DefContextButton</include>
                 </control>
 
-                <control type="radiobutton" id="5">
-                    <description>Enable auto-updates</description>
-                    <label>24063</label>
+                <control type="button" id="5">
+                    <description>Settings</description>
+                    <label>5</label>
                     <align>left</align>
                     <include>DefContextButton</include>
                 </control>

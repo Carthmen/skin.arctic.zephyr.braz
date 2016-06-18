@@ -3,7 +3,6 @@
 <window id="2600">
     <defaultcontrol always="true">9100</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <background>0</background>
     <controls>
 
         <include>GlobalBackground</include>
@@ -416,8 +415,8 @@
                 <control type="button" id="9008" description="Weather Location">
                     <include>DefContextButton</include>
                     <align>left</align>
-                    <label>35500</label>
-                    <label2>$INFO[Weather.Location]</label2>
+                    <!--<label>35500</label>-->
+                    <label>$INFO[Weather.Location]</label>
                     <onclick>Weather.LocationNext</onclick>
                 </control>
                 <control type="button" id="9001" description="Select icons">
@@ -441,12 +440,6 @@
                     <enable>!IsEmpty(Skin.String(weatherfanart.path))</enable>
                     <selected>!Skin.HasSetting(weather.hidefanart)</selected>
                     <onclick>Skin.ToggleSetting(weather.hidefanart)</onclick>
-                </control>
-                <control type="button" id="9003" description="Weather Settings">
-                    <include>DefContextButton</include>
-                    <align>left</align>
-                    <label>$LOCALIZE[5]</label>
-                    <onclick>activatewindow(WeatherSettings)</onclick>
                 </control>
             </control>
         </control>

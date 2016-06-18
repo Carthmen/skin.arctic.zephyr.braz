@@ -23,6 +23,10 @@
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
             <control type="group">
+                <visible>Window.IsActive(home)</visible>
+                <include>Furniture_Header</include>
+            </control>
+            <control type="group">
                 <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
                 <visible>!Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
                 <animation effect="slide" start="-1920" end="0" delay="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>

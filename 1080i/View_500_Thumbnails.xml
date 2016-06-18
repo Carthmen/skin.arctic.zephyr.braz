@@ -52,6 +52,7 @@
                             <texture diffuse="diffuse/wall-square.png" colordiffuse="Background">common/white100.png</texture>
                         </control>
                         <control type="image">
+                            <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="String.StartsWith(ListItem.Icon,Default)">Conditional</animation>
                             <left>20</left>
                             <top>20</top>
                             <right>20</right>
@@ -61,6 +62,7 @@
                             <visible>!Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons)</visible>
                         </control>
                         <control type="image">
+                            <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="String.StartsWith(ListItem.Icon,Default)">Conditional</animation>
                             <left>20</left>
                             <top>20</top>
                             <right>20</right>
@@ -114,6 +116,7 @@
                             <texture diffuse="diffuse/wall-square.png" colordiffuse="Background">common/white100.png</texture>
                         </control>
                         <control type="image">
+                            <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="String.StartsWith(ListItem.Icon,Default)">Conditional</animation>
                             <left>20</left>
                             <top>20</top>
                             <right>20</right>
@@ -123,6 +126,7 @@
                             <visible>!Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs) + !Container.Content(addons)</visible>
                         </control>
                         <control type="image">
+                            <animation effect="zoom" start="100" end="80" time="0" center="auto" condition="String.StartsWith(ListItem.Icon,Default)">Conditional</animation>
                             <left>20</left>
                             <top>20</top>
                             <right>20</right>

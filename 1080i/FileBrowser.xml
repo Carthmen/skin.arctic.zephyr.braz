@@ -61,7 +61,7 @@
                         <height>111</height>
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                        <visible>!substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                        <visible>!String.StartsWith(ListItem.Path,special://skin/extras/spinners) + !String.StartsWith(ListItem.Icon,Default)</visible>
                     </control>
                     <control type="image">
                         <posx>32</posx>
@@ -69,8 +69,8 @@
                         <width>111</width>
                         <height>111</height>
                         <aspectratio scalediffuse="false">center</aspectratio>
-                        <texture fallback="DefaultAddonNone.png" colordiffuse="$VAR[ColorHighlight]">$INFO[Listitem.FileNameAndPath]</texture>
-                        <visible>substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                        <texture fallback="DefaultAddonNone.png" colordiffuse="Black70">$INFO[Listitem.Icon]</texture>
+                        <visible>String.StartsWith(ListItem.Path,special://skin/extras/spinners) | String.StartsWith(ListItem.Icon,Default)</visible>
                     </control>
 
                     <control type="label">

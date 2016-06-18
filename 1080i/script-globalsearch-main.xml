@@ -243,6 +243,27 @@
         <control type="group">
             <height>242</height>
             <include>Def9000Background</include>
+            <control type="group">
+                <visible>!Window.IsActive(1109)</visible>
+                <control type="image">
+                    <visible>Container(9000).HasPrevious</visible>
+                    <description>arrow image</description>
+                    <centerleft>50%</centerleft>
+                    <posy>-16</posy>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="White70" flipy="true">common/arrow-small.png</texture>
+                </control>
+                <control type="image">
+                    <visible>Container(9000).HasNext</visible>
+                    <description>arrow image</description>
+                    <centerleft>50%</centerleft>
+                    <posy>244</posy>
+                    <width>16</width>
+                    <height>16</height>
+                    <texture colordiffuse="White70" flipy="false">common/arrow-small.png</texture>
+                </control>
+            </control>
             <control type="grouplist" id="9000">
                 <height>210</height>
                 <onleft>9500</onleft>
@@ -251,12 +272,14 @@
                 
                 <control type="button" id="1801">
                     <description>New search</description>
+                    <align>left</align>
                     <label>New search</label>
                     <include>DefContextButton</include>
                     <onclick>SendClick(198)</onclick>
                 </control>
                 <control type="button" id="1802">
                     <description>Addon settings</description>
+                    <align>left</align>
                     <label>Settings</label>
                     <include>DefContextButton</include>
                     <onclick>Addon.OpenSettings(script.globalsearch)</onclick>
