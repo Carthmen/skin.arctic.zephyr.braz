@@ -141,7 +141,7 @@
                         <onclick condition="Control.IsVisible(50)">SendClick(2003,5)</onclick>
                         <onclick>SetProperty(content,3)</onclick>
                         <onclick>SetFocus(9501)</onclick>        
-                        <visible>Container.Content(movies)</visible>
+                        <visible>$EXP[isMovie]</visible>
                         <enable>Integer.IsGreater(Container(9501).NumItems,0)</enable>
                     </control>
 
@@ -151,7 +151,7 @@
                         <onclick condition="Control.IsVisible(50)">SendClick(2003,5)</onclick>
                         <onclick>SetProperty(content,2)</onclick>
                         <onclick>SetFocus(9501)</onclick>     
-                        <visible>Container.Content(movies)</visible>
+                        <visible>$EXP[isMovie]</visible>
                     </control>
 
                     <control type="button" id ="6">
@@ -262,7 +262,7 @@
                         <control type="group">
                             <height>50</height>
                             <control type="label">
-                                <visible>Container.Content(movies)</visible>
+                                <visible>$EXP[isMovie]</visible>
                                 <posy>-10</posy>
                                 <width>100%</width>
                                 <height>36</height>
@@ -272,7 +272,7 @@
                                 <aligny>center</aligny>
                             </control>
                             <control type="label">
-                                <visible>Container.Content(episodes)</visible>
+                                <visible>$EXP[isEpisode]</visible>
                                 <posy>-10</posy>
                                 <width>100%</width>
                                 <height>36</height>
@@ -282,7 +282,7 @@
                                 <aligny>center</aligny>
                             </control>
                             <control type="label">
-                                <visible>Container.Content(seasons) | Container.Content(tvshows)</visible>
+                                <visible>$EXP[isSeason] | $EXP[isTvshow]</visible>
                                 <posy>-10</posy>
                                 <width>100%</width>
                                 <height>36</height>
@@ -398,7 +398,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))</visible>
+                            <visible>[$EXP[isTvshow] | $EXP[isSeason]] + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -947,8 +947,7 @@
             <onback condition="Control.IsVisible(50)">SendClick(2003,5)</onback>
             <onback>9000</onback>
             <onclick>RunScript(script.extendedinfo,info=extendedactorinfo,name=$INFO[Container(50).ListItem.Label])</onclick>
-        </control>
-        
+        </control>        
 
     </controls>
 

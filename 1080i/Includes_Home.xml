@@ -407,7 +407,7 @@
                         <width>100%</width>
                         <centertop>50%</centertop>
                         <height>100%</height>
-                        <textcolor>White70</textcolor>
+                        <textcolor>White100</textcolor>
                         <include>DefContextButton</include>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -428,7 +428,7 @@
                         <width>100%</width>
                         <centertop>50%</centertop>
                         <height>100%</height>
-                        <textcolor>Selected</textcolor>
+                        <textcolor>White100</textcolor>
                         <include>DefContextButton</include>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -476,7 +476,7 @@
                         <width>180</width>
                         <top>30</top>
                         <centerleft>50%</centerleft>
-                        <textcolor>White70</textcolor>
+                        <textcolor>White100</textcolor>
                         <font>HomeIcon</font>
                         <label>$INFO[ListItem.Label]</label>
                     </control>
@@ -999,7 +999,7 @@
                 <width>95%</width>
                 <top>0</top>
                 <centerleft>50%</centerleft>
-                <textcolor>White70</textcolor>
+                <textcolor>White100</textcolor>
                 <font>Home</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>
@@ -1050,7 +1050,7 @@
                 <height>90</height>
                 <centerleft>50%</centerleft>
                 <centertop>45%</centertop>
-                <texture colordiffuse="White70">$INFO[ListItem.Icon]</texture>
+                <texture colordiffuse="White100">$INFO[ListItem.Icon]</texture>
                 <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
             </control>
             <control type="label">
@@ -1059,7 +1059,7 @@
                 <width>180</width>
                 <bottom>5</bottom>
                 <centerleft>50%</centerleft>
-                <textcolor>White70</textcolor>
+                <textcolor>White100</textcolor>
                 <font>HomeIcon</font>
                 <label>$INFO[ListItem.Label]</label>
             </control>

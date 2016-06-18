@@ -3,12 +3,13 @@
 <window id="6">
     <defaultcontrol always="true">52</defaultcontrol>
     <menucontrol>9000</menucontrol>
-    <views>50,52,500</views>
+    <views>50,52,500,54</views>
     <controls>
 
         <include>GlobalBackground</include>
         <include condition="!Window.IsActive(musicplaylist)">View_50_List</include>
         <include condition="Window.IsActive(musicplaylist)">View_50_List_Square</include>
+        <include condition="Window.IsActive(musicplaylist)">View_54_Banner</include>
         <include condition="Skin.HasSetting(52biglist.singlepane)">View_52_BigList_SinglePane</include>
         <include condition="!Skin.HasSetting(52biglist.singlepane)">View_52_BigList_DoublePane</include>
         <include>View_500_Thumbnails</include>

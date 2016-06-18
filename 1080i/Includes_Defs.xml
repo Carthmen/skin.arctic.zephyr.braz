@@ -487,16 +487,6 @@
             <onclick>SendClick(4)</onclick>
             <enable>Control.IsEnabled(4)</enable>
         </control>
-
-        <control type="button" id="7">
-            <description>Playlist</description>
-            <include>DefContextButton</include>
-            <align>left</align>
-            <label>136</label>
-            <onclick>SetFocus(50)</onclick>
-            <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
-            <visible>!stringcompare(Container.FolderPath,special://musicplaylists/)</visible>
-        </control>
         
         <control type="button" id="9098">
             <description>Now Playing</description>

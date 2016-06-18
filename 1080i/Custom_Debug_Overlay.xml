@@ -55,20 +55,8 @@
 
                 <control type="label">
                     <include>WindowID</include>
-                    <label>MyMusicPlaylist.xml</label>
-                    <visible>Window.IsVisible(MyMusicPlaylist.xml)</visible>
-                </control>
-
-                <control type="label">
-                    <include>WindowID</include>
                     <label>MyMusicPlaylistEditor.xml</label>
                     <visible>Window.IsVisible(MyMusicPlaylistEditor.xml)</visible>
-                </control>
-
-                <control type="label">
-                    <include>WindowID</include>
-                    <label>MyMusicSongs.xml</label>
-                    <visible>Window.IsVisible(MyMusicSongs.xml)</visible>
                 </control>
 
                 <control type="label">
@@ -91,8 +79,8 @@
 
                 <control type="label">
                     <include>WindowID</include>
-                    <label>MyVideoPlaylist.xml</label>
-                    <visible>Window.IsVisible(MyVideoPlaylist.xml)</visible>
+                    <label>MyPlaylist.xml</label>
+                    <visible>Window.IsVisible(MyPlaylist.xml)</visible>
                 </control>
 
                 <control type="label">

@@ -93,12 +93,12 @@
                 <control type="button" id="3111">
                     <include>DefContextButton</include>
                     <label>Download artwork</label>
-                    <onclick condition="Container.Content(tvshows)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
-                    <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
-                    <onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="$EXP[isTvshow]">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=tvshow, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="$EXP[isMovie]">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
+                    <onclick condition="$EXP[isMusicvideo]">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
                     <description>Get Artwork</description>
                     <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                    <visible>[Container.Content(tvshows) | Container.Content(movies) | Container.Content(musicvideos)] + system.hasaddon(script.artwork.downloader)</visible>
+                    <visible>[$EXP[isTvshow] | $EXP[isMovie] | $EXP[isMusicvideo]] + system.hasaddon(script.artwork.downloader)</visible>
                 </control>
                 <control type="button" id="3112">
                     <include>DefContextButton</include>

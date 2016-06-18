@@ -973,7 +973,7 @@
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/video/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/music/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/mixed/)">special://skin/extras/icons/playlist.png</value>
-        <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">special://skin/extras/icons/music.png</value>
+        <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml)">special://skin/extras/icons/music.png</value>
         <value condition="String.StartsWith(Container.FolderPath,library://video/movies/)">special://skin/extras/icons/video.png</value>
         <value condition="String.StartsWith(Container.FolderPath,library://video/tvshows/)">special://skin/extras/icons/tv.png</value>
         <value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">special://skin/extras/icons/video.png</value>
@@ -988,7 +988,7 @@
         <value condition="Container.Content(addons)">special://skin/extras/icons/addon.png</value>
         <value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">special://skin/extras/icons/musicvideo.png</value>
         <value condition="Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml)">special://skin/extras/icons/livetv.png</value>
-        <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">special://skin/extras/icons/music.png</value>
+        <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml)">special://skin/extras/icons/music.png</value>
         <value condition="Window.IsVisible(MyPics.xml)">special://skin/extras/icons/pictures.png</value>
         <value condition="Window.IsVisible(MyPrograms.xml) | Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addon.png</value>
         <value condition="Window.IsVisible(weather)">special://skin/extras/icons/weather.png</value>
@@ -1037,15 +1037,15 @@
         <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
         <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
         <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
-        <value condition="!String.IsEmpty(Container.FolderName) + [Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)]">$INFO[Container.FolderName]</value>
-        <value condition="Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">$LOCALIZE[2]</value>
+        <value condition="!String.IsEmpty(Container.FolderName) + Window.IsVisible(MyMusicNav.xml)">$INFO[Container.FolderName]</value>
+        <value condition="Window.IsVisible(MyMusicNav.xml)">$LOCALIZE[2]</value>
         <value condition="Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
         <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
         <value condition="!String.IsEmpty(Container.FolderName) + Window.IsVisible(MyPics.xml)">$INFO[Container.FolderName]</value>
         <value condition="Window.IsVisible(MyPics.xml)">$LOCALIZE[1]</value>
         <value condition="Window.IsVisible(MyPrograms.xml)">$LOCALIZE[0]</value>
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
-        <value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
+        <value condition="Window.IsVisible(MyPlaylist.xml)">$LOCALIZE[559]</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
         <value condition="Window.IsVisible(1101)">$LOCALIZE[31192]</value>
         <value condition="Window.IsVisible(1102)">$LOCALIZE[31193]</value>

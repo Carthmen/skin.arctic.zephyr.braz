@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
-<window id="2001">
+<window>
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>ClearProperty(content)</onload>
     <onload>ClearProperty(tracklist)</onload>
@@ -121,7 +121,7 @@
                         <onclick condition="String.IsEmpty(Window.Property(tracklist))">SetProperty(tracklist,1)</onclick>
                         <onclick condition="!String.IsEmpty(Window.Property(tracklist))">ClearProperty(tracklist)</onclick>
                         <include>DefInfoButtons</include>
-                        <visible>Container.Content(albums)</visible>
+                        <visible>$EXP[isAlbum]</visible>
                     </control>
 
                     <!--<control type="button" id ="9003">
@@ -164,7 +164,7 @@
                         <width>260</width>
                         <include>DefInfoButtons</include>
                         <visible>!Skin.HasSetting(global.kioskmode)</visible>
-                        <visible>Container.Content(artists)</visible>
+                        <visible>$EXP[isArtist]</visible>
                     </control>
 
                     <control type="button" id ="9004">
@@ -178,7 +178,7 @@
 
                 <!-- Album Info -->
                 <control type="group">
-                    <visible>Container.Content(albums)</visible>
+                    <visible>$EXP[isAlbum]</visible>
                     <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
                     <left>ListSquareX</left>
                     <right>SidePad</right>
@@ -274,7 +274,7 @@
                         <control type="group">
                             <height>auto</height>
                             <width>100%</width>
-                            <visible>!Container.Content(Albums) | String.IsEmpty(Window.Property(tracklist))</visible>
+                            <visible>!$EXP[isAlbum] | String.IsEmpty(Window.Property(tracklist))</visible>
                             <control type="textbox" id="4">
                                 <top>10</top>
                                 <width>100%</width>
@@ -285,7 +285,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>Container.Content(Albums) + [String.IsEmpty(Control.GetLabel(4)) | !String.IsEmpty(Window.Property(tracklist))]</visible>
+                            <visible>$EXP[isAlbum] + [String.IsEmpty(Control.GetLabel(4)) | !String.IsEmpty(Window.Property(tracklist))]</visible>
                             <height>auto</height>
                             <width>100%</width>
                             <control type="textbox">
@@ -303,7 +303,7 @@
 
                 <!-- Artist Info -->
                 <control type="group">
-                    <visible>Container.Content(artists)</visible>
+                    <visible>$EXP[isArtist]</visible>
                     <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
                     <left>ListSquareX</left>
                     <right>SidePad</right>
@@ -737,7 +737,7 @@
                 <textcolor>White100</textcolor>
                 <height>45</height>
                 <label>$INFO[ListItem.Artist]</label>
-                <visible>Container.Content(artists)</visible>
+                <visible>$EXP[isArtist]</visible>
             </control>
             <control type="label">
                 <description>header label</description>
@@ -748,7 +748,7 @@
                 <textcolor>White100</textcolor>
                 <height>45</height>
                 <label>$INFO[ListItem.Album]</label>
-                <visible>Container.Content(albums)</visible>
+                <visible>$EXP[isAlbum]</visible>
             </control>
 
             <control type="textbox">
@@ -760,7 +760,7 @@
                 <font>Medium</font>
                 <textcolor>White100</textcolor>
                 <label>$INFO[ListItem.Property(Artist_Description)]</label>
-                <visible>Container.Content(artists)</visible>
+                <visible>$EXP[isArtist]</visible>
             </control>
             <control type="textbox">
                 <description>textarea</description>
@@ -771,7 +771,7 @@
                 <font>Medium</font>
                 <textcolor>White100</textcolor>
                 <label>$INFO[ListItem.Property(Album_Description)]</label>
-                <visible>Container.Content(albums)</visible>
+                <visible>$EXP[isAlbum]</visible>
             </control>
         </control>
 
