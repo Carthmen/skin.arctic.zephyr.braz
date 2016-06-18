@@ -8,7 +8,7 @@
             <visible>Control.IsVisible(57)</visible>
             <control type="group">
                 <control type="panel" id="57">
-                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)] | Container.Content(artists)</visible>
+                    <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | [Container.Content(episodes) + !String.StartsWith(Container.FolderPath,plugin://)] | Container.Content(artists)</visible>
                     <top>206</top>
                     <height>660</height>
                     <left>70</left>

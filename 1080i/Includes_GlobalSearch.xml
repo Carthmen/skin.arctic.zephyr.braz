@@ -200,7 +200,7 @@
                 <height>16</height>
                 <include>Animation.DelayFadeIn</include>
                 <include>Animation.FadeOut</include>
-                <visible>Control.HasFocus($PARAM[listid]) + IntegerGreaterThan(Container($PARAM[listid]).NumItems,4)</visible>
+                <visible>Control.HasFocus($PARAM[listid]) + Integer.IsGreater(Container($PARAM[listid]).NumItems,4)</visible>
                 <texture colordiffuse="White70" flipx="false">common/arrow-small-right.png</texture>
             </control>
         </control>

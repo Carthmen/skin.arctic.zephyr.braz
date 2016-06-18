@@ -107,7 +107,7 @@
                             <height>111</height>
                             <aspectratio scalediffuse="false">keep</aspectratio>
                             <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                            <visible>!substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
                         </control>
                         <control type="image">
                             <posx>32</posx>
@@ -116,7 +116,7 @@
                             <height>111</height>
                             <aspectratio scalediffuse="false">center</aspectratio>
                             <texture fallback="DefaultAddonNone.png" colordiffuse="$VAR[ColorHighlight]">$INFO[Listitem.FileNameAndPath]</texture>
-                            <visible>substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
                         </control>
                         <control type="label">
                             <posy>-18</posy>
@@ -155,7 +155,7 @@
                             <height>111</height>
                             <aspectratio scalediffuse="false">keep</aspectratio>
                             <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                            <visible>!substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
                         </control>
                         <control type="image">
                             <posx>32</posx>
@@ -164,7 +164,7 @@
                             <height>111</height>
                             <aspectratio scalediffuse="false">center</aspectratio>
                             <texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
-                            <visible>substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
                         </control>
 
                         <control type="label">
@@ -233,7 +233,7 @@
                 <height>450</height>
                 <texture fallback="DefaultAddonNone.png">$INFO[Container(450).ListItem.Icon]</texture>
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                <visible>!substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
             </control>
             <control type="image">
                 <description>Large Icon Image</description>
@@ -243,7 +243,7 @@
                 <height>200</height>
                 <texture fallback="DefaultAddonNone.png" colordiffuse="$VAR[ColorHighlight]">$INFO[Container(450).ListItem.Icon]</texture>
                 <aspectratio align="center" aligny="center">keep</aspectratio>
-                <visible>substring(ListItem.Path,special://skin/extras/spinners)</visible>
+                <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
                 <animation effect="rotate" start="360" end="0" center="auto" time="3000" loop="true" condition="true">conditional</animation>
             </control>
             

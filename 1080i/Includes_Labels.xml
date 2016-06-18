@@ -56,7 +56,7 @@
         <value condition="!String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]</value>
     </variable>
     <variable name="LabelEpisodeZero">
-        <value condition="!IntegerGreaterThan(ListItem.Episode,9) + !substring(ListItem.Episode,S) + !String.IsEmpty(ListItem.Episode)">$NUMBER[0]</value>
+        <value condition="!Integer.IsGreater(ListItem.Episode,9) + !String.Contains(ListItem.Episode,S) + !String.IsEmpty(ListItem.Episode)">$NUMBER[0]</value>
         <value condition="String.IsEmpty(ListItem.Episode)">$NUMBER[0]$NUMBER[0]</value>
     </variable>
     <variable name="LabelDirector">
@@ -90,8 +90,8 @@
         <value condition="[Container.Content(tvshows) + !Control.IsVisible(54) + !Control.IsVisible(555) + !Control.IsVisible(58) + !Control.IsVisible(57)] | Container.Content(episodes)">$VAR[LabelYear]</value>
     </variable>
     <variable name="LabelPlotBox">
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
-        <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
@@ -100,8 +100,8 @@
         <value>$INFO[ListItem.Plot]</value>
     </variable>
     <variable name="LabelOverlayPlot">
-        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
-        <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]">$INFO[Window(home).Property(SkinHelper.MovieSet.ExtendedPlot)]</value>
+        <value condition="!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Artist_Description))">$INFO[ListItem.Property(Artist_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.Property(Album_Description))">$INFO[ListItem.Property(Album_Description)]</value>
         <value condition="!String.IsEmpty(ListItem.AddonDescription)">$INFO[ListItem.AddonDescription]</value>
@@ -188,7 +188,7 @@
          <value>Poster</value>
     </variable>
     <variable name="WidgetTitle">
-        <value condition="substring(Container(300).ListItem.Property(widget),Weather,left)">$INFO[Window(Weather).Property(Current.Temperature),Currently ,°][LOWERCASE]$INFO[Window(Weather).Property(Current.Condition), and ][/LOWERCASE]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$INFO[Window(Weather).Property(Current.Temperature),Currently ,°][LOWERCASE]$INFO[Window(Weather).Property(Current.Condition), and ][/LOWERCASE]</value>
         <value condition="StringCompare(Container(300).ListItem.Property(widget),NextAired) | StringCompare(Container(300).ListItem.Property(widget),Favourites)">$INFO[Container(301).ListItem.Label]</value>
         <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Season,,x]$INFO[Container(301).ListItem.Episode,,. ]$INFO[Container(301).ListItem.Title]</value>
         <value condition="StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) +!String.IsEmpty(Container(301).ListItem.Title)">$INFO[Container(301).ListItem.Title]</value>
@@ -199,10 +199,10 @@
         <value condition="StringCompare(Container(300).ListItem.Property(widgetType),songs)">Recorded by $INFO[Container(301).ListItem.Artist] on the album $INFO[Container(301).ListItem.Album,,.]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.Plot)">$INFO[Container(301).ListItem.Plot]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.AddonDescription)">$INFO[Container(301).ListItem.AddonDescription]</value>
-        <value condition="!substring(Container(300).ListItem.Property(widget),Weather,left)">$LOCALIZE[19055]</value>
+        <value condition="!String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$LOCALIZE[19055]</value>
     </variable>
     <variable name="WidgetSubLabel">
-        <value condition="substring(Container(300).ListItem.Property(widget),Weather,left)">$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°]$INFO[Window(Weather).Property(Current.Humidity),  •  , $LOCALIZE[406]]$INFO[Window(Weather).Property(Current.Wind),  •  Wind ]</value>
+        <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°]$INFO[Window(Weather).Property(Current.Humidity),  •  , $LOCALIZE[406]]$INFO[Window(Weather).Property(Current.Wind),  •  Wind ]</value>
         <value condition="StringCompare(Container(300).ListItem.Property(widgetType),albums) | StringCompare(Container(300).ListItem.Property(widgetType),songs)">$INFO[Container(301).ListItem.Artist]$INFO[Container(301).ListItem.Year,  •  ,]</value>
         <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle]$INFO[Container(301).ListItem.Premiered,  •  ]$INFO[Container(301).ListItem.Duration,  •  , $LOCALIZE[31102]]$INFO[Container(301).ListItem.Rating,  •  ]</value>
         <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]]$INFO[Container(301).ListItem.Year,  •  ]$INFO[Container(301).ListItem.Rating,  •  ]</value>
@@ -245,8 +245,8 @@
     </variable>
     <variable name="HDSD">
         <value condition="Container.Content(tvshows) | Container.Content(seasons)">$INFO[ListItem.Property(UnWatchedEpisodes)]</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.VideoResolution,719)">HD</value>
-        <value condition="IntegerGreaterThan(ListItem.VideoResolution,719)">HD</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.VideoResolution,719)">HD</value>
+        <value condition="Integer.IsGreater(ListItem.VideoResolution,719)">HD</value>
         <value>SD</value>
     </variable>
     <variable name="PlayerTitle">
@@ -254,7 +254,7 @@
         <value condition="VideoPlayer.Content(livetv)">$INFO[VideoPlayer.ChannelNumber,,. ]$INFO[VideoPlayer.ChannelName]</value>
         <value condition="VideoPlayer.Content(movies) + !String.IsEmpty(VideoPlayer.Tagline)">$INFO[VideoPlayer.Tagline]</value>
         <value condition="VideoPlayer.Content(episodes)">$INFO[VideoPlayer.Season,,x]$INFO[VideoPlayer.Episode,,. ]$INFO[Player.Title]$INFO[VideoPlayer.Premiered,  (,)]</value>
-        <value condition="substring(Player.Filenameandpath,http)">$LOCALIZE[31107]</value>
+        <value condition="String.Contains(Player.Filenameandpath,http)">$LOCALIZE[31107]</value>
         <value>$LOCALIZE[291]</value>
     </variable>
     <variable name="PlayerBigTitle">

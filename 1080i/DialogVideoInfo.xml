@@ -132,7 +132,7 @@
                         <onclick condition="!Control.IsVisible(50)">SendClick(2003,5)</onclick>
                         <onclick>ClearProperty(content)</onclick>
                         <onclick>SetFocus(51)</onclick>
-                        <visible>!substring(Container.FolderPath,plugin://,left)</visible>             
+                        <visible>!String.StartsWith(Container.FolderPath,plugin://)</visible>             
                     </control>
                     
                     <control type="button" id="9011">
@@ -142,7 +142,7 @@
                         <onclick>SetProperty(content,3)</onclick>
                         <onclick>SetFocus(9501)</onclick>        
                         <visible>Container.Content(movies)</visible>
-                        <enable>IntegerGreaterThan(Container(9501).NumItems,0)</enable>
+                        <enable>Integer.IsGreater(Container(9501).NumItems,0)</enable>
                     </control>
 
                     <control type="button" id="9012">
@@ -832,7 +832,7 @@
                                 <effect type="zoom" start="100" end="90" time="150" tween="sine" easing="inout" center="auto" />
                                 <effect type="fade" start="100" end="0" time="150" tween="sine" easing="out" />
                             </animation>
-                            <visible>!substring(ListItem.Path,script.extendedinfo)</visible>
+                            <visible>!String.Contains(ListItem.Path,script.extendedinfo)</visible>
                             <visible>Control.HasFocus(9501)</visible>
                         </control>
                         <control type="group">

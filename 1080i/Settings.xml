@@ -77,7 +77,7 @@
                 <left>0</left>
                 <width>1770</width>
                 <height>650</height>
-                <oninfo condition="substring(Container.FolderPath,plugin://plugin.program.advanced.launcher/,left)">SetFocus(9601)</oninfo>
+                <oninfo condition="String.StartsWith(Container.FolderPath,plugin://plugin.program.advanced.launcher/)">SetFocus(9601)</oninfo>
                 <onleft>9100</onleft>
                 <onright>9100</onright>
                 <ondown>9100</ondown>

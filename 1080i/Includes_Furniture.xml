@@ -50,132 +50,132 @@
     
     <!-- Flags -->
     <variable name="Flagstar1">
-        <value condition="IntegerGreaterThan(ListItem.Rating,1)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.Rating,0)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,1)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,0)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="Flagstar2">
-        <value condition="IntegerGreaterThan(ListItem.Rating,3)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.Rating,2)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,3)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,2)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="Flagstar3">
-        <value condition="IntegerGreaterThan(ListItem.Rating,5)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.Rating,4)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,5)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,4)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="Flagstar4">
-        <value condition="IntegerGreaterThan(ListItem.Rating,7)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.Rating,6)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,7)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,6)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="Flagstar5">
-        <value condition="IntegerGreaterThan(ListItem.Rating,9)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.Rating,8)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,9)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.Rating,8)">star5</value>
         <value>star0</value>
     </variable>
 
     <variable name="MyFlagstar1">
-        <value condition="IntegerGreaterThan(ListItem.UserRating,1)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.UserRating,0)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,1)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,0)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="MyFlagstar2">
-        <value condition="IntegerGreaterThan(ListItem.UserRating,3)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.UserRating,2)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,3)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,2)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="MyFlagstar3">
-        <value condition="IntegerGreaterThan(ListItem.UserRating,5)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.UserRating,4)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,5)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,4)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="MyFlagstar4">
-        <value condition="IntegerGreaterThan(ListItem.UserRating,7)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.UserRating,6)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,7)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,6)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="MyFlagstar5">
-        <value condition="IntegerGreaterThan(ListItem.UserRating,9)">star10</value>
-        <value condition="IntegerGreaterThan(ListItem.UserRating,8)">star5</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,9)">star10</value>
+        <value condition="Integer.IsGreater(ListItem.UserRating,8)">star5</value>
         <value>star0</value>
     </variable>
 
     <variable name="HubFlagstar1">
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,1)">star10</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,0)">star5</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,1)">star10</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,0)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HubFlagstar2">
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,3)">star10</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,2)">star5</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,3)">star10</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,2)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HubFlagstar3">
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,5)">star10</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,4)">star5</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,5)">star10</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,4)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HubFlagstar4">
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,7)">star10</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,6)">star5</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,7)">star10</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,6)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HubFlagstar5">
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,9)">star10</value>
-        <value condition="IntegerGreaterThan(Container(9500).ListItem.Rating,8)">star5</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,9)">star10</value>
+        <value condition="Integer.IsGreater(Container(9500).ListItem.Rating,8)">star5</value>
         <value>star0</value>
     </variable>
     
     <variable name="HomeFlagstar1">
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,1)">star10</value>
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,0)">star5</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,1)">star10</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,0)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HomeFlagstar2">
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,3)">star10</value>
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,2)">star5</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,3)">star10</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,2)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HomeFlagstar3">
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,5)">star10</value>
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,4)">star5</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,5)">star10</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,4)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HomeFlagstar4">
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,7)">star10</value>
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,6)">star5</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,7)">star10</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,6)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="HomeFlagstar5">
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,9)">star10</value>
-        <value condition="IntegerGreaterThan(Container(301).ListItem.Rating,8)">star5</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,9)">star10</value>
+        <value condition="Integer.IsGreater(Container(301).ListItem.Rating,8)">star5</value>
         <value>star0</value>
     </variable>
 
     <variable name="SearchFlagstar1">
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),1)">star10</value>
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),0)">star5</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),1)">star10</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),0)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="SearchFlagstar2">
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),3)">star10</value>
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),2)">star5</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),3)">star10</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),2)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="SearchFlagstar3">
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),5)">star10</value>
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),4)">star5</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),5)">star10</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),4)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="SearchFlagstar4">
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),7)">star10</value>
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),6)">star5</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),7)">star10</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),6)">star5</value>
         <value>star0</value>
     </variable>
     <variable name="SearchFlagstar5">
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),9)">star10</value>
-        <value condition="IntegerGreaterThan(Container(100).ListItem.Property(Rating),8)">star5</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),9)">star10</value>
+        <value condition="Integer.IsGreater(Container(100).ListItem.Property(Rating),8)">star5</value>
         <value>star0</value>
     </variable>
     
@@ -266,7 +266,7 @@
             <itemgap>24</itemgap>
             <usecontrolcoords>true</usecontrolcoords>
             <!--<control type="group">
-                <visible>substring(ListItem.Path,videodb://movies/sets,left) | !Skin.HasSetting(furniture.flagicons) | Container.Content(tvshows) | Container.Content(seasons) | String.IsEmpty(ListItem.VideoResolution)</visible>
+                <visible>String.StartsWith(ListItem.Path,videodb://movies/sets) | !Skin.HasSetting(furniture.flagicons) | Container.Content(tvshows) | Container.Content(seasons) | String.IsEmpty(ListItem.VideoResolution)</visible>
                 <centertop>50%</centertop>
                 <width>64</width>
                 <height>64</height>
@@ -283,13 +283,13 @@
                     <label>$VAR[HDSD]</label>
                     <font>SmallBold</font>
                     <textcolor>Dark1</textcolor>
-                    <visible>!substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                    <visible>!String.StartsWith(ListItem.Path,videodb://movies/sets)</visible>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
                     <texture colordiffuse="Dark1">flags/sets.png</texture>
-                    <visible>substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                    <visible>String.StartsWith(ListItem.Path,videodb://movies/sets)</visible>
                 </control>
             </control>-->
             <!--<control type="image">
@@ -298,7 +298,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100" fallback="flags/fallback.png">$INFO[ListItem.VideoResolution,flags/resolution/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.VideoResolution) + !substring(ListItem.Path,videodb://movies/sets,left)</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(ListItem.VideoResolution) + !String.StartsWith(ListItem.Path,videodb://movies/sets)</visible>
             </control>-->
             
             <control type="image">
@@ -405,7 +405,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100">flags/airing.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)</visible>
+                <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.StartsWith(Container.FolderPath,plugin://)</visible>
             </control>
             <control type="label">
                 <width min="128">auto</width>
@@ -416,7 +416,7 @@
                 <label>$VAR[LabelNextAiredDetails]</label>
                 <font>Flag</font>
                 <textcolor>White70</textcolor>
-                <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !substring(Container.FolderPath,plugin://,left)</visible>
+                <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.StartsWith(Container.FolderPath,plugin://)</visible>
             </control>
 
             <control type="image">
@@ -524,21 +524,21 @@
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/bluray.png</texture>
-                <visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]</visible>
+                <visible>[String.Contains(ListItem.FilenameAndPath,bluray) | String.Contains(ListItem.FilenameAndPath,bdrip) | String.Contains(ListItem.FilenameAndPath,bd25) | String.Contains(ListItem.FilenameAndPath,bd50)]</visible>
             </control>
             <control type="image">
                 <width>95</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/hddvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image">
                 <width>64</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/dvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(ListItem.FilenameAndPath,dvd) + !String.Contains(ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             
             <control type="image">
@@ -714,21 +714,21 @@
                 <width>64</width>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/bluray.png</texture>
-                <visible>[substring(Container(9500).ListItem.FilenameAndPath,bluray) | substring(Container(9500).ListItem.FilenameAndPath,bdrip) | substring(Container(9500).ListItem.FilenameAndPath,bd25) | substring(Container(9500).ListItem.FilenameAndPath,bd50)]</visible>
+                <visible>[String.Contains(Container(9500).ListItem.FilenameAndPath,bluray) | String.Contains(Container(9500).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd25) | String.Contains(Container(9500).ListItem.FilenameAndPath,bd50)]</visible>
             </control>
             <control type="image">
                 <width>95</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/hddvd.png</texture>
-                <visible>substring(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image">
                 <width>64</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/dvd.png</texture>
-                <visible>substring(Container(9500).ListItem.FilenameAndPath,dvd) + !substring(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(Container(9500).ListItem.FilenameAndPath,dvd) + !String.Contains(Container(9500).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             
             <control type="image">
@@ -774,13 +774,13 @@
                     <label>$VAR[HDSD]</label>
                     <font>SmallBold</font>
                     <textcolor>Dark1</textcolor>
-                    <visible>!substring(Container(301).ListItem.Path,videodb://movies/sets,left)</visible>
+                    <visible>!String.StartsWith(Container(301).ListItem.Path,videodb://movies/sets)</visible>
                 </control>
                 <control type="image">
                     <width>64</width>
                     <height>64</height>
                     <texture colordiffuse="Dark1">flags/sets.png</texture>
-                    <visible>substring(Container(301).ListItem.Path,videodb://movies/sets,left)</visible>
+                    <visible>String.StartsWith(Container(301).ListItem.Path,videodb://movies/sets)</visible>
                 </control>
             </control>
             <control type="image">
@@ -921,21 +921,21 @@
                 <width>64</width>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/bluray.png</texture>
-                <visible>[substring(Container(301).ListItem.FilenameAndPath,bluray) | substring(Container(301).ListItem.FilenameAndPath,bdrip) | substring(Container(301).ListItem.FilenameAndPath,bd25) | substring(Container(301).ListItem.FilenameAndPath,bd50)]</visible>
+                <visible>[String.Contains(Container(301).ListItem.FilenameAndPath,bluray) | String.Contains(Container(301).ListItem.FilenameAndPath,bdrip) | String.Contains(Container(301).ListItem.FilenameAndPath,bd25) | String.Contains(Container(301).ListItem.FilenameAndPath,bd50)]</visible>
             </control>
             <control type="image">
                 <width>95</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/hddvd.png</texture>
-                <visible>substring(Container(301).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(Container(301).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             <control type="image">
                 <width>64</width>
                 <centertop>50%</centertop>
                 <height>64</height>
                 <texture colordiffuse="White100">flags/dvd.png</texture>
-                <visible>substring(Container(301).ListItem.FilenameAndPath,dvd) + !substring(Container(301).ListItem.FilenameAndPath,hddvd)</visible>
+                <visible>String.Contains(Container(301).ListItem.FilenameAndPath,dvd) + !String.Contains(Container(301).ListItem.FilenameAndPath,hddvd)</visible>
             </control>
             
             <control type="image">
@@ -967,18 +967,18 @@
         <value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) | Window.IsVisible(script-globalsearch-infodialog.xml)">special://skin/extras/icons/info.png</value>
         <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/icons/tvguide.png</value>
         <value condition="Window.IsVisible(script-globalsearch-main.xml)">special://skin/extras/icons/search.png</value>
-        <value condition="SubString(Container.FolderPath,sources://,Left)">special://skin/extras/icons/file.png</value>
-        <value condition="SubString(Container.FolderPath,special://videoplaylists/,Left)">special://skin/extras/icons/playlist.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,sources://)">special://skin/extras/icons/file.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,special://videoplaylists/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/video/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/music/)">special://skin/extras/icons/playlist.png</value>
         <value condition="StringCompare(Container.FolderPath,special://profile/playlists/mixed/)">special://skin/extras/icons/playlist.png</value>
         <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">special://skin/extras/icons/music.png</value>
-        <value condition="SubString(Container.FolderPath,library://video/movies/,Left)">special://skin/extras/icons/video.png</value>
-        <value condition="SubString(Container.FolderPath,library://video/tvshows/,Left)">special://skin/extras/icons/tv.png</value>
-        <value condition="SubString(Container.FolderPath,videodb://movies/,Left)">special://skin/extras/icons/video.png</value>
-        <value condition="SubString(Container.FolderPath,videodb://tvshows/,Left)">special://skin/extras/icons/tv.png</value>
-        <value condition="SubString(Container.FolderPath,plugin://,Left)">special://skin/extras/icons/addon.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,library://video/movies/)">special://skin/extras/icons/video.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,library://video/tvshows/)">special://skin/extras/icons/tv.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,videodb://movies/)">special://skin/extras/icons/video.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,videodb://tvshows/)">special://skin/extras/icons/tv.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,plugin://)">special://skin/extras/icons/addon.png</value>
         <value condition="Container.Content(movies)">special://skin/extras/icons/video.png</value>
         <value condition="Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)">special://skin/extras/icons/tv.png</value>
         <value condition="Container.Content(songs)">special://skin/extras/icons/music.png</value>
@@ -986,7 +986,7 @@
         <value condition="Container.Content(files)">special://skin/extras/icons/file.png</value>
         <value condition="Container.Content(plugins)">special://skin/extras/icons/addon.png</value>
         <value condition="Container.Content(addons)">special://skin/extras/icons/addon.png</value>
-        <value condition="SubString(Container.FolderPath,videodb://musicvideos/,Left)">special://skin/extras/icons/musicvideo.png</value>
+        <value condition="String.StartsWith(Container.FolderPath,videodb://musicvideos/)">special://skin/extras/icons/musicvideo.png</value>
         <value condition="Window.IsVisible(MyPVRChannels.xml) | Window.IsVisible(MyPVRSearch.xml) | Window.IsVisible(MyPVRTimers.xml) | Window.IsVisible(MyPVRGuide.xml) | Window.IsVisible(MyPVRRecordings.xml)">special://skin/extras/icons/livetv.png</value>
         <value condition="Window.IsVisible(MyMusicPlaylistEditor.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(MyMusicSongs.xml)">special://skin/extras/icons/music.png</value>
         <value condition="Window.IsVisible(MyPics.xml)">special://skin/extras/icons/pictures.png</value>
@@ -1027,9 +1027,9 @@
         <value condition="Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-VideoList.xml) | Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml) | Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)">$LOCALIZE[31241]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml) + StringCompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml) + StringCompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
-        <value condition="Window.IsVisible(MyVideoNav.xml) + SubString(Container.FolderPath,videodb://movies/,Left)">$INFO[Container.FolderName]</value>
-        <value condition="Window.IsVisible(MyVideoNav.xml) + SubString(Container.FolderPath,videodb://tvshows/,Left) + Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]$INFO[Container.FolderName, - ,]</value>
-        <value condition="Window.IsVisible(MyVideoNav.xml) + SubString(Container.FolderPath,videodb://tvshows/,Left)">$INFO[Container.FolderName]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + String.StartsWith(Container.FolderPath,videodb://movies/)">$INFO[Container.FolderName]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + String.StartsWith(Container.FolderPath,videodb://tvshows/) + Container.Content(episodes) + !String.IsEmpty(ListItem.TvShowTitle)">$INFO[ListItem.TvShowTitle]$INFO[Container.FolderName, - ,]</value>
+        <value condition="Window.IsVisible(MyVideoNav.xml) + String.StartsWith(Container.FolderPath,videodb://tvshows/)">$INFO[Container.FolderName]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml) + !String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
         <value condition="Window.IsVisible(MyVideoNav.xml)">$LOCALIZE[3]</value>                                                                          
         <value condition="Window.IsVisible(MyPVRChannels.xml)">$LOCALIZE[19019]</value>
@@ -1218,7 +1218,7 @@
         <control type="grouplist">
             <include>Animation.FurnitureFadeInOut</include>
             <visible>!Skin.HasSetting(furniture.weather)</visible>
-            <visible>Skin.HasSetting(furniture.topweather) | [Window.IsActive(home) + substring(Container(300).ListItem.Property(widget),Weather,left)]</visible>
+            <visible>Skin.HasSetting(furniture.topweather) | [Window.IsActive(home) + String.StartsWith(Container(300).ListItem.Property(widget),Weather)]</visible>
             <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
             <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
             <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
@@ -1377,7 +1377,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
-            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !String.IsEmpty(ListItem.Plot)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot)</visible>
             <include>Animation.FadeIn</include>
             <control type="image" description="Background">
                 <include>Dimensions_Fullscreen</include>
@@ -1404,7 +1404,7 @@
             <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
             <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
             <visible>!Window.IsVisible(script-script.extendedinfo-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-script.extendedinfo-DialogInfo.xml) + !Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>
-            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !String.IsEmpty(ListItem.Plot)</visible>
+            <visible>[!String.IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | String.StartsWith(ListItem.Path,videodb://movies/sets)]] | !String.IsEmpty(ListItem.Plot)</visible>
             <include>Animation.FadeIn.Slide</include>
 
             <control type="label">

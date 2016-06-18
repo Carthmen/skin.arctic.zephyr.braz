@@ -109,7 +109,7 @@
                         <onclick>SetProperty(content,1)</onclick>
                         <onclick>SetFocus(9501)</onclick>
                         <include>DefInfoButtons</include>
-                        <enable>IntegerGreaterThan(Container(9501).NumItems,0)</enable>
+                        <enable>Integer.IsGreater(Container(9501).NumItems,0)</enable>
                     </control>
 
                     <control type="togglebutton" id ="9002">
@@ -139,7 +139,7 @@
                         <onclick>SetProperty(content,350)</onclick>
                         <onclick>SetFocus(350)</onclick>
                         <include>DefInfoButtons</include>
-                        <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
+                        <enable>Integer.IsGreater(Container(350).NumItems,0)</enable>
                     </control>
 
                     <control type="button" id ="6">
