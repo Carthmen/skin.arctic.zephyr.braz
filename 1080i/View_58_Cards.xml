@@ -37,7 +37,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="White100">$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control type="image">                                
                             <left>10</left>
@@ -99,7 +99,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="White100">$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control type="image">                                
                             <left>10</left>
@@ -169,7 +169,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="Dark1">$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control type="label">
                             <left>237</left>
@@ -220,7 +220,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="Dark1">$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control type="image">                                
                             <left>10</left>

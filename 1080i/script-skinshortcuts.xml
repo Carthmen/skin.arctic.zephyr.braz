@@ -61,7 +61,7 @@
                         <height>66</height>
                         <texture colordiffuse="Black30">$INFO[ListItem.Icon]</texture>
                         <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
-                        <visible>Skin.HasSetting(home.showicons) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
+                        <visible>Skin.HasSetting(home.showicons) | String.IsEqual(Window.Property(groupname),movieshub) | String.IsEqual(Window.Property(groupname),episodeshub)</visible>
                     </control>
                 </itemlayout>
                 <focusedlayout width="600" height="69">
@@ -85,7 +85,7 @@
                         <height>66</height>
                         <texture colordiffuse="Black30">$INFO[ListItem.Icon]</texture>
                         <visible>String.Contains(ListItem.Icon,special://skin/extras/icons)</visible>
-                        <visible>Skin.HasSetting(home.showicons) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)</visible>
+                        <visible>Skin.HasSetting(home.showicons) | String.IsEqual(Window.Property(groupname),movieshub) | String.IsEqual(Window.Property(groupname),episodeshub)</visible>
                     </control>
                 </focusedlayout>
             </control>
@@ -100,7 +100,7 @@
                 <onup>Control.Move(211,-1)</onup>
                 <ondown>Control.Move(211,1)</ondown>
                 <orientation>horizontal</orientation>
-                <animation effect="slide" end="-48" condition="Skin.HasSetting(home.showicons) | stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub)">Conditional</animation>
+                <animation effect="slide" end="-48" condition="Skin.HasSetting(home.showicons) | String.IsEqual(Window.Property(groupname),movieshub) | String.IsEqual(Window.Property(groupname),episodeshub)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,0)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,1)">Conditional</animation>
                 <animation effect="slide" end="0,69" condition="Integer.IsGreater(Container(211).Position,2)">Conditional</animation>
@@ -190,30 +190,30 @@
                     <height>66</height>
                     <label>31266</label>
                     <label2>$INFO[Container(211).ListItem.Property(widgetName)]</label2>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                 </control>
                 <control type="button" id="9401" description="Widget Aspect">
                     <width>100%</width>
                     <height>66</height>
                     <label>Icon aspect ratio</label>
                     <label2>$VAR[WidgetIconLabel]</label2>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
                     <onclick>SetProperty(chooseProperty,widgetIcon)</onclick>
                     <onclick>SendClick(404)</onclick>
-                    <enable>!StringCompare(Container(211).ListItem.Property(widget),weather)</enable>
+                    <enable>!String.IsEqual(Container(211).ListItem.Property(widget),weather)</enable>
                 </control>
                 <control type="button" id="310" description="Background">
                     <width>100%</width>
                     <height>66</height>
                     <label>31110</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
@@ -225,39 +225,39 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Window.Property(groupname),movieshub) | stringcompare(Window.Property(groupname),episodeshub) | Skin.HasSetting(home.showicons)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),movieshub) | String.IsEqual(Window.Property(groupname),episodeshub) | Skin.HasSetting(home.showicons)</visible>
                 </control>
                 <control type="button" id="405" description="Set Submenu">
                     <width>100%</width>
                     <height>66</height>
                     <label>31112</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>!stringcompare(Container(211).ListItem.Label2,MovieHub) + !stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
+                    <visible>!String.IsEqual(Container(211).ListItem.Label2,MovieHub) + !String.IsEqual(Container(211).ListItem.Label2,TVHub)</visible>
                 </control>
 
                 <control type="button" id="9301" description="Set MovieHub">
                     <width>100%</width>
                     <height>66</height>
                     <label>31178</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Container(211).ListItem.Label2,MovieHub)</visible>
+                    <visible>String.IsEqual(Container(211).ListItem.Label2,MovieHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=movieshub)</onclick>
                 </control>
                 <control type="button" id="9302" description="Set TVHub">
                     <width>100%</width>
                     <height>66</height>
                     <label>31178</label>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <visible>String.IsEqual(Window.Property(groupname),mainmenu)</visible>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <visible>stringcompare(Container(211).ListItem.Label2,TVHub)</visible>
+                    <visible>String.IsEqual(Container(211).ListItem.Label2,TVHub)</visible>
                     <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=episodeshub)</onclick>
                 </control>
                 <control type="button" id="308" description="Reset">
@@ -266,7 +266,7 @@
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
-                    <!--<visible>!stringcompare(Window.Property(groupname),mainmenu)</visible>-->
+                    <!--<visible>!String.IsEqual(Window.Property(groupname),mainmenu)</visible>-->
                 </control>
             </control>
         

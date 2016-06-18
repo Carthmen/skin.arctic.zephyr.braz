@@ -116,7 +116,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture colordiffuse="White100">$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
                     </control>
                 </control>
             </control>
@@ -184,7 +184,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         <animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation>
                     </control>
                     <control type="label">
@@ -257,7 +257,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedN3]</texture>
-                        <visible>!stringcompare(ListItem(-3).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(-3).Label,..)</visible>
                     </control>
 
                 </control>
@@ -303,7 +303,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedN2]</texture>
-                        <visible>!stringcompare(ListItem(-2).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(-2).Label,..)</visible>
                     </control>
                 </control>
 
@@ -347,7 +347,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedN1]</texture>
-                        <visible>!stringcompare(ListItem(-1).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(-1).Label,..)</visible>
                     </control>
                 </control>
 
@@ -391,7 +391,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedP3]</texture>
-                        <visible>!stringcompare(ListItem(3).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(3).Label,..)</visible>
                     </control>
                 </control>
 
@@ -435,7 +435,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedP2]</texture>
-                        <visible>!stringcompare(ListItem(2).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(2).Label,..)</visible>
                         
                     </control>
                 </control>
@@ -480,7 +480,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatchedN3]</texture>
-                        <visible>!stringcompare(ListItem(-3).Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem(-3).Label,..)</visible>
                         
                     </control>
                 </control>
@@ -589,7 +589,7 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         <animation effect="slide" start="0" end="64" time="0" condition="Container.Content(Seasons)">Conditional</animation>
                     </control>
                     <control type="label">

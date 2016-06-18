@@ -495,7 +495,7 @@
 
                 <!-- Content Labels -->
                 <control type="label">
-                    <visible>Control.IsVisible(50) | [!String.IsEmpty(Window.Property(content)) + !StringCompare(Window.Property(content),350) + !Container(9501).IsUpdating]</visible>
+                    <visible>Control.IsVisible(50) | [!String.IsEmpty(Window.Property(content)) + !String.IsEqual(Window.Property(content),350) + !Container(9501).IsUpdating]</visible>
                     <left>ListSquareX</left>
                     <right>SidePad</right>
                     <textoffsetx>5</textoffsetx>
@@ -507,7 +507,7 @@
                     <include>Animation.DelayFadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>[StringCompare(Window.Property(content),350) + !Container(9501).IsUpdating]</visible>
+                    <visible>[String.IsEqual(Window.Property(content),350) + !Container(9501).IsUpdating]</visible>
                     <left>ListSquareX</left>
                     <right>SidePad</right>
                     <textoffsetx>5</textoffsetx>
@@ -549,7 +549,7 @@
                 
                 <!-- Youtube List -->
                 <control type="list" id="350">
-                    <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + StringCompare(Window.Property(content),350)</visible>
+                    <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + String.IsEqual(Window.Property(content),350)</visible>
                     <onleft>350</onleft>
                     <onright>350</onright>
                     <bottom>80</bottom>
@@ -579,7 +579,7 @@
                 <!-- Content List -->
                 <control type="list" id="9501">
                     <include>Animation.FadeIn.Slide</include>
-                    <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating + !Control.IsVisible(50) + !StringCompare(Window.Property(content),350)</visible>
+                    <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating + !Control.IsVisible(50) + !String.IsEqual(Window.Property(content),350)</visible>
                     <bottom>60</bottom>
                     <left>742</left>
                     <width>1108</width>

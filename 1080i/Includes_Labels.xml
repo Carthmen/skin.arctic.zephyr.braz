@@ -50,8 +50,8 @@
     </variable>
 
     <variable name="LabelYear">
-        <value condition="Container.Content(tvshows) + stringcompare(Container.SortMethod,$LOCALIZE[20360])">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
-        <value condition="[Container.Content(tvshows) | Container.Content(episodes)] + stringcompare(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
+        <value condition="Container.Content(tvshows) + String.IsEqual(Container.SortMethod,$LOCALIZE[20360])">$INFO[ListItem.Property(TotalEpisodes),, $LOCALIZE[20360]]</value>
+        <value condition="[Container.Content(tvshows) | Container.Content(episodes)] + String.IsEqual(Container.SortMethod,$LOCALIZE[568])">$INFO[ListItem.LastPlayed]</value>
         <value condition="Container.Content(episodes)">$INFO[ListItem.Premiered]</value>
         <value condition="!String.IsEmpty(ListItem.Year)">$INFO[ListItem.Year]</value>
     </variable>
@@ -81,11 +81,11 @@
         <value>$LOCALIZE[19055]</value>
     </variable>
     <variable name="LabelDuration">
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[20368])">$INFO[ListItem.Date]</value>
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[552])">$INFO[ListItem.Date]</value>
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[20074])">$INFO[ListItem.MPAA]</value>
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[570])">$INFO[ListItem.DateAdded]</value>
-        <value condition="stringcompare(Container.SortMethod,$LOCALIZE[567])">$INFO[ListItem.PlayCount]</value>
+        <value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[20368])">$INFO[ListItem.Date]</value>
+        <value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[552])">$INFO[ListItem.Date]</value>
+        <value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[20074])">$INFO[ListItem.MPAA]</value>
+        <value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[570])">$INFO[ListItem.DateAdded]</value>
+        <value condition="String.IsEqual(Container.SortMethod,$LOCALIZE[567])">$INFO[ListItem.PlayCount]</value>
         <value condition="!String.IsEmpty(ListItem.Duration)">$INFO[ListItem.Duration,, $LOCALIZE[31102]]</value>
         <value condition="[Container.Content(tvshows) + !Control.IsVisible(54) + !Control.IsVisible(555) + !Control.IsVisible(58) + !Control.IsVisible(57)] | Container.Content(episodes)">$VAR[LabelYear]</value>
     </variable>
@@ -114,58 +114,58 @@
         <value>$INFO[ListItem.Label]</value>
     </variable>
     <variable name="LabelAudioChannels">
-        <value condition="stringcompare(ListItem.AudioChannels,8)">7.1</value>
-        <value condition="stringcompare(ListItem.AudioChannels,7)">6.1</value>
-        <value condition="stringcompare(ListItem.AudioChannels,6)">5.1</value>
-        <value condition="stringcompare(ListItem.AudioChannels,5)">4.1</value>
-        <value condition="stringcompare(ListItem.AudioChannels,4)">4.0</value>
-        <value condition="stringcompare(ListItem.AudioChannels,3)">2.1</value>
-        <value condition="stringcompare(ListItem.AudioChannels,2)">2.0</value>
-        <value condition="stringcompare(ListItem.AudioChannels,1)">1.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,8)">7.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,7)">6.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,6)">5.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,5)">4.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,4)">4.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,3)">2.1</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,2)">2.0</value>
+        <value condition="String.IsEqual(ListItem.AudioChannels,1)">1.0</value>
         <value>???</value>
     </variable>
     <variable name="LabelHubAudioChannels">
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,8)">7.1</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,7)">6.1</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,6)">5.1</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,5)">4.1</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,4)">4.0</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,3)">2.1</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,2)">2.0</value>
-        <value condition="stringcompare(Container(9500).ListItem.AudioChannels,1)">1.0</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,8)">7.1</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,7)">6.1</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,6)">5.1</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,5)">4.1</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,4)">4.0</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,3)">2.1</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,2)">2.0</value>
+        <value condition="String.IsEqual(Container(9500).ListItem.AudioChannels,1)">1.0</value>
         <value>???</value>
     </variable>
     <variable name="LabelHomeAudioChannels">
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,8)">7.1</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,7)">6.1</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,6)">5.1</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,5)">4.1</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,4)">4.0</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,3)">2.1</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,2)">2.0</value>
-        <value condition="stringcompare(Container(301).ListItem.AudioChannels,1)">1.0</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,8)">7.1</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,7)">6.1</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,6)">5.1</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,5)">4.1</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,4)">4.0</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,3)">2.1</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,2)">2.0</value>
+        <value condition="String.IsEqual(Container(301).ListItem.AudioChannels,1)">1.0</value>
         <value>???</value>
     </variable>
     <variable name="LabelSearchAudioChannels">
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),8)">7.1</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),7)">6.1</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),6)">5.1</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),5)">4.1</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),4)">4.0</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),3)">2.1</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),2)">2.0</value>
-        <value condition="stringcompare(Container(100).ListItem.Property(AudioChannels),1)">1.0</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),8)">7.1</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),7)">6.1</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),6)">5.1</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),5)">4.1</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),4)">4.0</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),3)">2.1</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),2)">2.0</value>
+        <value condition="String.IsEqual(Container(100).ListItem.Property(AudioChannels),1)">1.0</value>
         <value>???</value>
     </variable>
     <variable name="LabelOSDAudioChannels">
-        <value condition="stringcompare(VideoPlayer.AudioChannels,8)">7.1</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,7)">6.1</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,6)">5.1</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,5)">4.1</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,4)">4.0</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,3)">2.1</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,2)">2.0</value>
-        <value condition="stringcompare(VideoPlayer.AudioChannels,1)">1.0</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,8)">7.1</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,7)">6.1</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,6)">5.1</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,5)">4.1</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,4)">4.0</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,3)">2.1</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,2)">2.0</value>
+        <value condition="String.IsEqual(VideoPlayer.AudioChannels,1)">1.0</value>
         <value>???</value>
     </variable>
     <variable name="Label_SettingsHeader">
@@ -189,24 +189,24 @@
     </variable>
     <variable name="WidgetTitle">
         <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$INFO[Window(Weather).Property(Current.Temperature),Currently ,°][LOWERCASE]$INFO[Window(Weather).Property(Current.Condition), and ][/LOWERCASE]</value>
-        <value condition="StringCompare(Container(300).ListItem.Property(widget),NextAired) | StringCompare(Container(300).ListItem.Property(widget),Favourites)">$INFO[Container(301).ListItem.Label]</value>
-        <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Season,,x]$INFO[Container(301).ListItem.Episode,,. ]$INFO[Container(301).ListItem.Title]</value>
-        <value condition="StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) +!String.IsEmpty(Container(301).ListItem.Title)">$INFO[Container(301).ListItem.Title]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(widget),NextAired) | String.IsEqual(Container(300).ListItem.Property(widget),Favourites)">$INFO[Container(301).ListItem.Label]</value>
+        <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Season,,x]$INFO[Container(301).ListItem.Episode,,. ]$INFO[Container(301).ListItem.Title]</value>
+        <value condition="String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) +!String.IsEmpty(Container(301).ListItem.Title)">$INFO[Container(301).ListItem.Title]</value>
         <value>$INFO[Container(301).ListItem.Label]</value>
     </variable>
     <variable name="WidgetPlot">
-        <value condition="StringCompare(Container(300).ListItem.Property(widgetType),albums)">$INFO[Container(301).ListItem.Property(Album_Description)]</value>
-        <value condition="StringCompare(Container(300).ListItem.Property(widgetType),songs)">Recorded by $INFO[Container(301).ListItem.Artist] on the album $INFO[Container(301).ListItem.Album,,.]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(widgetType),albums)">$INFO[Container(301).ListItem.Property(Album_Description)]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(widgetType),songs)">Recorded by $INFO[Container(301).ListItem.Artist] on the album $INFO[Container(301).ListItem.Album,,.]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.Plot)">$INFO[Container(301).ListItem.Plot]</value>
         <value condition="!String.IsEmpty(Container(301).ListItem.AddonDescription)">$INFO[Container(301).ListItem.AddonDescription]</value>
         <value condition="!String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$LOCALIZE[19055]</value>
     </variable>
     <variable name="WidgetSubLabel">
         <value condition="String.StartsWith(Container(300).ListItem.Property(widget),Weather)">$INFO[Window(Weather).Property(Current.FeelsLike),$LOCALIZE[402] ,°]$INFO[Window(Weather).Property(Current.Humidity),  •  , $LOCALIZE[406]]$INFO[Window(Weather).Property(Current.Wind),  •  Wind ]</value>
-        <value condition="StringCompare(Container(300).ListItem.Property(widgetType),albums) | StringCompare(Container(300).ListItem.Property(widgetType),songs)">$INFO[Container(301).ListItem.Artist]$INFO[Container(301).ListItem.Year,  •  ,]</value>
-        <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle]$INFO[Container(301).ListItem.Premiered,  •  ]$INFO[Container(301).ListItem.Duration,  •  , $LOCALIZE[31102]]$INFO[Container(301).ListItem.Rating,  •  ]</value>
-        <value condition="!StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]]$INFO[Container(301).ListItem.Year,  •  ]$INFO[Container(301).ListItem.Rating,  •  ]</value>
-        <value condition="StringCompare(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Episode,, $LOCALIZE[20360]]$INFO[Container(301).ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]$INFO[Container(301).ListItem.Duration,  •  , $LOCALIZE[31102]]$INFO[Container(301).ListItem.Rating,  •  ]</value>
+        <value condition="String.IsEqual(Container(300).ListItem.Property(widgetType),albums) | String.IsEqual(Container(300).ListItem.Property(widgetType),songs)">$INFO[Container(301).ListItem.Artist]$INFO[Container(301).ListItem.Year,  •  ,]</value>
+        <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + !String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.TvShowTitle]$INFO[Container(301).ListItem.Premiered,  •  ]$INFO[Container(301).ListItem.Duration,  •  , $LOCALIZE[31102]]$INFO[Container(301).ListItem.Rating,  •  ]</value>
+        <value condition="!String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle) + String.IsEmpty(Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Duration,, $LOCALIZE[31102]]$INFO[Container(301).ListItem.Year,  •  ]$INFO[Container(301).ListItem.Rating,  •  ]</value>
+        <value condition="String.IsEqual(Container(301).ListItem.Title,Container(301).ListItem.TvShowTitle)">$INFO[Container(301).ListItem.Episode,, $LOCALIZE[20360]]$INFO[Container(301).ListItem.Property(UnWatchedEpisodes),  •  , $LOCALIZE[16101]]$INFO[Container(301).ListItem.Duration,  •  , $LOCALIZE[31102]]$INFO[Container(301).ListItem.Rating,  •  ]</value>
     </variable>
     <variable name="PVRInfoStatus">
         <value condition="ListItem.IsRecording">$LOCALIZE[19158]</value>
@@ -273,9 +273,9 @@
     </variable>
     
     <variable name="LabelVideoInfoCastDirector">
-        <value condition="StringCompare(Window.Property(content),1)">$INFO[ListItem.Studio,$LOCALIZE[31205] ,]</value>
-        <value condition="StringCompare(Window.Property(content),2)">$INFO[ListItem.Title,$LOCALIZE[31204] ,]</value>
-        <value condition="StringCompare(Window.Property(content),3) + !Control.IsVisible(50)">$INFO[ListItem.Director,$LOCALIZE[31191] ,]</value>
+        <value condition="String.IsEqual(Window.Property(content),1)">$INFO[ListItem.Studio,$LOCALIZE[31205] ,]</value>
+        <value condition="String.IsEqual(Window.Property(content),2)">$INFO[ListItem.Title,$LOCALIZE[31204] ,]</value>
+        <value condition="String.IsEqual(Window.Property(content),3) + !Control.IsVisible(50)">$INFO[ListItem.Director,$LOCALIZE[31191] ,]</value>
         <value condition="Control.IsVisible(50)">$INFO[ListItem.Title,, $LOCALIZE[206]]</value>
         <value condition="!String.IsEmpty(ListItem.Tagline)">$INFO[ListItem.Tagline]</value>
     </variable>

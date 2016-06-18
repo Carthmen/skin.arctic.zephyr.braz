@@ -212,7 +212,7 @@
                         <label>- Animate music visualization background</label>
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-                        <enable>!String.IsEmpty(Skin.String(musicvis.background)) + !StringCompare(Skin.String(musicvis.background),albumwall)</enable>
+                        <enable>!String.IsEmpty(Skin.String(musicvis.background)) + !String.IsEqual(Skin.String(musicvis.background),albumwall)</enable>
                     </control>
                     <control type="radiobutton" id="9224" description="Show slideshow in background">
                         <width>1310</width>

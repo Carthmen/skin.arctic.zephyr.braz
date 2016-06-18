@@ -46,7 +46,7 @@
                     <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
                 </control>
                 <control type="group">
-                    <visible>!stringcompare(ListItem.Label,..)</visible>
+                    <visible>!String.IsEqual(ListItem.Label,..)</visible>
                     
                     <control type="image">
                         <left>379</left>
@@ -102,7 +102,7 @@
                     <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
                 </control>
                 <control type="group">
-                    <visible>!stringcompare(ListItem.Label,..)</visible>
+                    <visible>!String.IsEqual(ListItem.Label,..)</visible>
                     
                   
                   <control type="image">

@@ -748,7 +748,7 @@
             </control>
 
             <control type="image">
-                <visible>StringCompare(Window.Property(loading.progress),25)</visible>
+                <visible>String.IsEqual(Window.Property(loading.progress),25)</visible>
                 <animation effect="zoom" start="24,100" end="50,100" center="0,69" time="1000">Visible</animation>
                 <posx>80</posx>
                 <posy>137</posy>
@@ -757,7 +757,7 @@
                 <texture>script-hdhomerun-view-splash_progress_bar.png</texture>
             </control>
             <control type="image">
-                <visible>StringCompare(Window.Property(loading.progress),50)</visible>
+                <visible>String.IsEqual(Window.Property(loading.progress),50)</visible>
                 <animation effect="zoom" start="50,100" end="75,100" center="0,69" time="1000">Visible</animation>
                 <posx>80</posx>
                 <posy>137</posy>
@@ -766,7 +766,7 @@
                 <texture>script-hdhomerun-view-splash_progress_bar.png</texture>
             </control>
             <control type="image">
-                <visible>StringCompare(Window.Property(loading.progress),75)</visible>
+                <visible>String.IsEqual(Window.Property(loading.progress),75)</visible>
                 <animation effect="zoom" start="75,100" end="100,100" center="0,69" time="1000">Visible</animation>
                 <posx>80</posx>
                 <posy>137</posy>
@@ -775,7 +775,7 @@
                 <texture>script-hdhomerun-view-splash_progress_bar.png</texture>
             </control>
             <control type="image">
-                <visible>StringCompare(Window.Property(loading.progress),100)</visible>
+                <visible>String.IsEqual(Window.Property(loading.progress),100)</visible>
                 <posx>80</posx>
                 <posy>137</posy>
                 <width>249</width>

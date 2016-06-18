@@ -101,7 +101,7 @@
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>
                                 <texture colordiffuse="White100">$VAR[PercentWatched]</texture>
-                                <visible>!stringcompare(ListItem.Label,..)</visible>
+                                <visible>!String.IsEqual(ListItem.Label,..)</visible>
                                 <animation effect="slide" start="0" end="50" condition="Integer.IsGreater(ListItem.Episode,99)">Conditional</animation>
                             </control>
                             <control type="label">
@@ -243,7 +243,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="Dark1">$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
                         </control>
                         <control type="label">
                             <left>337</left>
@@ -414,7 +414,7 @@
                                 <height>32</height>
                                 <aspectratio aligny="top">keep</aspectratio>
                                 <texture colordiffuse="Dark1">$VAR[PercentWatched]</texture>
-                                <visible>!stringcompare(ListItem.Label,..)</visible>
+                                <visible>!String.IsEqual(ListItem.Label,..)</visible>
                                 <animation effect="slide" start="0" end="50" condition="Integer.IsGreater(ListItem.Episode,99)">Conditional</animation>
                             </control>
                             <control type="label">

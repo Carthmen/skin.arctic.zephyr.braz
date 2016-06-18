@@ -48,8 +48,8 @@
                             <texture diffuse="diffuse/bigiconsquare.png" background="true">$VAR[PosterImage]</texture>
                         </control>
                         <control type="group">
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
-                            <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                            <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                             
                             <control type="image">
                                 <left>379</left>
@@ -95,8 +95,8 @@
                             <texture diffuse="diffuse/bigiconsquare.png" background="true">$VAR[PosterImage]</texture>
                         </control>
                         <control type="group">
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
-                            <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                            <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                            <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                           
                             <control type="image">
                                 <left>379</left>

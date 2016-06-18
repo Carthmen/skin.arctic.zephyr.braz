@@ -190,7 +190,7 @@
                 </control>
 
                 <control type="label">
-                    <visible>stringcompare(Window.Property(content),150)</visible>
+                    <visible>String.IsEqual(Window.Property(content),150)</visible>
                     <visible>Control.IsVisible(150)</visible>
                     <visible>Control.HasFocus(150)</visible>
                     <left>540</left>
@@ -218,7 +218,7 @@
                     <include>Animation.DelayFadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>stringcompare(Window.Property(content),250)</visible>
+                    <visible>String.IsEqual(Window.Property(content),250)</visible>
                     <visible>Control.IsVisible(250)</visible>
                     <visible>Control.HasFocus(250)</visible>
                     <left>540</left>
@@ -246,7 +246,7 @@
                     <include>Animation.DelayFadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>stringcompare(Window.Property(content),350)</visible>
+                    <visible>String.IsEqual(Window.Property(content),350)</visible>
                     <visible>Control.IsVisible(350)</visible>
                     <visible>Control.HasFocus(350)</visible>
                     <left>540</left>
@@ -274,7 +274,7 @@
                     <include>Animation.DelayFadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>stringcompare(Window.Property(content),450)</visible>
+                    <visible>String.IsEqual(Window.Property(content),450)</visible>
                     <visible>Control.IsVisible(450)</visible>
                     <visible>Control.HasFocus(450)</visible>
                     <left>540</left>
@@ -302,7 +302,7 @@
                     <include>Animation.DelayFadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>stringcompare(Window.Property(content),550)</visible>
+                    <visible>String.IsEqual(Window.Property(content),550)</visible>
                     <visible>Control.IsVisible(550)</visible>
                     <visible>Control.HasFocus(550)</visible>
                     <left>540</left>
@@ -465,31 +465,31 @@
                 </control>
 
                 <control type="list" id="150">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(content),150)</visible>
+                    <visible allowhiddenfocus="true">String.IsEqual(Window.Property(content),150)</visible>
                     <onleft>150</onleft>
                     <onright>150</onright>
                     <include>DefExtendedInfoList</include>
                 </control>
                 <control type="list" id="250">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(content),250)</visible>
+                    <visible allowhiddenfocus="true">String.IsEqual(Window.Property(content),250)</visible>
                     <onleft>250</onleft>
                     <onright>250</onright>
                     <include>DefExtendedInfoList</include>
                 </control>
                 <control type="list" id="350">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(content),350)</visible>
+                    <visible allowhiddenfocus="true">String.IsEqual(Window.Property(content),350)</visible>
                     <onleft>350</onleft>
                     <onright>350</onright>
                     <include>DefExtendedInfoListWide</include>
                 </control>                
                 <control type="list" id="450">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(content),450)</visible>
+                    <visible allowhiddenfocus="true">String.IsEqual(Window.Property(content),450)</visible>
                     <onleft>450</onleft>
                     <onright>450</onright>
                     <include>DefExtendedInfoList</include>
                 </control>
                 <control type="list" id="550">
-                    <visible allowhiddenfocus="true">StringCompare(Window.Property(content),550)</visible>
+                    <visible allowhiddenfocus="true">String.IsEqual(Window.Property(content),550)</visible>
                     <onleft>550</onleft>
                     <onright>550</onright>
                     <include>DefExtendedInfoList</include>

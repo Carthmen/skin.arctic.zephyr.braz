@@ -112,7 +112,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture colordiffuse="White100">$VAR[PercentWatched]</texture>
-            <visible>!stringcompare(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
+            <visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
         </control>
     </include>
 
@@ -160,7 +160,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture colordiffuse="Dark1">$VAR[PercentWatched]</texture>
-            <visible>!stringcompare(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
+            <visible>!String.IsEqual(ListItem.Label,..) + !String.StartsWith(Container.FolderPath,plugin://)</visible>
         </control>
     </include>
 
