@@ -19,7 +19,7 @@
             </control>
         </control>
         <control type="group">
-            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | Window.IsVisible(1110)">
+            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | Window.IsVisible(1110)">
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
             <control type="group">
@@ -123,7 +123,7 @@
                         <description>Trailer button</description>
                         <label>20410</label>
                         <include>DefInfoButtons</include>
-                        <visible>!IsEmpty(ListItem.Trailer)</visible>
+                        <visible>!String.IsEmpty(ListItem.Trailer)</visible>
                     </control>
 
                     <control type="button" id="53">
@@ -226,7 +226,7 @@
                     <include>Animation.FadeIn</include>
                 </control>
                 <control type="label">
-                    <visible>Control.IsVisible(50) | [!IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating]</visible>
+                    <visible>Control.IsVisible(50) | [!String.IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating]</visible>
                     <left>540</left>
                     <right>SidePad</right>
                     <top>260</top>
@@ -238,7 +238,7 @@
                 </control>
 
                 <control type="group">
-                    <visible>!Control.IsVisible(50) + IsEmpty(Window.Property(content))</visible>
+                    <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
                     <left>540</left>
                     <right>SidePad</right>
                     <bottom>224</bottom>
@@ -293,7 +293,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Year)</visible>
+                            <visible>!String.IsEmpty(ListItem.Year)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -314,7 +314,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.MPAA)</visible>
+                            <visible>!String.IsEmpty(ListItem.MPAA)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -335,7 +335,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Duration)</visible>
+                            <visible>!String.IsEmpty(ListItem.Duration)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -356,7 +356,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Studio)</visible>
+                            <visible>!String.IsEmpty(ListItem.Studio)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -377,7 +377,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Genre)</visible>
+                            <visible>!String.IsEmpty(ListItem.Genre)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -398,7 +398,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !IsEmpty(Window(Home).Property(NextAired.LatestTitle))</visible>
+                            <visible>[Container.Content(tvshows) | Container.Content(seasons)] + !String.IsEmpty(Window(Home).Property(NextAired.LatestTitle))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -419,7 +419,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Director)</visible>
+                            <visible>!String.IsEmpty(ListItem.Director)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -440,7 +440,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Writer)</visible>
+                            <visible>!String.IsEmpty(ListItem.Writer)</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -461,7 +461,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -481,65 +481,65 @@
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(AudioLanguage.1),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.1))</visible>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(AudioLanguage.2),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.2))</visible>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(AudioLanguage.3),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.3))</visible>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(AudioLanguage.4),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.4))</visible>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(AudioLanguage.5),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(AudioLanguage.5))</visible>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(SubtitleLanguage.1),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.1))</visible>
                                     <colordiffuse>ff777777</colordiffuse>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(SubtitleLanguage.2),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.2))</visible>
                                     <colordiffuse>ff777777</colordiffuse>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(SubtitleLanguage.3),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.3))</visible>
                                     <colordiffuse>ff777777</colordiffuse>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(SubtitleLanguage.4),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.4))</visible>
                                     <colordiffuse>ff777777</colordiffuse>
                                 </control>
                                 <control type="image">
                                     <width>28</width>
                                     <height>28</height>
                                     <texture>$INFO[ListItem.Property(SubtitleLanguage.5),flags/lang/,.png]</texture>
-                                    <visible>!IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
+                                    <visible>!String.IsEmpty(ListItem.Property(SubtitleLanguage.5))</visible>
                                     <colordiffuse>ff777777</colordiffuse>
                                 </control>
                             </control>
@@ -684,7 +684,7 @@
                     <centerbottom>51%</centerbottom>
                     <width>450</width>
                     <height>117</height>
-                    <visible>!IsEmpty(Window.Property(content)) + Container(9501).IsUpdating + !Control.IsVisible(50)</visible>
+                    <visible>!String.IsEmpty(Window.Property(content)) + Container(9501).IsUpdating + !Control.IsVisible(50)</visible>
                     <include>Animation.FadeIn</include>
                     <include>Animation.FadeOut</include>
               
@@ -713,7 +713,7 @@
                 </control>
                 <control type="list" id="9501">
                     <include>Animation.FadeIn.Slide</include>
-                    <visible allowhiddenfocus="true">!IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating + !Control.IsVisible(50)</visible>
+                    <visible allowhiddenfocus="true">!String.IsEmpty(Window.Property(content)) + !Container(9501).IsUpdating + !Control.IsVisible(50)</visible>
                     <bottom>80</bottom>
                     <left>530</left>
                     <width>1320</width>
@@ -752,7 +752,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
                         <control type="image">
                             <centerright>32</centerright>
@@ -761,7 +761,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture>$VAR[PosterPercentWatched]</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
                         <control type="image">
                             <left>10</left>
@@ -806,7 +806,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
                         <control type="image">
                             <centerright>32</centerright>
@@ -815,7 +815,7 @@
                             <height>32</height>
                             <aspectratio aligny="top">keep</aspectratio>
                             <texture>$VAR[PosterPercentWatched]</texture>
-                            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
                         </control>
                         <control type="image">
                             <centerleft>50%</centerleft>

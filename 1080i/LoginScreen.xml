@@ -5,7 +5,7 @@
     <controls>
         <control type="group">
             <visible>!Player.HasVideo</visible>
-            <visible>!IsEmpty(Window(home).Property(SkinInitStarted))</visible>
+            <visible>!String.IsEmpty(Window(home).Property(SkinInitStarted))</visible>
             <include>GlobalBackground</include>
             <include>Furniture_Header</include>
             <include>Furniture_Clock</include>

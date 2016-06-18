@@ -30,7 +30,7 @@
                 <height>64</height>
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100">flags/$VAR[SearchFlagstar1].png</texture>
-                <visible>!Skin.HasSetting(furniture.numericrating) | !IsEmpty(Container(100).ListItem.Property(Rating))</visible>
+                <visible>!Skin.HasSetting(furniture.numericrating) | !String.IsEmpty(Container(100).ListItem.Property(Rating))</visible>
             </control>
             <control type="image">
                 <posx>-48</posx>
@@ -74,7 +74,7 @@
                 <label>$INFO[Container(100).ListItem.Property(Rating)]</label>
                 <font>Flag</font>
                 <textcolor>White100</textcolor>
-                <visible>Skin.HasSetting(furniture.numericrating) + !IsEmpty(Container(100).ListItem.Property(Rating))</visible>
+                <visible>Skin.HasSetting(furniture.numericrating) + !String.IsEmpty(Container(100).ListItem.Property(Rating))</visible>
             </control>
             
             <control type="image">
@@ -83,7 +83,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100" fallback="flags/fallback.png">$INFO[Container(100).ListItem.Property(VideoCodec),flags/source/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(VideoCodec))</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(VideoCodec))</visible>
             </control>
             <control type="image">
                 <width>88</width>
@@ -91,7 +91,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100" fallback="flags/fallback.png">$INFO[Container(100).ListItem.Property(VideoAspect),flags/aspectratio/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(VideoAspect))</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(VideoAspect))</visible>
             </control>
             <control type="image">
                 <width>88</width>
@@ -99,7 +99,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100" fallback="flags/fallback.png">$INFO[Container(100).ListItem.Property(AudioCodec),flags/audio/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
             </control>
             <control type="image">
                 <width>88</width>
@@ -107,7 +107,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100" fallback="flags/fallback.png">$INFO[Container(100).ListItem.Property(AudioChannels),flags/channels/,.png]</texture>
                 <aspectratio align="center">keep</aspectratio>
-                <visible>Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(AudioChannels))</visible>
+                <visible>Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(AudioChannels))</visible>
             </control>
             
             
@@ -118,7 +118,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100">flags/video.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(VideoResolution))</visible>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(VideoResolution))</visible>
             </control>
             <control type="label">
                 <width min="128">auto</width>
@@ -129,7 +129,7 @@
                 <label>$INFO[Container(100).ListItem.Property(VideoCodec),,  •  ]$INFO[Container(100).ListItem.Property(VideoResolution)]$INFO[Container(100).ListItem.Property(VideoAspect),  •  ,]</label>
                 <font>Flag</font>
                 <textcolor>White100</textcolor>
-                <visible>!Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(VideoResolution))</visible>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(VideoResolution))</visible>
             </control>
             <control type="image">
                 <width>48</width>
@@ -137,7 +137,7 @@
                 <height>64</height>
                 <texture colordiffuse="White100">flags/audio.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -148,7 +148,7 @@
                 <label>$INFO[Container(100).ListItem.Property(AudioCodec)]$VAR[LabelSearchAudioChannels,  •  ,]</label>
                 <font>Flag</font>
                 <textcolor>White100</textcolor>
-                <visible>!Skin.HasSetting(furniture.flagicons) + !IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
+                <visible>!Skin.HasSetting(furniture.flagicons) + !String.IsEmpty(Container(100).ListItem.Property(AudioCodec))</visible>
             </control>
             <control type="image">
                 <width>48</width>
@@ -156,7 +156,7 @@
                 <centertop>50%</centertop>
                 <texture colordiffuse="White100">flags/time.png</texture>
                 <aspectratio align="left">scale</aspectratio>
-                <visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+                <visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
             </control>
             <control type="label">
                 <width>auto</width>
@@ -167,7 +167,7 @@
                 <label>$INFO[Container(100).ListItem.Property(Duration),, $LOCALIZE[31102]  ]</label>
                 <font>Flag</font>
                 <textcolor>White100</textcolor>
-                <visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+                <visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
             </control>
         </control>
 

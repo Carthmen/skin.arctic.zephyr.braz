@@ -107,6 +107,13 @@
                 <posy>513</posy>
                 <width>383</width>
                 <height>383</height>
+                <texture colordiffuse="Background">common/white100.png</texture>
+            </control>
+            <control type="image">
+                <posx>15</posx>
+                <posy>513</posy>
+                <width>383</width>
+                <height>383</height>
                 <texture fallback="DefaultAddon.png">$INFO[ListItem.Icon]</texture>
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
             </control>

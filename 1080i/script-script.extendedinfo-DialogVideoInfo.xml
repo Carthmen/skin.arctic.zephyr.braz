@@ -17,7 +17,7 @@
             <visible>Window.IsVisible(fullscreenvideo)</visible>
         </control>
         <control type="group">
-            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
+            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
       
@@ -78,7 +78,7 @@
           
                 <control type="group">
                     <include>Animation.DelayFadeIn</include>
-                    <visible>!IsEmpty(Window.Property(content))</visible>
+                    <visible>!String.IsEmpty(Window.Property(content))</visible>
                     <visible>[Control.HasFocus(150) + !Container(150).IsUpdating] | [Control.HasFocus(250) + !Container(250).IsUpdating] | [Control.HasFocus(350) + !Container(350).IsUpdating] | [Control.HasFocus(550) + !Container(550).IsUpdating] | [Control.HasFocus(750) + !Container(750).IsUpdating] | [Control.HasFocus(1000) + !Container(1000).IsUpdating] | [Control.HasFocus(1150) + !Container(1150).IsUpdating] | [Control.HasFocus(50) + !Container(50).IsUpdating] | [Control.HasFocus(9501) + !Container(9501).IsUpdating]</visible>
                     <centerbottom>366</centerbottom>
                     <height>16</height>
@@ -150,16 +150,16 @@
                         <description>Play</description>
                         <label>208</label>
                         <include>DefInfoButtons</include>
-                        <visible>!IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
-                        <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                        <visible>!String.IsEmpty(Window.Property(DBID)) + !Stringcompare(Window.Property(Type),tvshow)</visible>
+                        <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
                     </control>
 
                     <control type="button" id ="120">
                         <description>Browse</description>
                         <label>21385</label>
                         <include>DefInfoButtons</include>
-                        <visible>!IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
-                        <visible>IsEmpty(Window(home).Property(globalsearch))</visible>
+                        <visible>!String.IsEmpty(Window.Property(DBID)) + Stringcompare(Window.Property(Type),tvshow)</visible>
+                        <visible>String.IsEmpty(Window(home).Property(globalsearch))</visible>
                     </control>
 
                     <control type="button" id ="9002">
@@ -308,7 +308,7 @@
                     <right>SidePad</right>
                     <bottom>224</bottom>
                     <top>PosterPad</top>
-                    <visible>IsEmpty(Window.Property(content))</visible>
+                    <visible>String.IsEmpty(Window.Property(content))</visible>
                     <control type="grouplist">
                         <left>30</left>
                         <right>30</right>
@@ -332,7 +332,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(ReleaseDate))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(ReleaseDate))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -353,7 +353,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(mpaa))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(mpaa))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -374,7 +374,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(duration))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(duration))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -395,7 +395,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(Budget))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(Budget))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -416,7 +416,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(Revenue))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(Revenue))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -437,7 +437,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(studio))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(studio))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -458,7 +458,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(genre))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(genre))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -479,7 +479,7 @@
                             </control>
                         </control>
                         <control type="group">
-                            <visible>IsEmpty(Window.Property(content)) + !IsEmpty(Window.Property(director))</visible>
+                            <visible>String.IsEmpty(Window.Property(content)) + !String.IsEmpty(Window.Property(director))</visible>
                             <height>36</height>
                             <control type="label">
                                 <width>100%</width>
@@ -509,7 +509,7 @@
                             <aligny>center</aligny>
                         </control>
                         <control type="textbox">
-                            <visible>IsEmpty(Window.Property(content))</visible>
+                            <visible>String.IsEmpty(Window.Property(content))</visible>
                             <width>100%</width>
                             <height>110</height>
                             <font>Tiny</font>

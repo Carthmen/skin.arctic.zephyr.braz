@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <variable name="GlobalSearchArt">
-        <!--<value condition="!IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>-->
+        <!--<value condition="!String.IsEmpty(ListItem.Property(Fanart))">$INFO[ListItem.Property(Fanart)]</value>-->
         <value>$INFO[ListItem.Thumb]</value>
     </variable>
     <variable name="GlobalSearchPoster">
@@ -9,19 +9,19 @@
         <value>$INFO[Container(100).ListItem.Icon]</value>
     </variable>
     <variable name="GlobalSearchArtInfo">
-        <value condition="!IsEmpty(Container(100).ListItem.Property(Fanart))">$INFO[Container(100).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(111) + !IsEmpty(Container(111).ListItem.Property(Fanart))">$INFO[Container(111).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(121) + !IsEmpty(Container(121).ListItem.Property(Fanart))">$INFO[Container(121).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(131) + !IsEmpty(Container(131).ListItem.Property(Fanart))">$INFO[Container(131).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(141) + !IsEmpty(Container(141).ListItem.Property(Fanart))">$INFO[Container(141).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(151) + !IsEmpty(Container(151).ListItem.Property(Fanart))">$INFO[Container(151).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(161) + !IsEmpty(Container(161).ListItem.Property(Fanart))">$INFO[Container(161).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(171) + !IsEmpty(Container(171).ListItem.Property(Fanart))">$INFO[Container(171).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(181) + !IsEmpty(Container(181).ListItem.Property(Fanart))">$INFO[Container(181).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(191) + !IsEmpty(Container(191).ListItem.Property(Fanart))">$INFO[Container(191).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(211) + !IsEmpty(Container(211).ListItem.Property(Fanart))">$INFO[Container(211).ListItem.Property(Fanart)]</value>
-        <value condition="Control.HasFocus(221) + !IsEmpty(Container(221).ListItem.Property(Fanart))">$INFO[Container(221).ListItem.Property(Fanart)]</value>
-        <value condition="!Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + !IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
+        <value condition="!String.IsEmpty(Container(100).ListItem.Property(Fanart))">$INFO[Container(100).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(111) + !String.IsEmpty(Container(111).ListItem.Property(Fanart))">$INFO[Container(111).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(121) + !String.IsEmpty(Container(121).ListItem.Property(Fanart))">$INFO[Container(121).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(131) + !String.IsEmpty(Container(131).ListItem.Property(Fanart))">$INFO[Container(131).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(141) + !String.IsEmpty(Container(141).ListItem.Property(Fanart))">$INFO[Container(141).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(151) + !String.IsEmpty(Container(151).ListItem.Property(Fanart))">$INFO[Container(151).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(161) + !String.IsEmpty(Container(161).ListItem.Property(Fanart))">$INFO[Container(161).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(171) + !String.IsEmpty(Container(171).ListItem.Property(Fanart))">$INFO[Container(171).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(181) + !String.IsEmpty(Container(181).ListItem.Property(Fanart))">$INFO[Container(181).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(191) + !String.IsEmpty(Container(191).ListItem.Property(Fanart))">$INFO[Container(191).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(211) + !String.IsEmpty(Container(211).ListItem.Property(Fanart))">$INFO[Container(211).ListItem.Property(Fanart)]</value>
+        <value condition="Control.HasFocus(221) + !String.IsEmpty(Container(221).ListItem.Property(Fanart))">$INFO[Container(221).ListItem.Property(Fanart)]</value>
+        <value condition="!Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + !String.IsEmpty(Skin.String(fanart.fallback))">$INFO[Skin.String(fanart.fallback)]</value>
         <value condition="!Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml)">special://skin/extras/backgrounds/default_bg.jpg</value>
     </variable>
     <variable name="GlobalSearchInfoSubHeading">
@@ -265,7 +265,7 @@
             <animation effect="slide" start="0" end="-1920" time="300" tween="quadratic" easing="in">Hidden</animation>
             <left>SidePad</left>
             <top>PosterPad</top>
-            <visible>!IsEmpty(Container(100).ListItem.Thumb)</visible>
+            <visible>!String.IsEmpty(Container(100).ListItem.Thumb)</visible>
             <control type="image">
                 <top>PosterH</top>
                 <width>PosterH</width>
@@ -339,7 +339,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Year))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -380,7 +380,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Season))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Season))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -401,7 +401,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Control.IsVisible(140) + !IsEmpty(Container(100).ListItem.Property(Episode))</visible>
+                    <visible>Control.IsVisible(140) + !String.IsEmpty(Container(100).ListItem.Property(Episode))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -422,7 +422,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>Control.IsVisible(140) + !IsEmpty(Container(100).ListItem.Property(Premiered))</visible>
+                    <visible>Control.IsVisible(140) + !String.IsEmpty(Container(100).ListItem.Property(Premiered))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -443,7 +443,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -464,7 +464,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Studio))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Studio))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -485,7 +485,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Genre))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Genre))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -506,7 +506,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Director))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Director))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>100%</width>
@@ -582,7 +582,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>[Control.IsVisible(150) | Control.IsVisible(180)] + !IsEmpty(Container(100).ListItem.Property(Album))</visible>
+                    <visible>[Control.IsVisible(150) | Control.IsVisible(180)] + !String.IsEmpty(Container(100).ListItem.Property(Album))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -603,7 +603,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Track))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Track))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -624,7 +624,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Year))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Year))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -645,7 +645,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Album_Label))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Album_Label))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -666,7 +666,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Genre))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Genre))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -687,7 +687,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Genre))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Genre))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -708,7 +708,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Born)) | !IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Born)) | !String.IsEmpty(Container(100).ListItem.Property(Artist_Formed))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -717,7 +717,7 @@
                         <textcolor>White100</textcolor>
                         <label>[B]$LOCALIZE[21893][/B]</label>
                         <aligny>center</aligny>
-                        <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
+                        <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
                     </control>
                     <control type="label">
                         <width>100%</width>
@@ -726,7 +726,7 @@
                         <textcolor>White100</textcolor>
                         <label>[B]$LOCALIZE[21894][/B]</label>
                         <aligny>center</aligny>
-                        <visible>IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
+                        <visible>String.IsEmpty(Container(100).ListItem.Property(Artist_Born))</visible>
                     </control>
                     <control type="label">
                         <left>160</left>
@@ -739,7 +739,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Died)) | !IsEmpty(Container(100).ListItem.Property(Artist_Disbanded))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Died)) | !String.IsEmpty(Container(100).ListItem.Property(Artist_Disbanded))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -748,7 +748,7 @@
                         <textcolor>White100</textcolor>
                         <label>[B]$LOCALIZE[21897][/B]</label>
                         <aligny>center</aligny>
-                        <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
+                        <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
                     </control>
                     <control type="label">
                         <width>150</width>
@@ -757,7 +757,7 @@
                         <textcolor>White100</textcolor>
                         <label>[B]$LOCALIZE[21896][/B]</label>
                         <aligny>center</aligny>
-                        <visible>IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
+                        <visible>String.IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
                     </control>
                     <control type="label">
                         <left>160</left>
@@ -767,7 +767,7 @@
                         <textcolor>White70</textcolor>
                         <label>$INFO[Container(100).ListItem.Property(Artist_Died)]</label>
                         <aligny>center</aligny>
-                        <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
+                        <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
                     </control>
                     <control type="label">
                         <left>160</left>
@@ -777,11 +777,11 @@
                         <textcolor>White70</textcolor>
                         <label>$INFO[Container(100).ListItem.Property(Artist_Disbanded)]</label>
                         <aligny>center</aligny>
-                        <visible>IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
+                        <visible>String.IsEmpty(Container(100).ListItem.Property(Artist_Died))</visible>
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Artist_Style))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Artist_Style))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -864,7 +864,7 @@
                 </control>
                 
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Duration))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Duration))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -885,7 +885,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Starttime))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Starttime))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -906,7 +906,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Endtime))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Endtime))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>
@@ -927,7 +927,7 @@
                     </control>
                 </control>
                 <control type="group">
-                    <visible>!IsEmpty(Container(100).ListItem.Property(Genre))</visible>
+                    <visible>!String.IsEmpty(Container(100).ListItem.Property(Genre))</visible>
                     <height>36</height>
                     <control type="label">
                         <width>150</width>

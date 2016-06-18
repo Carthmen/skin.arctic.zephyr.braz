@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="100">
-    <defaultcontrol always="true">10</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(home.classicwidgets)</onunload>
     <onunload condition="!Skin.HasSetting(startup.init)">Skin.SetBool(startup.init)</onunload>
     <controls>
@@ -9,34 +9,84 @@
         <include>GlobalOverlay</include>
 
         <control type="group">
-            <include>DefDialogOK</include>
-            <control type="button" id="11">
-                <description>Yes</description>
-                <centerleft>29%</centerleft>
-                <posy>285</posy>
-                <width>320</width>
-                <label>107</label>
-                <onleft>10</onleft>
-                <onright>10</onright>
-                <onup>11</onup>
-                <ondown>11</ondown>
-                <font>Button</font>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+            <centerleft>50%</centerleft>
+            <posy>360</posy>
+            <width>900</width>
+            <include>Animation.FadeIn.Slide</include>
+            <control type="image">
+                <posx>-30</posx>
+                <posy>-30</posy>
+                <width>960</width>
+                <height>444</height>
+                <texture border="16" colordiffuse="White100">common/rounded-shadow8.png</texture>
             </control>
-            <control type="button" id="10">
-                <description>No</description>
-                <centerright>29%</centerright>
+
+            <control type="image">
+                <left>-46</left>
+                <right>-46</right>
+                <top>-46</top>
+                <height>476</height>
+                <bordertexture border="32">common/shadow-24.png</bordertexture>
+                <bordersize>24</bordersize>
+                <texture colordiffuse="White100" border="16">common/box.png</texture>
+            </control>
+
+            <control type="label" id="1">
+                <description>Heading</description>
+                <left>15</left>
+                <right>15</right>
+                <font>MediumBold</font>
+                <align>left</align>
+            </control>
+
+            <control type="textbox" id="9">
+                <description>Line 1</description>
+                <left>15</left>
+                <right>15</right>
+                <posy>85</posy>
+                <height>300</height>
+            </control>
+            <control type="progress" id="20">
+                <description>Progressbar</description>
+                <left>15</left>
+                <right>15</right>
+                <posy>225</posy>
+                <height>27</height>
+                <info>System.Progressbar</info>
+                <texturebg colordiffuse="Black12">osd/progress-bg.png</texturebg>
+            </control>
+
+            <control type="grouplist" id="9000">
                 <posy>285</posy>
-                <width>320</width>
-                <label>106</label>
-                <onleft>11</onleft>
-                <onright>11</onright>
-                <onup>10</onup>
-                <ondown>10</ondown>
-                <font>Button</font>
-                <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
-                <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                <width>900</width>
+                <height>70</height>
+                <align>center</align>
+                <itemgap>0</itemgap>
+                <orientation>horizontal</orientation>
+                <control type="button" id="11">
+                    <description>Ok</description>
+                    <width>300</width>
+                    <label>-</label>
+                    <font>Button</font>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                </control>
+                <control type="button" id="10">
+                    <description>Cancel</description>
+                    <width>300</width>
+                    <label>-</label>
+                    <font>Button</font>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                </control>
+                <control type="button" id="12">
+                    <description>Custom</description>
+                    <width>300</width>
+                    <label>-</label>
+                    <font>Button</font>
+                    <texturefocus colordiffuse="$VAR[ColorHighlight]" border="5">common/box.png</texturefocus>
+                    <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
+                </control>
             </control>
             
 

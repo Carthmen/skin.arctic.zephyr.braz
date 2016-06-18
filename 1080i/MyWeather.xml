@@ -437,7 +437,7 @@
                     <include>DefContextButton</include>
                     <align>left</align>
                     <label>31234</label>
-                    <enable>!IsEmpty(Skin.String(weatherfanart.path))</enable>
+                    <enable>!String.IsEmpty(Skin.String(weatherfanart.path))</enable>
                     <selected>!Skin.HasSetting(weather.hidefanart)</selected>
                     <onclick>Skin.ToggleSetting(weather.hidefanart)</onclick>
                 </control>

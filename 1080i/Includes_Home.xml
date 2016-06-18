@@ -105,7 +105,7 @@
                     <height>100</height>
                     <texture colordiffuse="$VAR[ColorHighlight]">$INFO[Control.GetLabel(9666),progress/circle/p,.png]</texture>
                     <aspectratio align="center">keep</aspectratio>
-                    <visible>!IsEmpty(Player.Duration)</visible>
+                    <visible>!String.IsEmpty(Player.Duration)</visible>
                 </control>
               
             </control>
@@ -198,7 +198,7 @@
     <include name="HomeWidgetSelector">
         <!-- Widget Selector -->
         <control type="group">
-            <visible>![Window.IsVisible(home) + !IsEmpty(Skin.String(home.slideshowpath)) + IsEmpty(Container(300).ListItem.Property(widget))] + IsEmpty(Container(300).ListItem.Property(Background))</visible>
+            <visible>![Window.IsVisible(home) + !String.IsEmpty(Skin.String(home.slideshowpath)) + String.IsEmpty(Container(300).ListItem.Property(widget))] + String.IsEmpty(Container(300).ListItem.Property(Background))</visible>
             <animation effect="slide" end="0" start="0,-250" time="150" reversible="false" condition="ControlGroup(303).HasFocus()">Conditional</animation>
             <animation effect="slide" start="0" end="0,-250" time="150" reversible="false" condition="!ControlGroup(303).HasFocus()">Conditional</animation>
             <include>Animation.FadeOut</include>
@@ -524,8 +524,8 @@
                 <control type="group">
                     <animation effect="slide" end="0,-250" time="450" tween="back" reversible="false" condition="Control.HasFocus(301) | ControlGroup(303).HasFocus()">Conditional</animation>
                     <animation effect="slide" start="0,-250" time="250" tween="quadratic" reversible="false" condition="!Control.HasFocus(301) + !ControlGroup(303).HasFocus()">Conditional</animation>
-                    <animation effect="slide" start="0" end="0,-270" time="450" tween="back" reversible="false" condition="[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + IsEmpty(Skin.String(home.slideshowpath))]]] + Control.IsVisible(301)">Conditional</animation>
-                    <animation effect="slide" end="0" start="0,-270" time="250" tween="quadratic" reversible="false" condition="![[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + IsEmpty(Skin.String(home.slideshowpath))]]]] | !Control.IsVisible(301)">Conditional</animation>
+                    <animation effect="slide" start="0" end="0,-270" time="450" tween="back" reversible="false" condition="[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]] + Control.IsVisible(301)">Conditional</animation>
+                    <animation effect="slide" end="0" start="0,-270" time="250" tween="quadratic" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]]] | !Control.IsVisible(301)">Conditional</animation>
                     <control type="image" description="BottomBG">
                         <width>100%</width>
                         <height>900</height>
@@ -544,8 +544,8 @@
 
                 <!-- Widget  -->
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
-                    <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
+                    <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
                     <animation type="WindowClose">
                         <effect type="fade" start="100" end="0" time="150"/>
                     </animation>
@@ -566,8 +566,8 @@
                         <right>70</right>
                         <top>20</top>
                         <bottom>20</bottom>
-                        <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
-                        <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
+                        <onup condition="String.IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
+                        <onup condition="!String.IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                         <ondown>300</ondown>
                         <onback>300</onback>
                         <onleft>301</onleft>
@@ -971,8 +971,8 @@
                 <left>SidePad</left>
                 <include condition="!Skin.HasSetting(furniture.clock)">DefHomeRight520</include>
                 <include condition="Skin.HasSetting(furniture.clock)">DefHomeRightSidePad</include>
-                <onup condition="!Skin.HasSetting(home.dontshowfanart) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]">301</onup>
-                <onup condition="Skin.HasSetting(home.dontshowfanart) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]">SetFocus(301,0)</onup>
+                <onup condition="!Skin.HasSetting(home.dontshowfanart) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]">301</onup>
+                <onup condition="Skin.HasSetting(home.dontshowfanart) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]">SetFocus(301,0)</onup>
                 <ondown condition="IntegerGreaterThan(Container(302).NumItems,0)">SetFocus(302,0)</ondown>
                 <onleft>300</onleft>
                 <onright>300</onright>
@@ -1156,7 +1156,7 @@
                     <effect type="slide" end="-1920" start="0" center="auto" tween="sine" delay="0" easing="out" time="300" />
                     <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
                 </animation>
-                <animation type="Conditional" reversible="true" condition="Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()">
+                <animation type="Conditional" reversible="true" condition="Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()">
                     <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
                 </animation>
                 <!-- Home List -->
@@ -1322,13 +1322,13 @@
                     <effect type="slide" end="1920" start="0" center="auto" tween="sine" delay="0" easing="out" time="300" />
                     <effect type="fade" start="100" end="0" tween="cubic" easing="out" delay="0" time="300" />
                 </animation>
-                <animation type="Conditional" reversible="true" condition="Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()">
+                <animation type="Conditional" reversible="true" condition="Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()">
                     <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
                 </animation>
 
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![[!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]] | !IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating | [!Weather.IsFetched + substring(Container(300).ListItem.Property(widget),Weather,left)]">Conditional</animation>
-                    <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="[!Container(301).IsUpdating + IntegerGreaterThan(Container(301).NumItems,0) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]] | [Weather.IsFetched + substring(Container(300).ListItem.Property(widget),Weather,left)]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]] | !IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating | [!Weather.IsFetched + substring(Container(300).ListItem.Property(widget),Weather,left)]">Conditional</animation>
+                    <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="[!Container(301).IsUpdating + IntegerGreaterThan(Container(301).NumItems,0) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]] | [Weather.IsFetched + substring(Container(300).ListItem.Property(widget),Weather,left)]">Conditional</animation>
                     <!-- Widget Text -->
                     <control type="label">
                         <font>TinyBold</font>

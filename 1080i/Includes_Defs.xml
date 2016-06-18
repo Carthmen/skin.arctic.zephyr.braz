@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
     <variable name="ColorHighlight">
-        <value condition="!IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
+        <value condition="!String.IsEmpty(Skin.String(focuscolor.name))">$INFO[Skin.String(focuscolor.name)]</value>
         <value>Highlight</value>
     </variable>
     <variable name="ColorBackground">
-        <value condition="!IsEmpty(Skin.String(backgroundcolor.name))">$INFO[Skin.String(backgroundcolor.name)]</value>
+        <value condition="!String.IsEmpty(Skin.String(backgroundcolor.name))">$INFO[Skin.String(backgroundcolor.name)]</value>
         <value>Background</value>
     </variable>
     <variable name="ColorPickerLabel">
@@ -555,11 +555,11 @@
     <include name="DefHomeRight520"><right>520</right></include>
     <include name="DefHomeRightSidePad"><right>SidePad</right></include>
     <variable name="DefTVHubWidget">
-        <value condition="!IsEmpty(SKin.String(TVHubWidget))">$INFO[Skin.String(TVHubWidget)]</value>
+        <value condition="!String.IsEmpty(SKin.String(TVHubWidget))">$INFO[Skin.String(TVHubWidget)]</value>
         <value>special://skin/extras/playlists/RandomEpisodes.xsp</value>
     </variable>
     <variable name="DefMovieHubWidget">
-        <value condition="!IsEmpty(Skin.String(MovieHubWidget))">$INFO[Skin.String(MovieHubWidget)]</value>
+        <value condition="!String.IsEmpty(Skin.String(MovieHubWidget))">$INFO[Skin.String(MovieHubWidget)]</value>
         <value>special://skin/extras/playlists/RandomMovies.xsp</value>
     </variable>
 
@@ -590,7 +590,7 @@
     </variable>
 
     <variable name="DefWeatherIcon">
-        <value condition="System.HasAddon(script.image.resource.select) + !IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]</value>
+        <value condition="System.HasAddon(script.image.resource.select) + !String.IsEmpty(Skin.String(weathericons.path))">$INFO[Skin.String(weathericons.path)]</value>
         <value>resource://resource.images.weathericons.default/</value>
     </variable>
     <variable name="DefWeatherIconExt">
@@ -673,7 +673,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
-            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
         </control>
         <control type="image">
             <centerright>32</centerright>
@@ -682,7 +682,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture>$VAR[PosterPercentWatched]</texture>
-            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
         </control>
      
         <control type="image">
@@ -729,7 +729,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
-            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
         </control>
         <control type="image">
             <centerright>32</centerright>
@@ -738,7 +738,7 @@
             <height>32</height>
             <aspectratio aligny="top">keep</aspectratio>
             <texture>$VAR[PosterPercentWatched]</texture>
-            <visible>!IsEmpty(ListItem.Property(DBID))</visible>
+            <visible>!String.IsEmpty(ListItem.Property(DBID))</visible>
         </control>
         <control type="image">
             <centerleft>50%</centerleft>
@@ -959,7 +959,7 @@
                 <font>Tiny</font>
                 <label>$INFO[ListItem.Label]</label>
                 <textcolor>PanelWhite70</textcolor>
-                <visible>!IsEmpty(ListItem.Label)</visible>
+                <visible>!String.IsEmpty(ListItem.Label)</visible>
             </control>
             <control type="image">
                 <left>20</left>
@@ -1001,7 +1001,7 @@
                 <label>$INFO[ListItem.Label]</label>
                 <selectedcolor>White100</selectedcolor>
                 <textcolor>Selected</textcolor>
-                <visible>!IsEmpty(ListItem.Label)</visible>
+                <visible>!String.IsEmpty(ListItem.Label)</visible>
             </control>
             <control type="image">
                 <left>20</left>

@@ -243,8 +243,8 @@
 
                 <control type="label">
                     <include>DialogID</include>
-                    <label>DialogOk.xml</label>
-                    <visible>Window.IsVisible(DialogOk.xml)</visible>
+                    <label>DialogConfirm.xml</label>
+                    <visible>Window.IsVisible(DialogConfirm.xml)</visible>
                 </control>
 
                 <control type="label">

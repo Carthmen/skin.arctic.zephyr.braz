@@ -71,7 +71,7 @@
                         <height>100</height>
                         <texture colordiffuse="$VAR[ColorHighlight]">$INFO[Control.GetLabel(933),progress/circle/p,.png]</texture>
                         <aspectratio align="center">keep</aspectratio>
-                        <visible>!IsEmpty(Player.Duration)</visible>
+                        <visible>!String.IsEmpty(Player.Duration)</visible>
                     </control>
                   
                 </control>
@@ -224,7 +224,7 @@
                             <height>32</height>
                             <width>32</width>
                             <texture colordiffuse="$VAR[OSDPanelWhite70]">indicator/playwhite.png</texture>
-                            <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                         </control>
                         <control type="label">
                             <left>30</left>
@@ -258,7 +258,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture colordiffuse="$VAR[OSDPanelWhite70]">indicator/playwhite.png</texture>
-                                <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                             </control>
                             <control type="label">
                                 <left>30</left>
@@ -296,7 +296,7 @@
                                 <height>32</height>
                                 <width>32</width>
                                 <texture colordiffuse="Selected">indicator/playwhite.png</texture>
-                                <visible>!IsEmpty(ListItem.Property(IsPlaying))</visible>
+                                <visible>!String.IsEmpty(ListItem.Property(IsPlaying))</visible>
                             </control>
                             <control type="label">
                                 <left>30</left>

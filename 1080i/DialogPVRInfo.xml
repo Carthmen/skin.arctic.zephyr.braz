@@ -18,7 +18,7 @@
             <visible>!Window.IsVisible(script-script.extendedinfo-DialogInfo.xml)</visible>
         </control>
         <control type="group">
-            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
+            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
 
@@ -33,7 +33,7 @@
                 <control type="group" description="Poster">
                     <left>SidePad</left>
                     <top>PosterPad</top>
-                    <visible>!IsEmpty(ListItem.Icon)</visible>
+                    <visible>!String.IsEmpty(ListItem.Icon)</visible>
                
                     <control type="image">
                         <centertop>PosterH</centertop>

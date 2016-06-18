@@ -212,7 +212,7 @@
                         <label>- Animate music visualization background</label>
                         <selected>Skin.HasSetting(ArtistSlideshow.Animate)</selected>
                         <onclick>Skin.ToggleSetting(ArtistSlideshow.Animate)</onclick>
-                        <enable>!IsEmpty(Skin.String(musicvis.background)) + !StringCompare(Skin.String(musicvis.background),albumwall)</enable>
+                        <enable>!String.IsEmpty(Skin.String(musicvis.background)) + !StringCompare(Skin.String(musicvis.background),albumwall)</enable>
                     </control>
                     <control type="radiobutton" id="9224" description="Show slideshow in background">
                         <width>1310</width>
@@ -221,7 +221,7 @@
                         <label>- Show visualization behind background</label>
                         <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
                         <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
-                        <enable>!IsEmpty(Skin.String(musicvis.background))</enable>
+                        <enable>!String.IsEmpty(Skin.String(musicvis.background))</enable>
                     </control>
                     <control type="button" id="9225" description="Set Fallback Image">
                         <width>1310</width>
@@ -238,7 +238,7 @@
                         <label>- Reset</label>
                         <onclick>Skin.Reset(fanart.fallback)</onclick>
                         <onclick>SetFocus(9225)</onclick>
-                        <visible>!IsEmpty(Skin.String(fanart.fallback))</visible>
+                        <visible>!String.IsEmpty(Skin.String(fanart.fallback))</visible>
                     </control>
                     <control type="radiobutton" id="9226" description="Show video in background">
                         <width>1310</width>
@@ -306,7 +306,7 @@
                         <include>DefSettingsButton</include>
                         <label>31149</label>
                         <selected>Skin.HasSetting(home.dontshowfanart)</selected>
-                        <onclick condition="!Skin.HasSetting(home.dontshowfanart) + IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick>
+                        <onclick condition="!Skin.HasSetting(home.dontshowfanart) + String.IsEmpty(Skin.String(home.slideshowpath))">Skin.SetPath(home.slideshowpath)</onclick>
                         <onclick>Skin.ToggleSetting(home.dontshowfanart)</onclick>
                     </control>
                     <control type="button" id="9242" description="Set Slideshow Path">
@@ -336,8 +336,8 @@
                         <include>DefSettingsButton</include>
                         <label>31182</label>
                         <label2>$INFO[Skin.String(MovieHubWidget)]</label2>
-                        <onclick condition="IsEmpty(Skin.String(MovieHubWidget))">Skin.SetFile(MovieHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(MovieHubWidget))">Skin.Reset(MovieHubWidget)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(MovieHubWidget))">Skin.SetFile(MovieHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(MovieHubWidget))">Skin.Reset(MovieHubWidget)</onclick>
                     </control>
                     <control type="button" id="9252" description="Select Movies Hub Items">
                         <width>1310</width>
@@ -352,8 +352,8 @@
                         <include>DefSettingsButton</include>
                         <label>31183</label>
                         <label2>$INFO[Skin.String(TVHubWidget)]</label2>
-                        <onclick condition="IsEmpty(Skin.String(TVHubWidget))">Skin.SetFile(TVHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
-                        <onclick condition="!IsEmpty(Skin.String(TVHubWidget))">Skin.Reset(TVHubWidget)</onclick>
+                        <onclick condition="String.IsEmpty(Skin.String(TVHubWidget))">Skin.SetFile(TVHubWidget,.xsp|.m3u,special://profile/playlists/video/)</onclick>
+                        <onclick condition="!String.IsEmpty(Skin.String(TVHubWidget))">Skin.Reset(TVHubWidget)</onclick>
                     </control>
                     <control type="button" id="9254" description="Select TV Hub Items">
                         <width>1310</width>
@@ -548,7 +548,7 @@
                         <label>resource.images.moviegenreicons.arctic.zephyr</label>
                         <label2>$VAR[StatusVideoGenreIcons]</label2>
                         <onclick condition="System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">Addon.OpenSettings(resource.images.moviegenreicons.arctic.zephyr)</onclick>
-                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">RunPlugin(plugin://resource.images.moviegenreicons.arctic.zephyr)</onclick>
+                        <onclick condition="!System.HasAddon(resource.images.moviegenreicons.arctic.zephyr)">InstallAddon(resource.images.moviegenreicons.arctic.zephyr)</onclick>
                     </control>
                     <control type="button" id="9299" description="Artist Slideshow">
                         <width>1310</width>
@@ -557,7 +557,7 @@
                         <label>script.artistslideshow</label>
                         <label2>$VAR[StatusArtistSlideshow]</label2>
                         <onclick condition="System.HasAddon(script.artistslideshow)">Addon.OpenSettings(script.artistslideshow)</onclick>
-                        <onclick condition="!System.HasAddon(script.artistslideshow)">RunPlugin(plugin://script.artistslideshow)</onclick>
+                        <onclick condition="!System.HasAddon(script.artistslideshow)">InstallAddon(script.artistslideshow)</onclick>
                     </control>
                     <control type="button" id="9291" description="Extended Info">
                         <width>1310</width>
@@ -566,7 +566,7 @@
                         <label>script.extendedinfo</label>
                         <label2>$VAR[StatusExtendedInfo]</label2>
                         <onclick condition="System.HasAddon(script.extendedinfo)">Addon.OpenSettings(script.extendedinfo)</onclick>
-                        <onclick condition="!System.HasAddon(script.extendedinfo)">RunPlugin(plugin://script.extendedinfo)</onclick>
+                        <onclick condition="!System.HasAddon(script.extendedinfo)">InstallAddon(script.extendedinfo)</onclick>
                     </control>
                     <control type="button" id="9296" description="Global Search">
                         <width>1310</width>
@@ -575,7 +575,7 @@
                         <label>script.globalsearch</label>
                         <label2>$VAR[StatusGlobalSearch]</label2>
                         <onclick condition="System.HasAddon(script.globalsearch)">Addon.OpenSettings(script.globalsearch)</onclick>
-                        <onclick condition="!System.HasAddon(script.globalsearch)">RunPlugin(plugin://script.globalsearch)</onclick>
+                        <onclick condition="!System.HasAddon(script.globalsearch)">InstallAddon(script.globalsearch)</onclick>
                     </control>
                     <control type="button" id="9298" description="Grab Fanart">
                         <width>1310</width>
@@ -584,7 +584,7 @@
                         <label>script.grab.fanart</label>
                         <label2>$VAR[StatusGrabFanart]</label2>
                         <onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.grab.fanart)</onclick>
-                        <onclick condition="!System.HasAddon(script.grab.fanart)">RunPlugin(plugin://script.grab.fanart)</onclick>
+                        <onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.grab.fanart)</onclick>
                     </control>
                     <control type="button" id="9300" description="Image Resource Select">
                         <width>1310</width>
@@ -593,7 +593,7 @@
                         <label>script.image.resource.select</label>
                         <label2>$VAR[StatusImageResourceSelect]</label2>
                         <onclick condition="System.HasAddon(script.grab.fanart)">Addon.OpenSettings(script.image.resource.select)</onclick>
-                        <onclick condition="!System.HasAddon(script.grab.fanart)">RunPlugin(plugin://script.image.resource.select)</onclick>
+                        <onclick condition="!System.HasAddon(script.grab.fanart)">InstallAddon(script.image.resource.select)</onclick>
                     </control>
                     <control type="button" id="9292" description="Skin Helper Service">
                         <width>1310</width>
@@ -602,7 +602,7 @@
                         <label>script.skin.helper.service</label>
                         <label2>$VAR[StatusSkinHelperService]</label2>
                         <onclick condition="System.HasAddon(script.skin.helper.service)">Addon.OpenSettings(script.skin.helper.service)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.service)">RunPlugin(plugin://script.skin.helper.service)</onclick>
+                        <onclick condition="!System.HasAddon(script.skin.helper.service)">InstallAddon(script.skin.helper.service)</onclick>
                     </control>
                     <control type="button" id="9293" description="Skin Shortcuts">
                         <width>1310</width>
@@ -611,7 +611,7 @@
                         <label>script.skinshortcuts</label>
                         <label2>$VAR[StatusSkinShortcuts]</label2>
                         <onclick condition="System.HasAddon(script.skinshortcuts)">Addon.OpenSettings(script.skinshortcuts)</onclick>
-                        <onclick condition="!System.HasAddon(script.skinshortcuts)">RunPlugin(plugin://script.skinshortcuts)</onclick>
+                        <onclick condition="!System.HasAddon(script.skinshortcuts)">InstallAddon(script.skinshortcuts)</onclick>
                     </control>
                     <control type="button" id="9294" description="Toolbox">
                         <width>1310</width>
@@ -620,7 +620,7 @@
                         <label>script.toolbox</label>
                         <label2>$VAR[StatusToolbox]</label2>
                         <onclick condition="System.HasAddon(script.toolbox)">Addon.OpenSettings(script.toolbox)</onclick>
-                        <onclick condition="!System.HasAddon(script.toolbox)">RunPlugin(plugin://script.toolbox)</onclick>
+                        <onclick condition="!System.HasAddon(script.toolbox)">InstallAddon(script.toolbox)</onclick>
                     </control>
                     <control type="button" id="9295" description="Library Data Provider">
                         <width>1310</width>
@@ -629,7 +629,7 @@
                         <label>service.library.data.provider</label>
                         <label2>$VAR[StatusLibraryDataProvider]</label2>
                         <onclick condition="System.HasAddon(service.library.data.provider)">Addon.OpenSettings(service.library.data.provider)</onclick>
-                        <onclick condition="!System.HasAddon(service.library.data.provider)">RunPlugin(plugin://service.library.data.provider)</onclick>
+                        <onclick condition="!System.HasAddon(service.library.data.provider)">InstallAddon(service.library.data.provider)</onclick>
                     </control>
                     <control type="button" id="9297" description="Nextup Notification">
                         <width>1310</width>
@@ -638,7 +638,7 @@
                         <label>service.nextup.notification</label>
                         <label2>$VAR[StatusNextupNotification]</label2>
                         <onclick condition="System.HasAddon(service.nextup.notification)">Addon.OpenSettings(service.nextup.notification)</onclick>
-                        <onclick condition="!System.HasAddon(service.nextup.notification)">RunPlugin(plugin://service.nextup.notification)</onclick>
+                        <onclick condition="!System.HasAddon(service.nextup.notification)">InstallAddon(service.nextup.notification)</onclick>
                     </control>
                     
                 </control>
@@ -675,8 +675,6 @@
                     <scroll>true</scroll>
                     <align>left</align>
                     <textoffsetx>0</textoffsetx>
-                    <texturenofocus>noop</texturenofocus>
-                    <texturefocus>noop</texturefocus>
                     <label>$INFO[System.ProfileName]</label>
                 </control>
                 <control type="label">

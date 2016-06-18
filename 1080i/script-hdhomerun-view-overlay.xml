@@ -22,7 +22,7 @@
         </control>
 
         <control type="videowindow">
-            <visible>!IsEmpty(Window.Property(touch.mode))</visible>
+            <visible>!String.IsEmpty(Window.Property(touch.mode))</visible>
             <posx>0</posx>
             <posy>0</posy>
             <width>1920</width>
@@ -30,7 +30,7 @@
         </control>
 
         <control type="group" id="200">
-            <animation effect="slide" start="0,0" end="-820,0" time="500" condition="!IsEmpty(Window.Property(show.overlay))">Conditional</animation>
+            <animation effect="slide" start="0,0" end="-820,0" time="500" condition="!String.IsEmpty(Window.Property(show.overlay))">Conditional</animation>
             <posx>1920</posx>
             <posy>0</posy>
             <defaultcontrol>210</defaultcontrol>
@@ -62,7 +62,7 @@
                 <itemlayout height="270">
 
                     <control type="group">
-                        <visible>!IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) | !IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
+                        <visible>!String.IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) | !String.IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
                         <posx>0</posx>
                         <posy>0</posy>
                         <control type="image">
@@ -74,7 +74,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
-                            <visible>!IsEmpty(ListItem.Property(is.current))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(is.current))</visible>
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>820</width>
@@ -92,7 +92,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="label">
-                            <visible>IsEmpty(ListItem.Property(channel.icon))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(channel.icon))</visible>
                             <posx>10</posx>
                             <posy>10</posy>
                             <width>160</width>
@@ -192,7 +192,7 @@
                     </control>
 
                     <control type="group">
-                        <visible>IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) + IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
+                        <visible>String.IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) + String.IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
                         <posx>400</posx>
                         <posy>0</posy>
 
@@ -205,7 +205,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
-                            <visible>!IsEmpty(ListItem.Property(is.current))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(is.current))</visible>
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>430</width>
@@ -223,7 +223,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="label">
-                            <visible>IsEmpty(ListItem.Property(channel.icon))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(channel.icon))</visible>
                             <posx>10</posx>
                             <posy>10</posy>
                             <width>160</width>
@@ -297,7 +297,7 @@
                 <!-- FOCUSED LAYOUT ####################################### -->
                 <focusedlayout height="270">
                     <control type="group">
-                        <visible>!IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) | !IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
+                        <visible>!String.IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) | !String.IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
                         <posx>0</posx>
                         <posy>0</posy>
                         <control type="image">
@@ -309,7 +309,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
-                            <visible>!IsEmpty(ListItem.Property(is.current))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(is.current))</visible>
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>820</width>
@@ -327,7 +327,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="label">
-                            <visible>IsEmpty(ListItem.Property(channel.icon))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(channel.icon))</visible>
                             <posx>10</posx>
                             <posy>10</posy>
                             <width>160</width>
@@ -427,7 +427,7 @@
                     </control>
 
                     <control type="group">
-                        <visible>IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) + IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
+                        <visible>String.IsEmpty(Window(10000).Property(script.hdhomerun.view.touch.mode)) + String.IsEmpty(Window(10000).Property(script.hdhomerun.view.guide.full.detail))</visible>
                         <animation effect="slide" start="400,0" end="0,0" time="200" delay="500">Focus</animation>
                         <posx>0</posx>
                         <posy>0</posy>
@@ -440,7 +440,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="image">
-                            <visible>!IsEmpty(ListItem.Property(is.current))</visible>
+                            <visible>!String.IsEmpty(ListItem.Property(is.current))</visible>
                             <posx>0</posx>
                             <posy>0</posy>
                             <width>830</width>
@@ -458,7 +458,7 @@
                             <aspectratio>stretch</aspectratio>
                         </control>
                         <control type="label">
-                            <visible>IsEmpty(ListItem.Property(channel.icon))</visible>
+                            <visible>String.IsEmpty(ListItem.Property(channel.icon))</visible>
                             <posx>10</posx>
                             <posy>10</posy>
                             <width>160</width>
@@ -560,7 +560,7 @@
 
         <control type="group">
             <visible>False</visible>
-            <!--<visible>[!IsEmpty(Window.Property(show.overlay)) | !IsEmpty(Window.Property(show.current))] + !IsEmpty(Window.Property(channel.name))</visible>-->
+            <!--<visible>[!String.IsEmpty(Window.Property(show.overlay)) | !String.IsEmpty(Window.Property(show.current))] + !String.IsEmpty(Window.Property(channel.name))</visible>-->
             <animation effect="slide" start="0,1080" end="0,-150" time="500">VisibleChange</animation>
             <posx>0</posx>
             <posy>1080</posy>
@@ -655,7 +655,7 @@
 
         <control type="group">
             <description>Seek bar for DVR</description>
-            <visible>[!IsEmpty(Window.Property(show.seekbar)) + Player.HasVideo()] | [!IsEmpty(Window(10000).Property(script.hdhomerun.view.playing.dvr)) + [Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]]</visible>
+            <visible>[!String.IsEmpty(Window.Property(show.seekbar)) + Player.HasVideo()] | [!String.IsEmpty(Window(10000).Property(script.hdhomerun.view.playing.dvr)) + [Player.Paused | Player.Seeking | Player.DisplayAfterSeek | Player.Forwarding | Player.Rewinding]]</visible>
             <posx>40</posx>
             <posy>960</posy>
             <control type="image">
@@ -734,7 +734,7 @@
         </control>
 
         <control type="group">
-            <visible>!IsEmpty(Window.Property(loading.progress))</visible>
+            <visible>!String.IsEmpty(Window.Property(loading.progress))</visible>
             <posx>760</posx>
             <posy>340</posy>
 
@@ -805,7 +805,7 @@
         </control>
 
         <control type="group">
-            <visible>!IsEmpty(Window(10000).Property(script.hdhomerun.view.busy)) + [!Player.HasVideo | !IsEmpty(Window.Property(show.overlay))]</visible>
+            <visible>!String.IsEmpty(Window(10000).Property(script.hdhomerun.view.busy)) + [!Player.HasVideo | !String.IsEmpty(Window.Property(show.overlay))]</visible>
             <posx>1367</posx>
             <posy>860</posy>
 
