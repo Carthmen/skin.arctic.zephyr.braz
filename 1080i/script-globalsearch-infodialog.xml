@@ -234,12 +234,6 @@
                     <onup>9601</onup>
                     <itemgap>16</itemgap>
                     <orientation>horizontal</orientation>
-                    <control type="button" id ="191">
-                        <description>Ok button</description>
-                        <label>186</label>
-                        <width>260</width>
-                        <include>DefInfoButtons</include>
-                    </control>
                     <control type="button" id ="192">
                         <description>Play button</description>
                         <label>-</label>
