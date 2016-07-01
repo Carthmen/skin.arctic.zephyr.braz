@@ -59,18 +59,15 @@
                         <posy>12</posy>
                         <width>111</width>
                         <height>111</height>
-                        <aspectratio scalediffuse="false">keep</aspectratio>
-                        <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                        <visible>!String.StartsWith(ListItem.Path,special://skin/extras/spinners) + !String.StartsWith(ListItem.Icon,Default)</visible>
+                        <texture colordiffuse="Background">common/white100.png</texture>
                     </control>
                     <control type="image">
                         <posx>32</posx>
                         <posy>12</posy>
                         <width>111</width>
                         <height>111</height>
-                        <aspectratio scalediffuse="false">center</aspectratio>
-                        <texture fallback="DefaultAddonNone.png" colordiffuse="Black70">$INFO[Listitem.Icon]</texture>
-                        <visible>String.StartsWith(ListItem.Path,special://skin/extras/spinners) | String.StartsWith(ListItem.Icon,Default)</visible>
+                        <aspectratio scalediffuse="false">keep</aspectratio>
+                        <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                     </control>
 
                     <control type="label">
@@ -105,18 +102,15 @@
                             <posy>12</posy>
                             <width>111</width>
                             <height>111</height>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
-                            <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                            <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <texture colordiffuse="Background">common/white100.png</texture>
                         </control>
                         <control type="image">
                             <posx>32</posx>
                             <posy>12</posy>
                             <width>111</width>
                             <height>111</height>
-                            <aspectratio scalediffuse="false">center</aspectratio>
-                            <texture fallback="DefaultAddonNone.png" colordiffuse="$VAR[ColorHighlight]">$INFO[Listitem.FileNameAndPath]</texture>
-                            <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                         </control>
                         <control type="label">
                             <posy>-18</posy>
@@ -153,18 +147,15 @@
                             <posy>12</posy>
                             <width>111</width>
                             <height>111</height>
-                            <aspectratio scalediffuse="false">keep</aspectratio>
-                            <texture fallback="DefaultAddonNone.png">$INFO[Listitem.Icon]</texture>
-                            <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <texture colordiffuse="Background">common/white100.png</texture>
                         </control>
                         <control type="image">
                             <posx>32</posx>
                             <posy>12</posy>
                             <width>111</width>
                             <height>111</height>
-                            <aspectratio scalediffuse="false">center</aspectratio>
-                            <texture fallback="DefaultAddonNone.png">$INFO[Listitem.FileNameAndPath]</texture>
-                            <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
+                            <aspectratio scalediffuse="false">keep</aspectratio>
+                            <texture fallback="DefaultAddonNone.png">$INFO[ListItem.Icon]</texture>
                         </control>
 
                         <control type="label">
@@ -224,7 +215,13 @@
 
 
             </control>
-
+            <control type="image">
+                <posx>738</posx>
+                <posy>507</posy>
+                <width>300</width>
+                <height>300</height>
+                <texture colordiffuse="Background">common/white100.png</texture>
+            </control>
             <control type="image">
                 <description>Large Icon Image</description>
                 <posx>738</posx>
@@ -233,18 +230,6 @@
                 <height>450</height>
                 <texture fallback="DefaultAddonNone.png">$INFO[Container(450).ListItem.Icon]</texture>
                 <aspectratio align="center" aligny="bottom">keep</aspectratio>
-                <visible>!String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
-            </control>
-            <control type="image">
-                <description>Large Icon Image</description>
-                <posx>788</posx>
-                <posy>607</posy>
-                <width>200</width>
-                <height>200</height>
-                <texture fallback="DefaultAddonNone.png" colordiffuse="$VAR[ColorHighlight]">$INFO[Container(450).ListItem.Icon]</texture>
-                <aspectratio align="center" aligny="center">keep</aspectratio>
-                <visible>String.Contains(ListItem.Path,special://skin/extras/spinners)</visible>
-                <animation effect="rotate" start="360" end="0" center="auto" time="3000" loop="true" condition="true">conditional</animation>
             </control>
             
             <control type="image">

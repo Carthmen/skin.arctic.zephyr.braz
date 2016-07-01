@@ -218,10 +218,11 @@
                     <align>left</align>
                     <include>DefDialogButtons</include>
                 </control>
-                <control type="button" id="311" description="Browse for Thumb">
+                <control type="button" id="306" description="Browse for Icon">
                     <width>100%</width>
                     <height>66</height>
                     <label>31181</label>
+                    <label2>$INFO[Container(211).ListItem.Property(thumbnail)]</label2>
                     <texturenofocus colordiffuse="Black12" border="5">common/box.png</texturenofocus>
                     <align>left</align>
                     <include>DefDialogButtons</include>
