@@ -544,16 +544,16 @@
 
                 <!-- Widget  -->
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="600" condition="![[substring(Container(300).ListItem.Property(widget),Weather,left) | IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating] + [substring(Container(300).ListItem.Property(widget),Weather,left) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
-                    <animation effect="fade" end="100" start="0" time="0" condition="[[substring(Container(300).ListItem.Property(widget),Weather,left) | IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating] + [substring(Container(300).ListItem.Property(widget),Weather,left) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="600" condition="![[String.StartsWith(Container(300).ListItem.Property(widget),Weather) | Integer.IsGreater(Container(301).NumItems,0) | Container(301).IsUpdating] + [String.StartsWith(Container(300).ListItem.Property(widget),Weather) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
+                    <animation effect="fade" end="100" start="0" time="0" condition="[[String.StartsWith(Container(300).ListItem.Property(widget),Weather) | Integer.IsGreater(Container(301).NumItems,0) | Container(301).IsUpdating] + [String.StartsWith(Container(300).ListItem.Property(widget),Weather) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
                     <animation type="WindowClose">
                         <effect type="fade" start="100" end="0" time="150"/>
                     </animation>
                     <bottom>190</bottom>
                     <height>297</height>
                     <control type="group">
-                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![!substring(Container(300).ListItem.Property(widget),Weather,left) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
-                        <animation effect="fade" start="0" end="100" time="0" delay="0" reversible="false" condition="!substring(Container(300).ListItem.Property(widget),Weather,left) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![!String.StartsWith(Container(300).ListItem.Property(widget),Weather) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
+                        <animation effect="fade" start="0" end="100" time="0" delay="0" reversible="false" condition="!String.StartsWith(Container(300).ListItem.Property(widget),Weather) + [!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
                         <include>skinshortcuts-template-widget-classic</include>
                     </control>
 

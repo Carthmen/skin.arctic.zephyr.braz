@@ -13,8 +13,8 @@
                 <right>70</right>
                 <top>20</top>
                 <bottom>20</bottom>
-                <onup condition="IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
-                <onup condition="!IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
+                <onup condition="String.IsEmpty(Container(300).ListItem.Property(widget))">303</onup>
+                <onup condition="!String.IsEmpty(Container(300).ListItem.Property(widget))">300</onup>
                 <ondown>300</ondown>
                 <onback>300</onback>
                 <onleft>301</onleft>
@@ -23,7 +23,7 @@
                 <orientation>horizontal</orientation>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout width="178" height="257" condition="![StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape) | StringCompare(Container(300).ListItem.Property(widgetIcon),Square)]">
+                <itemlayout width="178" height="257" condition="![String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape) | String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)]">
                     <control type="image">
                         <left>10</left>
                         <right>10</right>
@@ -33,7 +33,7 @@
                         <texture diffuse="diffuse/wall.png" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="178" height="257" condition="![StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape) | StringCompare(Container(300).ListItem.Property(widgetIcon),Square)]">
+                <focusedlayout width="178" height="257" condition="![String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape) | String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)]">
                     <control type="image">
                         <left>10</left>
                         <right>10</right>
@@ -59,7 +59,7 @@
                         </animation>
                     </control>
                 </focusedlayout>
-                <itemlayout width="254" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Square)">
+                <itemlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)">
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <width>237</width>
@@ -69,7 +69,7 @@
                         <texture diffuse="diffuse/wall-square.png" fallback="DefaultAddonNone.png" background="true">$VAR[PosterImage]</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="254" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Square)">
+                <focusedlayout width="254" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)">
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <width>237</width>
@@ -95,7 +95,7 @@
                         </animation>
                     </control>
                 </focusedlayout>
-                <itemlayout width="445" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                <itemlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape)">
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <width>425</width>
@@ -105,7 +105,7 @@
                         <texture diffuse="diffuse/wall-fanart.png" fallback="DefaultAddonNone.png" background="true">$VAR[LandscapeImage]</texture>
                     </control>
                 </itemlayout>
-                <focusedlayout width="445" height="257" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                <focusedlayout width="445" height="257" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape)">
                     <control type="image">
                         <centerleft>50%</centerleft>
                         <width>425</width>
@@ -143,7 +143,7 @@
         <controls>
             <control type="fixedlist" id="301">
                 <skinshortcuts>visibility</skinshortcuts>
-                <visible>!substring(Container(300).ListItem.Property(widget),Weather,left)</visible>
+                <visible>!String.StartsWith(Container(300).ListItem.Property(widget),Weather)</visible>
                 <animation effect="fade" start="100" end="66" time="400" condition="!Control.HasFocus(301)">Conditional</animation>
                 <autoscroll time="10000">!Control.HasFocus(301)</autoscroll>
                 <top>330</top>
@@ -160,7 +160,7 @@
                 <pagecontrol>60</pagecontrol>
                 <viewtype label="536">list</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <itemlayout height="325" width="222" condition="!StringCompare(Container(300).ListItem.Property(widgetaspect),Square) + ![StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape) | StringCompare(Container(300).ListItem.Property(widgetIcon),Square)]">
+                <itemlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetaspect),Square) + ![String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape) | String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)]">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -183,11 +183,11 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                 </itemlayout>
-                <itemlayout height="325" width="325" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Square)">
+                <itemlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -210,11 +210,11 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                 </itemlayout>
-                <itemlayout height="325" width="578" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                <itemlayout height="325" width="578" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape)">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -237,11 +237,11 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="325" width="222" condition="!StringCompare(Container(300).ListItem.Property(widgetIcon),Square) + !StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                <focusedlayout height="325" width="222" condition="!String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square) + !String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape)">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -264,8 +264,8 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                     <control type="image">
                         <left>3</left>
@@ -285,7 +285,7 @@
                     </control>
                       
                 </focusedlayout>
-                <focusedlayout height="325" width="325" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Square)">
+                <focusedlayout height="325" width="325" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Square)">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -308,8 +308,8 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                     <control type="image">
                         <left>3</left>
@@ -329,7 +329,7 @@
                     </control>
                       
                 </focusedlayout>
-                <focusedlayout height="325" width="578" condition="StringCompare(Container(300).ListItem.Property(widgetIcon),Landscape)">
+                <focusedlayout height="325" width="578" condition="String.IsEqual(Container(300).ListItem.Property(widgetIcon),Landscape)">
                     <control type="image">
                         <left>0</left>
                         <top>0</top>
@@ -352,8 +352,8 @@
                         <height>32</height>
                         <aspectratio aligny="top">keep</aspectratio>
                         <texture>$VAR[PercentWatched]</texture>
-                        <visible>!stringcompare(ListItem.Label,..)</visible>
-                        <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
+                        <visible>!String.IsEqual(ListItem.Label,..)</visible>
+                        <visible>String.IsEqual(ListItem.Overlay,OverlayWatched.png)</visible>
                     </control>
                     <control type="image">
                         <left>3</left>

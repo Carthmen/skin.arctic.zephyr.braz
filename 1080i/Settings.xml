@@ -178,7 +178,7 @@
                     <item id="5">
                         <label>Live TV</label>
                         <icon>DefaultTVShows.png</icon>
-                        <onclick>activatewindow(TVSettings)</onclick>
+                        <onclick>activatewindow(PVRSettings)</onclick>
                     </item>
                     <item id="6">
                         <label>13000</label>
