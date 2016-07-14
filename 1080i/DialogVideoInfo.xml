@@ -25,6 +25,9 @@
             <control type="group">
                 <visible>Window.IsActive(home)</visible>
                 <include>Furniture_Header</include>
+                <include>Furniture_Clock</include>
+                <include>Furniture_Flags</include>
+                <include>Furniture_NowPlaying</include>
             </control>
             <control type="group">
                 <visible>!Window.IsVisible(script-script.extendedinfo-DialogVideoInfo.xml)</visible>

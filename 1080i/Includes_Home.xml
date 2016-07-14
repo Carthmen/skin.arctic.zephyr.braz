@@ -522,10 +522,10 @@
             <animation effect="slide" end="0" start="0,550" time="200">WindowOpen</animation>
             <control type="group">
                 <control type="group">
-                    <animation effect="slide" end="0,-250" time="450" tween="back" reversible="false" condition="Control.HasFocus(301) | ControlGroup(303).HasFocus()">Conditional</animation>
-                    <animation effect="slide" start="0,-250" time="250" tween="quadratic" reversible="false" condition="!Control.HasFocus(301) + !ControlGroup(303).HasFocus()">Conditional</animation>
-                    <animation effect="slide" start="0" end="0,-270" time="450" tween="back" reversible="false" condition="[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]] + Control.IsVisible(301)">Conditional</animation>
-                    <animation effect="slide" end="0" start="0,-270" time="250" tween="quadratic" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]]] | !Control.IsVisible(301)">Conditional</animation>
+                    <animation effect="slide" end="0,-250" time="450" tween="back" reversible="false" condition="Control.HasFocus(301)">Conditional</animation>
+                    <animation effect="slide" start="0,-250" time="250" tween="quadratic" reversible="false" condition="!Control.HasFocus(301)">Conditional</animation>
+                    <animation effect="slide" start="0" end="0,-270" time="450" tween="back" reversible="false" condition="[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]] + [!Skin.HasSetting(home.dontautoshowwidget) | [Skin.HasSetting(home.dontautoshowwidget) + Control.HasFocus(301)]]">Conditional</animation>
+                    <animation effect="slide" end="0" start="0,-270" time="250" tween="quadratic" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + String.IsEmpty(Skin.String(home.slideshowpath))]]]] | [Skin.HasSetting(home.dontautoshowwidget) + !Control.HasFocus(301)]">Conditional</animation>
                     <control type="image" description="BottomBG">
                         <width>100%</width>
                         <height>900</height>
@@ -544,15 +544,18 @@
 
                 <!-- Widget  -->
                 <control type="group">
-                    <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
-                    <animation effect="fade" start="0" end="100" time="200" delay="200" reversible="false" condition="[!String.IsEmpty(Container(300).ListItem.Property(widget)) | [String.IsEmpty(Container(300).ListItem.Property(widget)) + [String.IsEmpty(Container(300).ListItem.Property(Background)) + [String.IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" time="600" condition="![[substring(Container(300).ListItem.Property(widget),Weather,left) | IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating] + [substring(Container(300).ListItem.Property(widget),Weather,left) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
+                    <animation effect="fade" end="100" start="0" time="0" condition="[[substring(Container(300).ListItem.Property(widget),Weather,left) | IntegerGreaterThan(Container(301).NumItems,0) | Container(301).IsUpdating] + [substring(Container(300).ListItem.Property(widget),Weather,left) | Control.HasFocus(301) | !Skin.HasSetting(home.dontautoshowwidget)]]">Conditional</animation>
                     <animation type="WindowClose">
                         <effect type="fade" start="100" end="0" time="150"/>
                     </animation>
                     <bottom>190</bottom>
                     <height>297</height>
-
-                    <include>skinshortcuts-template-widget-classic</include>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="0" time="0" reversible="false" condition="![!substring(Container(300).ListItem.Property(widget),Weather,left) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]]">Conditional</animation>
+                        <animation effect="fade" start="0" end="100" time="0" delay="0" reversible="false" condition="!substring(Container(300).ListItem.Property(widget),Weather,left) + [!IsEmpty(Container(300).ListItem.Property(widget)) | [IsEmpty(Container(300).ListItem.Property(widget)) + [IsEmpty(Container(300).ListItem.Property(Background)) + [IsEmpty(Skin.String(home.slideshowpath))]]]]">Conditional</animation>
+                        <include>skinshortcuts-template-widget-classic</include>
+                    </control>
 
                     <control type="panel" id="301">
                         <visible allowhiddenfocus="true">String.IsEqual(Container(300).ListItem.Property(widget),weather) + [Control.HasFocus(301) | ControlGroup(303).HasFocus() | !Skin.HasSetting(home.dontautoshowwidget)]</visible>
@@ -1271,7 +1274,11 @@
                     </control>
 
                     <!-- Widget -->
-                    <include>skinshortcuts-template-widget-vertical</include>
+                    <control type="group">
+                        <animation effect="fade" start="100" end="0" time="150" reversible="false" condition="Skin.HasSetting(home.dontautoshowwidget) + !Control.HasFocus(301)">Conditional</animation>
+                        <animation effect="fade" start="0" end="100" time="350" delay="0" reversible="false" condition="Skin.HasSetting(home.dontautoshowwidget) + Control.HasFocus(301)">Conditional</animation>
+                        <include>skinshortcuts-template-widget-vertical</include>
+                    </control>
 
                     <!-- Weather Widget -->
                     <control type="panel" id="301">
