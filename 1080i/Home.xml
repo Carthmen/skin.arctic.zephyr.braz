@@ -15,7 +15,7 @@
         <include condition="!Skin.HasSetting(home.vertical)">HomeNowPlaying</include>
         <include condition="!Skin.HasSetting(home.vertical)">HomeWidgetSelector</include>
         <include condition="!Skin.HasSetting(home.vertical)">HomeBackgroundPlaylist</include>
-        <include condition="!Skin.HasSetting(home.vertical)">HomeClassicWidgets</include>
+        <include condition="!Skin.HasSetting(home.vertical)">HomeHorizontalMenu</include>
         
         <include condition="!Skin.HasSetting(home.vertical) + Skin.HasSetting(home.submenu2)">HomeSubMenu2</include>
         <include condition="!Skin.HasSetting(home.vertical) + !Skin.HasSetting(home.submenu2)">HomeSubMenu</include>
