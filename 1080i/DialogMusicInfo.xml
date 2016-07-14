@@ -4,12 +4,29 @@
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>ClearProperty(content)</onload>
     <onload>ClearProperty(tracklist)</onload>
-    <onload>Dialog.Close(135)</onload>
     <controls>
+        <control type="group">
+            <visible>Window.IsActive(home)</visible>
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <texture background="true">$INFO[ListItem.Art(fanart)]</texture>
+            </control>
+            <control type="image" description="Background">
+                <include>Dimensions_Fullscreen</include>
+                <animation effect="fade" start="100" end="90" time="200" condition="true">Conditional</animation>
+                <texture colordiffuse="$VAR[ColorBackground]">common/bg.png</texture>
+            </control>
+        </control>
         <control type="group">
             <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) |     Window.IsVisible(DialogConfirm.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
                 <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
             </animation>
+            <control type="group">
+                <visible>Window.IsActive(home)</visible>
+                <include>Furniture_Header</include>
+                <include>Furniture_Clock</include>
+                <include>Furniture_NowPlaying</include>
+            </control>
 
             <!-- Poster-->
             <control type="group">
@@ -178,7 +195,7 @@
 
                 <!-- Album Info -->
                 <control type="group">
-                    <visible>$EXP[isAlbum]</visible>
+                    <!--<visible>$EXP[isAlbum]</visible>-->
                     <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
                     <left>ListSquareX</left>
                     <right>SidePad</right>
@@ -192,7 +209,7 @@
                             <description>Header Label</description>
                             <textcolor>White100</textcolor>
                             <include>DefDialogInfoHeader</include>
-                            <label>$INFO[ListItem.Album]</label>
+                            <label>$INFO[ListItem.Label]</label>
                         </control>
                         <control type="group">
                             <height>50</height>
@@ -246,88 +263,6 @@
                                 <font>Tiny</font>
                                 <textcolor>White70</textcolor>
                                 <label fallback="19055">$INFO[ListItem.Property(Album_Label)]</label>
-                                <aligny>center</aligny>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>!String.IsEmpty(ListItem.Genre)</visible>
-                            <height>36</height>
-                            <control type="label">
-                                <width>150</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White100</textcolor>
-                                <label>[B]$LOCALIZE[515][/B]</label>
-                                <aligny>center</aligny>
-                            </control>
-                            <control type="label">
-                                <left>160</left>
-                                <width>100%</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Genre]</label>
-                                <aligny>center</aligny>
-                            </control>
-                        </control>
-
-                        <control type="group">
-                            <height>auto</height>
-                            <width>100%</width>
-                            <visible>!$EXP[isAlbum] | String.IsEmpty(Window.Property(tracklist))</visible>
-                            <control type="textbox" id="4">
-                                <top>10</top>
-                                <width>100%</width>
-                                <height>250</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <aligny>top</aligny>
-                            </control>
-                        </control>
-                        <control type="group">
-                            <visible>$EXP[isAlbum] + [String.IsEmpty(Control.GetLabel(4)) | !String.IsEmpty(Window.Property(tracklist))]</visible>
-                            <height>auto</height>
-                            <width>100%</width>
-                            <control type="textbox">
-                                <top>10</top>
-                                <width>100%</width>
-                                <height>313</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
-                                <aligny>top</aligny>
-                            </control>
-                        </control>
-                    </control>
-                </control>
-
-                <!-- Artist Info -->
-                <control type="group">
-                    <visible>$EXP[isArtist]</visible>
-                    <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
-                    <left>ListSquareX</left>
-                    <right>SidePad</right>
-                    <bottom>224</bottom>
-                    <top>PosterPad</top>
-                    <control type="grouplist">
-                        <left>30</left>
-                        <right>30</right>
-                        <itemgap>0</itemgap>
-                        <control type="label">
-                            <description>Header Label</description>
-                            <textcolor>White100</textcolor>
-                            <include>DefDialogInfoHeader</include>
-                            <label>$INFO[ListItem.Artist]</label>
-                        </control>
-                        <control type="group">
-                            <height>50</height>
-                            <control type="label">
-                                <posy>-10</posy>
-                                <width>100%</width>
-                                <height>36</height>
-                                <font>Tiny</font>
-                                <textcolor>White70</textcolor>
-                                <label fallback="19055">$INFO[ListItem.Property(Artist_YearsActive)]</label>
                                 <aligny>center</aligny>
                             </control>
                         </control>
@@ -446,6 +381,89 @@
                                 <aligny>center</aligny>
                             </control>
                         </control>
+
+                        <control type="group">
+                            <height>auto</height>
+                            <width>100%</width>
+                            <visible>String.IsEmpty(Window.Property(tracklist))</visible>
+                            <control type="textbox" id="4">
+                                <top>10</top>
+                                <width>100%</width>
+                                <height>250</height>
+                                <font>Tiny</font>
+                                <textcolor>White70</textcolor>
+                                <aligny>top</aligny>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>[String.IsEmpty(Control.GetLabel(4)) | !String.IsEmpty(Window.Property(tracklist))]</visible>
+                            <height>auto</height>
+                            <width>100%</width>
+                            <control type="textbox">
+                                <top>10</top>
+                                <width>100%</width>
+                                <height>313</height>
+                                <font>Tiny</font>
+                                <textcolor>White70</textcolor>
+                                <label>$INFO[Window(Home).Property(SkinHelper.Music.TrackList)]</label>
+                                <aligny>top</aligny>
+                            </control>
+                        </control>
+                    </control>
+                </control>
+
+                <!-- Artist Info -->
+                <control type="group">
+                    <visible>$EXP[isArtist]</visible>
+                    <visible>!Control.IsVisible(50) + String.IsEmpty(Window.Property(content))</visible>
+                    <left>ListSquareX</left>
+                    <right>SidePad</right>
+                    <bottom>224</bottom>
+                    <top>PosterPad</top>
+                    <control type="grouplist">
+                        <left>30</left>
+                        <right>30</right>
+                        <itemgap>0</itemgap>
+                        <control type="label">
+                            <description>Header Label</description>
+                            <textcolor>White100</textcolor>
+                            <include>DefDialogInfoHeader</include>
+                            <label>$INFO[ListItem.Artist]</label>
+                        </control>
+                        <control type="group">
+                            <height>50</height>
+                            <control type="label">
+                                <posy>-10</posy>
+                                <width>100%</width>
+                                <height>36</height>
+                                <font>Tiny</font>
+                                <textcolor>White70</textcolor>
+                                <label fallback="19055">$INFO[ListItem.Property(Artist_YearsActive)]</label>
+                                <aligny>center</aligny>
+                            </control>
+                        </control>
+                        <control type="group">
+                            <visible>!String.IsEmpty(ListItem.Genre)</visible>
+                            <height>36</height>
+                            <control type="label">
+                                <width>150</width>
+                                <height>36</height>
+                                <font>Tiny</font>
+                                <textcolor>White100</textcolor>
+                                <label>[B]$LOCALIZE[515][/B]</label>
+                                <aligny>center</aligny>
+                            </control>
+                            <control type="label">
+                                <left>160</left>
+                                <width>100%</width>
+                                <height>36</height>
+                                <font>Tiny</font>
+                                <textcolor>White70</textcolor>
+                                <label fallback="19055">$INFO[ListItem.Genre]</label>
+                                <aligny>center</aligny>
+                            </control>
+                        </control>
+                        
 
                         <control type="group">
                             <height>auto</height>
@@ -736,19 +754,7 @@
                 <font>EpisodeNumber</font>
                 <textcolor>White100</textcolor>
                 <height>45</height>
-                <label>$INFO[ListItem.Artist]</label>
-                <visible>$EXP[isArtist]</visible>
-            </control>
-            <control type="label">
-                <description>header label</description>
-                <left>60</left>
-                <right>60</right>
-                <posy>60</posy>
-                <font>EpisodeNumber</font>
-                <textcolor>White100</textcolor>
-                <height>45</height>
-                <label>$INFO[ListItem.Album]</label>
-                <visible>$EXP[isAlbum]</visible>
+                <label>$INFO[ListItem.Label]</label>
             </control>
 
             <control type="textbox">
